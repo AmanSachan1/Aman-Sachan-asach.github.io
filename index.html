@@ -17,6 +17,9 @@
     <!-- My custom CSS -->
     <link href="css/websiteHomePage.css" rel="stylesheet">
 
+    <!-- LinkStyle CSS -->
+    <link href="css/linkstyles.css" rel="stylesheet">
+
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -53,13 +56,10 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#portfolio">Portfolio</a>
+                        <a href="#Demo Reel">Demo Reel</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#about">About</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#contact">Contact</a>
+                        <a href="#portfolio">Projects</a>
                     </li>
                 </ul>
             </div>
@@ -70,11 +70,10 @@
 
     <!-- Header -->
     <header>
-        <div class="container" id="maincontent" tabindex="-1">
+        <div class="container" id="maincontent" tabindex="-1" style="display:flex;justify-content:center;align-items:center;">
             <div class="row">
                 <div class="col-lg-12">
-                    <img class="img-responsive" src="img/profile.png" alt="">
-                    <div class="intro-text">
+                    <div class="intro-text center-block">
 
                         <h1 class="name">Aman Sachan</h1>                        
                         <span class="skills">Graphics Programmer</span><span class="divider">  |  </span>
@@ -86,11 +85,34 @@
 						<!-- All the connect with me icons-->
 						<div class="footer-social-icons">
 							<ul class="social-icons">
-								<li><a href="https://www.linkedin.com/in/amansachan1/" class="social-icon"><i class="fa fa-linkedin-square fa-4x"></i></a></li>
-								<li><a href="https://github.com/Aman-Sachan-asach" class="social-icon"> <i class="fa fa-github-square fa-4x"></i></a></li>
-						        <li><a href="mailto:asach@seas.upenn.edu" class="social-icon"> <i class="fa fa-envelope fa-4x"></i></a></li>
+                                <li>
+                                    <a href="https://vimeo.com/amansachan" class="social-icon">
+                                    <i class="fa fa-vimeo-square fa-4x">
+                                </i></a></li>
+								<li>
+                                    <a href="https://www.linkedin.com/in/amansachan1/" class="social-icon">
+                                    <i class="fa fa-linkedin-square fa-4x">
+                                </i></a></li>
+								<li>
+                                    <a href="https://github.com/Aman-Sachan-asach" class="social-icon">
+                                    <i class="fa fa-github-square fa-4x">
+                                </i></a></li>
+                                <li>
+                                    <a href="mailto:asach@seas.upenn.edu" class="social-icon">
+                                    <i class="fa fa-envelope fa-4x">
+                                </i></a></li>
+                                <li>
+                                    <a href="https://www.youtube.com/channel/UCgt_lAI0-x_RhlGyv6DEBAw" class="social-icon">
+                                    <i class="fa fa-youtube-square fa-4x">
+                                </i></a></li>
 						    </ul>
 						</div>
+
+                        <div class="grid__item color-11">
+                            <a class="link link--yaku" href="/images/myw3schoolsimage.jpg" download>
+                                <span>R</span><span>e</span><span>s</span><span>u</span><span>m</span><span>e</span> 
+                            </a>
+                        </div>
 
                     </div>
                 </div>
@@ -99,31 +121,35 @@
     </header>
 
     <!-- About Section and Demo Reel -->
-    <section class="success" id="about">
-        <div class="container">
+    <section class="success" id="Demo Reel">
+        <div class="container-wide">
             <div class="row">
-                <div class="col-lg-4">
-					<div class="row">
-						<div class="col-lg-3 text-center">
-							<h2>About</h2>
-						</div>
-					</div>
-					<p> Check out my resume, and feel free to contact me at asach@seas.upenn.edu with any questions about my work!</p>
-				</div>
-                <div class="col-lg-8">
-					<div class="row">
-						<div class="col-lg-3 text-center">
-							<h2>Demo Reel</h2>
-						</div>
-					</div>
-                    <p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
+
+                <div class="col-lg-4 col-sm-4 col-md-4">
+                    <!-- Demo Reel Breakdown -->
+                    <div class="demo-reel-breakdown">
+                        <h2 class="text-center demo-reel-breakdown-title">Demo Reel Breakdown</h2>
+                        <ul class="custom-bullet">
+                            <li>Thing 1</li>
+                            <li>Thing 2</li>
+                            <li>Thing 3</li>
+                            <li>Thing 4</li>
+                            <li>Thing 5</li>
+                        </ul>
+                    </div>
                 </div>
+
+                <div class="col-lg-8 col-sm-8 col-md-8">
+                    <!-- Demo Reel -->
+                    <iframe class="center-block" width="854" height="480" src="https://www.youtube.com/embed/2mEkWEzqaQg" frameborder="0"></iframe>
+                </div>
+
             </div>
         </div>
     </section>
 
     <!-- Portfolio Grid Section -->
-    <section id="portfolio">
+    <section id="HighLighted Projects">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -198,23 +224,20 @@
 
     <!-- Footer -->
     <footer class="text-center">
-        <div class="footer-above">
-            <div class="container">
-                <div class="row">
-                    
-                </div>
-            </div>
-        </div>
         <div class="footer-below">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        Copyright &copy; Your Website 2016
+                        &copy; Aman Sachan 2017. All Rights Reserved.
                     </div>
                 </div>
             </div>
         </div>
     </footer>
+
+    <!-- ////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- Actual Website content you can see on the page is above this points -->
+    <!-- ////////////////////////////////////////////////////////////////////////////////////// -->
 
     <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
     <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">

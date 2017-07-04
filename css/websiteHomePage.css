@@ -41,10 +41,20 @@ h6 {
 
 header {
   text-align: center;
+  margin: auto;
   background: #000000;
   color: white;
 }
 header .container {
+  min-height: 100vh;
+  margin: 0 auto;
+  vertical-align: middle;
+  padding-top: 10px;
+  padding-bottom: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.containerDemoReel {
   padding-top: 10px;
   padding-bottom: 50px;
   padding-left: 10px;
@@ -75,10 +85,19 @@ header .intro-text .divider {
 }
 @media (min-width: 768px) {
   header .container {
-    padding-top: 200px;
-    padding-bottom: 100px;
+  	min-height: 100vh;
+	margin: auto;
+    padding-top: 125px;
+    padding-bottom: 125px;
     padding-left: 10px;
   	padding-right: 10px;
+  }
+
+  .containerDemoReel {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   }
   header .intro-text .name {
     font-size: 72px;
@@ -93,7 +112,7 @@ header .intro-text .divider {
   text-transform: uppercase;
   font-weight: 300;
   border: none;
-  font-size: 22px;
+  font-size: 16px;
 }
 .navbar-custom .navbar-brand {
   color: white;
@@ -161,19 +180,19 @@ header .intro-text .divider {
   }
 }
 section {
-  padding: 100px 0;
+  padding: 40px 0px 10px 0px;
 }
 section h2 {
   margin: 0;
   font-size: 3em;
 }
 section.success {
-  background: #18BC9C;
+  background: #222;
   color: white;
 }
 @media (max-width: 767px) {
   section {
-    padding: 75px 0;
+    padding: 40px 0px 10px 0px;
   }
   section.first {
     padding-top: 75px;
@@ -290,8 +309,9 @@ footer .footer-col {
   margin-bottom: 50px;
 }
 footer .footer-below {
-  padding: 25px 0;
-  background-color: #233140;
+  padding: 8px;
+  font-size: 10px;
+  background-color: #333;
 }
 .btn-outline {
   color: white;
@@ -505,6 +525,32 @@ div#maincontent {
 
 /* My custom styling effects*/
 /* connect with me type social links */
+.demo-reel-breakdown{
+    display:block;
+    text-align: left;
+    margin: 2% 5%;
+    padding: 2px 20px;
+}
+
+.demo-reel-breakdown-title{
+    padding: 15px 0px;
+}
+
+.container.fullheight {
+   min-height: 100%;
+   margin: auto;
+}
+
+.container.wide {
+   max-width: 1920px;
+   margin: 25px auto;
+}
+
+.Demo-Reel {
+	margin: 10px 5px;
+
+}
+
 ul {
     padding:0;
     list-style: none;
@@ -513,6 +559,22 @@ a {
     text-decoration: none;
     color: #fff;
 }
+
+        
+.custom-bullet li {
+    display: block;
+}
+
+.custom-bullet li:before
+{
+    /*Using a Bootstrap glyphicon as the bullet point*/
+    content: "\e092";
+    font-family: 'Glyphicons Halflings';
+    font-size: 9px;
+    float: left;
+    margin-top: 4px;
+    margin-left: -17px;
+ }
 
 .footer-social-icons {
     width: 1000px;
@@ -582,4 +644,36 @@ ul.social-icons {
 .fa-envelope:hover {
     color: #007fff;
     text-shadow: 0px 0px 5px #007fff;
+}
+
+.fa-vimeo-square {
+    padding: 0px;
+    margin: 5px 15px;
+    -o-transition:.25s;
+    -ms-transition:.25s;
+    -moz-transition:.25s;
+    -webkit-transition:.25s;
+    transition: .25s;
+    background-color: #000000;
+    color: #d3d3d3;
+}
+.fa-vimeo-square:hover {
+    color: #1ab7ea;
+    text-shadow: 0px 0px 5px #1ab7ea;
+}
+
+.fa-youtube-square {
+    padding: 0px;
+    margin: 5px 15px;
+    -o-transition:.25s;
+    -ms-transition:.25s;
+    -moz-transition:.25s;
+    -webkit-transition:.25s;
+    transition: .25s;
+    background-color: #000000;
+    color: #d3d3d3;
+}
+.fa-youtube-square:hover {
+    color: #d13838;
+    text-shadow: 0px 0px 5px #d13838;
 }
