@@ -92,19 +92,18 @@
 			<!-- Load the Paper.js library -->
 			<script type="text/javascript" src="scripts/others/paper-full.js"></script>
 			<!-- create a canvas -->
-			<canvas id="myCanvas"></canvas>
+			<canvas id="voronoiCanvas"></canvas>
 
 			<!-- Load external PaperScript and associate it with myCanvas  -->
 			<script type="text/javascript" src="http://paperjs.org/assets/js/rhill-voronoi-core.js"></script>
-			<script type="text/paperscript" canvas="myCanvas">
-				
+			<script type="text/paperscript" canvas="voronoiCanvas">				
 				var voronoi =  new Voronoi();
-				var sites = generateBeeHivePoints(view.size / 200, true);
+				var sites = generateBeeHivePoints(view.size / 150, true);
 				var bbox, diagram;
 				var oldSize = view.size;
 				var mousePos = view.center;
 				var sitecolors = generateColors();
-
+				
 				onResize();
 
 				function onMouseMove(event) 
@@ -120,6 +119,8 @@
 					var diagram = voronoi.compute(sites, bbox);
 					if (diagram) 
 					{
+						var background = new Path.Rectangle(view.bounds);
+						background.fillColor = '#000';
 						for (var i = 0, l = sites.length; i < l; i++) 
 						{
 							var cell = diagram.cells[sites[i].voronoiId];
@@ -212,6 +213,7 @@
 					
 					return points;
 				}
+				
 				function createPath(points, t, center) 
 				{
 					var path = new Path();
@@ -249,8 +251,7 @@
 					}
 					oldSize = view.size;
 					renderDiagram();
-				}
-							
+				}							
 			</script>
 			
             <div class="row">

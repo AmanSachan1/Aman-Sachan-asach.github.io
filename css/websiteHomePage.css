@@ -43,6 +43,12 @@ header {
   text-align: center;
   margin: auto;
   color: white;
+  background: rgba(0,0,0,0.5);
+  text-shadow:
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000; 
 }
 header .container {
   min-height: 100vh;
@@ -347,7 +353,7 @@ a {
     color: #fff;
 }
 
-#myCanvas {
+#voronoiCanvas {
     border: 0px solid black;    
     margin: 0px;
 
@@ -506,7 +512,7 @@ a {
 .footer-social-icons {
     width: 1000px;
     display:block;
-    margin: 0 auto;
+    margin: 0px;
 }
 .social-icon {
     color: #fff;
@@ -533,7 +539,6 @@ ul.social-icons {
     -moz-transition:.25s;
     -webkit-transition:.25s;
     transition: .25s;
-    background-color: #000000;
     color: #d3d3d3;
 }
 .fa-linkedin-square:hover {
@@ -549,7 +554,6 @@ ul.social-icons {
     -moz-transition:.25s;
     -webkit-transition:.25s;
     transition: .25s;
-    background-color: #000000;
     color: #d3d3d3;
 }
 .fa-github-square:hover {
@@ -565,7 +569,6 @@ ul.social-icons {
     -moz-transition:.25s;
     -webkit-transition:.25s;
     transition: .25s;
-    background-color: #000000;
     color: #d3d3d3;
 }
 .fa-envelope:hover {
@@ -581,7 +584,6 @@ ul.social-icons {
     -moz-transition:.25s;
     -webkit-transition:.25s;
     transition: .25s;
-    background-color: #000000;
     color: #d3d3d3;
 }
 .fa-vimeo-square:hover {
@@ -597,7 +599,6 @@ ul.social-icons {
     -moz-transition:.25s;
     -webkit-transition:.25s;
     transition: .25s;
-    background-color: #000000;
     color: #d3d3d3;
 }
 .fa-youtube-square:hover {
