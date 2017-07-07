@@ -113,7 +113,7 @@ header .intro-text .divider {
   }
 }
 .navbar-custom {
-  background: #2C3E50;
+  background: rgba(0,0,0,0);
   font-family: 'Raleway', sans-serif;
   text-transform: uppercase;
   font-weight: 300;
@@ -151,7 +151,7 @@ header .intro-text .divider {
 .navbar-custom .navbar-nav li.active a:focus,
 .navbar-custom .navbar-nav li.active a:active {
   color: white;
-  background: #18BC9C;
+  background: #fff;
 }
 .navbar-custom .navbar-toggle {
   color: white;
@@ -161,7 +161,7 @@ header .intro-text .divider {
 }
 .navbar-custom .navbar-toggle:hover,
 .navbar-custom .navbar-toggle:focus {
-  background-color: #18BC9C;
+  background-color: #fff;
   color: white;
   border-color: #18BC9C;
 }
