@@ -42,26 +42,26 @@
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand" href="#page-top">Aman Sachan</a>
-            </div>
+			<div class="navbar-header page-scroll">
+			    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			        <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+			    </button>
+			    <a class="navbar-brand" href="#page-top">Aman Sachan</a>
+			</div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#Demo Reel">Demo Reel</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#HighLighted Projects">Projects</a>
-                    </li>
-                    <li>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			    <ul class="nav navbar-nav navbar-right">
+					<li class="hidden">
+					    <a href="#page-top"></a>
+					</li>
+					<li class="page-scroll">
+					    <a href="#Demo Reel">Demo Reel</a>
+					</li>
+					<li class="page-scroll">
+					    <a href="#HighLighted Projects">Projects</a>
+					</li>
+					<li>
 						<div id="dd" class="dropdown-wrapper" tabindex="1"> Code
 							<ul class="dropdown">
 								<li><a href="https://github.com/Aman-Sachan-asach/Monte-Carlo-Path-Tracer">Path Tracer</a></li>
@@ -72,13 +72,16 @@
 								<li><a href="https://github.com/Aman-Sachan-asach/LSystem-in-Maya-">Maya L-System</a></li>
 							</ul>
 						</div>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="webpages/modelling.html">3D Modelling</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="webpages/awards.html">Awards and Honors</a>
-                    </li>
+					</li>
+					<li class="page-scroll">
+					    <a href="webpages/awards.html">Honors</a>
+					</li>
+					<li class="page-scroll">
+					    <a href="webpages/modelling.html">3D Modelling</a>
+					</li>
+					<li class="page-scroll">
+					    <a href="webpages/modelling.html">Blog</a>
+					</li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -507,7 +510,37 @@
 	<!-- ////////////////////////////////////////////////////////////////////////////////////// -->
 
 	<!-- DropDown Menu javascript -->
-	<script src="scripts/dropdown.js"></script>
+	<!-- jQuery if needed -->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script type="text/javascript">
+
+		function DropDown(el) {
+			this.dd = el;
+			this.initEvents();
+		}
+		DropDown.prototype = {
+			initEvents : function() {
+				var obj = this;
+
+				obj.dd.on('click', function(event){
+					$(this).toggleClass('active');
+					event.stopPropagation();
+				});	
+			}
+		}
+
+		$(function() {
+
+			var dd = new DropDown( $('#dd') );
+
+			$(document).click(function() {
+				// all dropdowns
+				$('.wrapper-dropdown-5').removeClass('active');
+			});
+
+		});
+
+	</script>
 
 	<!-- jQuery -->
 	<script src="vendor/jquery/jquery.min.js"></script>

@@ -105,7 +105,7 @@ header .intro-text .name {
 
 .navbar-default {
   text-shadow: 0px 0px 5px #007fff;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 1);
 }
 
 .navbar-custom {
@@ -157,11 +157,14 @@ header .intro-text .name {
 }
 .navbar-custom .navbar-toggle:hover,
 .navbar-custom .navbar-toggle:focus {
-  background-color: #fff;
+  background-color: rgba(0,0,0,0);
   color: white;
   border-color: #007fff;
 }
 @media (min-width: 768px) {
+  .navbar-default {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
   .navbar-custom {
     padding: 10px 0;
     -webkit-transition: padding 0.3s;
@@ -580,7 +583,8 @@ a {
     width: 120px;
     height: 23px;
     margin: 12px 15px;
-    padding: 0px;
+    padding: 0px 15px;
+    z-index: 1;
 
     /* Styles */
     background: #000;
@@ -602,7 +606,7 @@ a {
     margin-top: -3px;
     border-width: 6px 6px 0 6px;
     border-style: solid;
-    border-color: #4cbeff transparent;
+    border-color: #007fff transparent;
 }
 
 .dropdown-wrapper .dropdown {
@@ -613,9 +617,9 @@ a {
     right: 0;
 
     /* Styles */
-    background: #fff;
+    background: #000;
     border-radius: 0 0 5px 5px;
-    border: 1px solid rgba(0,0,0,0.2);
+    border: 1px solid #007fff;
     border-top: none;
     border-bottom: none;
     list-style: none;
@@ -633,10 +637,10 @@ a {
 .dropdown-wrapper .dropdown li a {
     display: block;
     text-decoration: none;
-    color: #333;
+    color: #fff;
     padding: 10px 0;
     transition: all 0.3s ease-out;
-    border-bottom: 1px solid #e6e8ea;
+    border-bottom: 1px solid #1c721e;
 }
 
 .dropdown-wrapper .dropdown li:last-of-type a {
@@ -652,25 +656,25 @@ a {
 /* Hover state */
 
 .dropdown-wrapper .dropdown li:hover a {
-    color: #57a9d9;
+    color: #007fff;
 }
 
 /* Active state */
 
 .dropdown-wrapper.active {
     border-radius: 5px 5px 0 0;
-    background: #4cbeff;
+    background: #007fff;
     box-shadow: none;
     border-bottom: none;
     color: white;
 }
 
 .dropdown-wrapper.active:after {
-    border-color: #82d1ff transparent;
+    border-color: #fff;
 }
 
 .dropdown-wrapper.active .dropdown {
-    border-bottom: 1px solid rgba(0,0,0,0.2);
+    border-bottom: 1px solid #007fff;
     max-height: 400px;
 }
 
