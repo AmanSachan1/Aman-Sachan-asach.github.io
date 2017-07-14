@@ -4,7 +4,6 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
 
-@import url(https://fonts.googleapis.com/css?family=Lato);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
 
 body {
@@ -554,7 +553,8 @@ a {
 }
 
 .project {
-  margin: 0px 10px;
+  margin: 0px 9px;
+  padding:c 1px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
   background: rgba(0, 0, 0, 1);
   image-rendering: -moz-crisp-edges;
@@ -569,9 +569,9 @@ a {
 }
 .project:hover {
   cursor: pointer;
-}
-.project:hover h3 {
-  text-decoration: underline;
+  outline-color: #007fff;
+  outline-style: solid;
+  outline-width: 1px;
 }
 
 .project .summary {
@@ -584,6 +584,7 @@ a {
   font-weight: 400;
   font-size: 20px;
   color: #fff;
+  text-decoration: none;
 }
 .project .summary .summarytitle:hover {
     color: #007fff;
@@ -618,7 +619,7 @@ a {
 .dropdown-wrapper {
     /* Size & position */
     position: relative;
-    width: 120px;
+    width: 100px;
     height: 23px;
     margin: 12px 15px;
     padding: 0px 15px;
@@ -632,6 +633,18 @@ a {
     cursor: pointer;
     outline: none;
     transition: all 0.3s ease-out;
+}
+
+.dropdown_code{
+  z-index: 2;
+}
+.dropdown_code .innerdropdown{
+  width: 150px;
+}
+
+.dropdown_miscellaneous{
+  width: 175px;
+  z-index: 1;
 }
 
 .dropdown-wrapper:after { /* Little arrow */
@@ -713,6 +726,7 @@ a {
 
 .dropdown-wrapper.active .dropdown {
     border-bottom: 1px solid #007fff;
+    border-top: 1px solid #007fff;
     max-height: 400px;
 }
 
