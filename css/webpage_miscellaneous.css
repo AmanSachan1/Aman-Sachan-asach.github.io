@@ -714,6 +714,8 @@ input[type="radio"]:checked+.nav-dots-Artorias{
 }
 
 .pin {
+  color: #007fff;
+
   display: inline-block;
   background: #FEFEFE;
   border: 2px solid #FAFAFA;
@@ -741,7 +743,8 @@ input[type="radio"]:checked+.nav-dots-Artorias{
 }
 
 .pin p {
-  font: 12px/18px Arial, sans-serif;
+  font-size: 15px;
+  font-family: 'Roboto Condensed', sans-serif;
   color: #333;
   margin: 0;
 }
@@ -749,6 +752,9 @@ input[type="radio"]:checked+.nav-dots-Artorias{
 /*
 ///////////////////////// Project GIF and Description //////////////////////////////////
 */
+body{
+  font-size: 19px;
+}
 
 .moreProjects{
     margin: 30px 0px;
@@ -842,11 +848,12 @@ input[type="radio"]:checked+.nav-dots-Artorias{
 }
 
 .project .summary .summarytitle {
+  width:100%;
   font-weight: 400;
   float: left;
   position: relative;
   text-align: left;
-  font-size: 24px;
+  font-size: 24px; !important
   padding: 10px 0px;
   margin: auto;
   color: #000;
@@ -1156,8 +1163,8 @@ input[type="radio"]:checked+.nav-dots-Artorias{
     font-family: 'Glyphicons Halflings';
     font-size: 9px;
     float: left;
-    margin-top: 4px;
-    margin-left: -17px;
+    margin-top: 2px;
+    margin-left: 15px;
  }
 
 
