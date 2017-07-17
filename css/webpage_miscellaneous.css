@@ -17,13 +17,20 @@ p {
 p.small {
   font-size: 16px;
 }
-a,
+
 a:hover,
 a:focus,
 a:active,
 a.active {
   color: #007fff;
+  text-decoration: none;
+  text-shadow: 0px 0px 5px #007fff;
 }
+
+a{
+  color: #007fff;
+}
+
 h1,
 h2,
 h3,
@@ -458,7 +465,7 @@ ul {
 }
 a {
     text-decoration: none;
-    color: #fff;
+    color: #007fff;
 }
 
 /*
@@ -514,9 +521,25 @@ a {
 */
 
 .backgroundPrimary {
-  padding: 15px;
+  padding: 5px;
   margin: 15px auto;
-  background: rgba(0, 147, 255, 0.48);
+  background: rgba(46,11,145,0.6);
+  /*
+  background: -webkit-radial-gradient(rgba(46,11,145,0.8) 99%, rgba(46,11,145,0.0.55) 0.95%, rgba(0,0,0,0) 0.05%); 
+  background: -o-radial-gradient(rgba(46,11,145,0.8) 99%, rgba(46,11,145,0.0.55) 0.95%, rgba(0,0,0,0) 0.05%); 
+  background: -moz-radial-gradient(rgba(46,11,145,0.8) 99%, rgba(46,11,145,0.0.55) 0.95%, rgba(0,0,0,0) 0.05%); 
+  background: radial-gradient(rgba(46,11,145,0.8) 99%, rgba(46,11,145,0.0.55) 0.95%, rgba(0,0,0,0) 0.05%); 
+  */
+}
+
+.backgroundPrimary:hover {
+  background: #007fff;
+  /*
+  background: -webkit-radial-gradient(rgba(46,11,145,0.8) 99%, rgba(46,11,145,0.0.55) 0.95%, rgba(0,0,0,0) 0.05%); 
+  background: -o-radial-gradient(rgba(46,11,145,0.8) 99%, rgba(46,11,145,0.0.55) 0.95%, rgba(0,0,0,0) 0.05%); 
+  background: -moz-radial-gradient(rgba(46,11,145,0.8) 99%, rgba(46,11,145,0.0.55) 0.95%, rgba(0,0,0,0) 0.05%); 
+  background: radial-gradient(rgba(46,11,145,0.8) 99%, rgba(46,11,145,0.0.55) 0.95%, rgba(0,0,0,0) 0.05%); 
+  */
 }
 
 .slidebackgroundSif,
@@ -790,12 +813,29 @@ input[type="radio"]:checked+.nav-dots-Artorias{
 }
 
 .project .summary {
-  background: rgba(0, 147, 255, 0.48);;
   width: 100%;
   vertical-align: middle;
-  padding: 15px;
+  padding: 5px;
+  margin: 0px auto;
+
+  background: rgba(46,11,145,0.6);
+  /*
+  background: -webkit-radial-gradient(rgba(46,11,145,0.8) 99%, rgba(46,11,145,0.0.55) 0.95%, rgba(0,0,0,0) 0.05%); 
+  background: -o-radial-gradient(rgba(46,11,145,0.8) 99%, rgba(46,11,145,0.0.55) 0.95%, rgba(0,0,0,0) 0.05%); 
+  background: -moz-radial-gradient(rgba(46,11,145,0.8) 99%, rgba(46,11,145,0.0.55) 0.95%, rgba(0,0,0,0) 0.05%); 
+  background: radial-gradient(rgba(46,11,145,0.8) 99%, rgba(46,11,145,0.0.55) 0.95%, rgba(0,0,0,0) 0.05%); 
+  */
 }
 
+.project .summary:hover {
+  background: #007fff;
+  /*
+  background: -webkit-radial-gradient(rgba(46,11,145,0.8) 99%, rgba(46,11,145,0.0.55) 0.95%, rgba(0,0,0,0) 0.05%); 
+  background: -o-radial-gradient(rgba(46,11,145,0.8) 99%, rgba(46,11,145,0.0.55) 0.95%, rgba(0,0,0,0) 0.05%); 
+  background: -moz-radial-gradient(rgba(46,11,145,0.8) 99%, rgba(46,11,145,0.0.55) 0.95%, rgba(0,0,0,0) 0.05%); 
+  background: radial-gradient(rgba(46,11,145,0.8) 99%, rgba(46,11,145,0.0.55) 0.95%, rgba(0,0,0,0) 0.05%); 
+  */
+}
 .project .gif {
   width: 80%;
   margin: 0px auto;
