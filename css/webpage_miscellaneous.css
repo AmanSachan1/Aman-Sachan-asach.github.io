@@ -533,7 +533,7 @@ a {
 }
 
 .backgroundPrimary:hover {
-  background: #007fff;
+  background: rgba(27, 204, 91, 0.4);
   /*
   background: -webkit-radial-gradient(rgba(46,11,145,0.8) 99%, rgba(46,11,145,0.0.55) 0.95%, rgba(0,0,0,0) 0.05%); 
   background: -o-radial-gradient(rgba(46,11,145,0.8) 99%, rgba(46,11,145,0.0.55) 0.95%, rgba(0,0,0,0) 0.05%); 
@@ -828,7 +828,7 @@ input[type="radio"]:checked+.nav-dots-Artorias{
 }
 
 .project .summary:hover {
-  background: #007fff;
+  background: rgba(27, 204, 91, 0.4);
   /*
   background: -webkit-radial-gradient(rgba(46,11,145,0.8) 99%, rgba(46,11,145,0.0.55) 0.95%, rgba(0,0,0,0) 0.05%); 
   background: -o-radial-gradient(rgba(46,11,145,0.8) 99%, rgba(46,11,145,0.0.55) 0.95%, rgba(0,0,0,0) 0.05%); 
