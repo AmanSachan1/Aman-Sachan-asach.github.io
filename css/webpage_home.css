@@ -7,8 +7,8 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
 
 html, body {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   margin: 0px;
   padding: 0px;
   font-family: 'Raleway', sans-serif;
@@ -71,7 +71,7 @@ header .container {
   padding-left: 10px;
   padding-right: 10px;
   height: 100%;
-  width:100%;
+  width: 100%;
 }
 .containerDemoReel {
   padding-top: 10px;
