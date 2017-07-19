@@ -506,42 +506,6 @@
     <!-- SCRIPTS -->
     <!-- ////////////////////////////////////////////////////////////////////////////////////// -->
 
-    <!-- DropDown Menu javascript -->
-    <!-- jQuery if needed -->
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-    <script type="text/javascript">
-
-        function DropDown(el) {
-            this.dd = el;
-            this.initEvents();
-        }
-        DropDown.prototype = {
-            initEvents : function() {
-                var obj = this;
-
-                obj.dd.on('click', function(event){
-                    $(this).toggleClass('active');
-                    event.stopPropagation();
-                }); 
-            }
-        }
-
-        $(function() {
-
-            var dd = new DropDown( $('#dd') );
-
-            $(document).click(function() {
-                // all dropdowns
-                $('.wrapper-dropdown-5').removeClass('active');
-            });
-
-        });
-
-    </script>
-
-    <!-- jQuery :::::: already using the CDN-->
-    <!-- <script src="../vendor/jquery/jquery.min.js"></script> -->
-
     <!-- Bootstrap Core JavaScript -->
     <script src="../scripts/others/bootstrap.min.js"></script>
 </body>
