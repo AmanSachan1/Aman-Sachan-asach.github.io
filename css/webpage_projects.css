@@ -4,8 +4,6 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
 
-@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
-
 body {
   font-family: 'Raleway', sans-serif;
   overflow-x: hidden;
@@ -528,6 +526,7 @@ div#maincontent {
 
 .modal-body h2,h3,h4,h5,h6{
   width: 85%;
+  font-family: 'Roboto Condensed', sans-serif;
   margin: 0px auto;
   padding: 5px;
   text-align: center;
@@ -1024,166 +1023,6 @@ input:checked + .slide-container .nav label { display: block; }
 }
 
 /*
-///////////////////////// Double Roll Button //////////////////////////////////
-*/
-.button_base {
-    margin: 0;
-    border: 0;
-    font-size: 22px;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    margin-top: -25px;
-    margin-left: -100px;
-    width: 200px;
-    height: 50px;
-    text-align: center;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-user-select: none;
-    cursor: default;
-}
-
-.button_base:hover {
-    cursor: pointer;
-}
-
-.button_3D_double_roll {
-    perspective: 500px;
-    -webkit-perspective: 500px;
-    -moz-perspective: 500px;
-    transform-style: preserve-3d;
-    -webkit-transform-style: preserve-3d;
-}
-
-.button_3D_double_roll div {
-    text-align: center;
-    padding: 10px;
-    border: #007fff solid 1px;
-    pointer-events: none;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-}
-
-.button_3D_double_roll div:nth-child(1) {
-    color: #000000;
-    background-color: #ffffff;
-    z-index: 0;
-    width: 100%;
-    height: 50px;
-    clip: rect(0px, 100px, 50px, 0px);
-    position: absolute;
-    transition: all 0.2s ease;
-    -webkit-transition: all 0.2s ease;
-    -moz-transition: all 0.2s ease;
-    transform: rotateX(0deg);
-    -webkit-transform: rotateX(0deg);
-    -moz-transform: rotateX(0deg);
-    transform-origin: 50% 50% -25px;
-    -webkit-transform-origin: 50% 50% -25px;
-    -moz-transform-origin: 50% 50% -25px;
-}
-
-.button_3D_double_roll div:nth-child(2) {
-    color: #007fff;
-    background-color: #000000;
-    z-index: -1;
-    width: 100%;
-    height: 50px;
-    clip: rect(0px, 100px, 50px, 0px);
-    position: absolute;
-    transform: rotateX(90deg);
-    -webkit-transform: rotateX(90deg);
-    -moz-transform: rotateX(90deg);
-    transition: all 0.2s ease;
-    -webkit-transition: all 0.2s ease;
-    -moz-transition: all 0.2s ease;
-    transform-origin: 50% 50% -25px;
-    -webkit-transform-origin: 50% 50% -25px;
-    -moz-transform-origin: 50% 50% -25px;
-}
-
-.button_3D_double_roll div:nth-child(3) {
-    color: #000000;
-    background-color: #ffffff;
-    z-index: 0;
-    width: 100%;
-    height: 50px;
-    clip: rect(0px, 200px, 50px, 100px);
-    position: absolute;
-    transition: all 0.2s ease 0.1s;
-    -webkit-transition: all 0.2s ease 0.1s;
-    -moz-transition: all 0.2s ease 0.1s;
-    transform: rotateX(0deg);
-    -webkit-transform: rotateX(0deg);
-    -moz-transform: rotateX(0deg);
-    transform-origin: 50% 50% -25px;
-    -webkit-transform-origin: 50% 50% -25px;
-    -moz-transform-origin: 50% 50% -25px;
-}
-
-.button_3D_double_roll div:nth-child(4) {
-    color: #000000;
-    background-color: #000000;
-    z-index: -1;
-    width: 100%;
-    height: 50px;
-    clip: rect(0px, 200px, 50px, 100px);
-    position: absolute;
-    transform: rotateX(-90deg);
-    -webkit-transform: rotateX(-90deg);
-    -moz-transform: rotateX(-90deg);
-    transition: all 0.2s ease 0.1s;
-    -webkit-transition: all 0.2s ease 0.1s;
-    -moz-transition: all 0.2s ease 0.1s;
-    transform-origin: 50% 50% -25px;
-    -webkit-transform-origin: 50% 50% -25px;
-    -moz-transform-origin: 50% 50% -25px;
-}
-
-.button_3D_double_roll:hover div:nth-child(1) {
-    background-color: #000000;
-    transition: all 0.2s ease;
-    -webkit-transition: all 0.2s ease;
-    -moz-transition: all 0.2s ease;
-    transform: rotateX(-90deg);
-    -webkit-transform: rotateX(-90deg);
-    -moz-transform: rotateX(-90deg);
-}
-
-.button_3D_double_roll:hover div:nth-child(2) {
-    color: #007fff;
-    transition: all 0.2s ease;
-    -webkit-transition: all 0.2s ease;
-    -moz-transition: all 0.2s ease;
-    transform: rotateX(0deg);
-    -webkit-transform: rotateX(0deg);
-    -moz-transform: rotateX(0deg);
-}
-
-.button_3D_double_roll:hover div:nth-child(3) {
-    background-color: #000000;
-    transition: all 0.2s ease 0.1s;
-    -webkit-transition: all 0.2s ease 0.1s;
-    -moz-transition: all 0.2s ease 0.1s;
-    transform: rotateX(90deg);
-    -webkit-transform: rotateX(90deg);
-    -moz-transform: rotateX(90deg);
-}
-
-.button_3D_double_roll:hover div:nth-child(4) {
-    color: #007fff;
-    transition: all 0.2s ease 0.1s;
-    -webkit-transition: all 0.2s ease 0.1s;
-    -moz-transition: all 0.2s ease 0.1s;
-    transform: rotateX(0deg);
-    -webkit-transform: rotateX(0deg);
-    -moz-transform: rotateX(0deg);
-}
-
-/*
 ///////////////////////// CUSTOM BULLET TYPE //////////////////////////////////
 */
         
@@ -1232,21 +1071,6 @@ input:checked + .slide-container .nav label { display: block; }
     text-decoration: none;
 }
 
-.fa-linkedin-square {
-    padding: 0px;
-    margin: 5px 15px;
-    -o-transition:.25s;
-    -ms-transition:.25s;
-    -moz-transition:.25s;
-    -webkit-transition:.25s;
-    transition: .25s;
-    color: #d3d3d3;
-}
-.fa-linkedin-square:hover {
-    color: #0073a4;
-    text-shadow: 0px 0px 5px #0073a4;
-}
-
 .fa-github-square {
     padding: 0px;
     margin: 5px 15px;
@@ -1260,21 +1084,6 @@ input:checked + .slide-container .nav label { display: block; }
 .fa-github-square:hover {
     color: #6e5494;
     text-shadow: 0px 0px 5px #6e5494;
-}
-
-.fa-envelope {
-    padding: 0px;
-    margin: 5px 15px;
-    -o-transition:.25s;
-    -ms-transition:.25s;
-    -moz-transition:.25s;
-    -webkit-transition:.25s;
-    transition: .25s;
-    color: #d3d3d3;
-}
-.fa-envelope:hover {
-    color: #007fff;
-    text-shadow: 0px 0px 5px #007fff;
 }
 
 .fa-vimeo-square {
