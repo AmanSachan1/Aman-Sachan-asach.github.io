@@ -103,13 +103,15 @@
     <header>
         <div class="container" id="maincontent" tabindex="-1" style="display:flex;justify-content:center;align-items:center;">
 			<!-- Load the Paper.js library -->
-			<script type="text/javascript" src="scripts/others/paper-full.js"></script>
+			<script type="text/javascript" src="scripts/voronoi/paper-full.js"></script>
 			<!-- create a canvas -->
-			<canvas id="voronoiCanvas" resize></canvas>
+			<canvas id="voronoiCanvas" hidpi="off" resize></canvas>
 
 			<!-- Load external PaperScript and associate it with myCanvas  -->
-			<script type="text/javascript" src="http://paperjs.org/assets/js/rhill-voronoi-core.js"></script>
-			<script type="text/paperscript" canvas="voronoiCanvas">				
+			<script type="text/javascript" src="scripts/voronoi/rhill-voronoi-core.js"></script>
+			<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/seedrandom/2.4.3/seedrandom.min.js"></script> <!-- Seedable RNG -->
+			<script type="text/paperscript" canvas="voronoiCanvas">
+				Math.seedrandom('hello.');
 				var voronoi =  new Voronoi();
 				var sites = generateBeeHivePoints(view.size / 150, true);
 				var bbox, diagram;
@@ -265,7 +267,7 @@
 					}
 					oldSize = view.size;
 					renderDiagram();
-				}							
+				}
 			</script>
 			
             <div class="row">
