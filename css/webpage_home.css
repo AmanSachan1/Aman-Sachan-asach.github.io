@@ -8,7 +8,7 @@ html, body {
   margin: 0px;
   padding: 0px;
   font-family: 'Raleway', sans-serif;
-  overflow-x: hidden;
+  /*overflow-x: hidden;*/
 }
 p {
   font-size: 20px;
@@ -395,7 +395,7 @@ div#maincontent {
 }
 
 .modal-dialog{
-  width:95%;
+  width:100%;
 }
 
 .modal-header{
@@ -1031,9 +1031,13 @@ a {
 .project .repo {
   float: right;
   text-decoration: none;
+
+  font-size: 16px;
+  text-align: center;
+  vertical-align: middle;
 }
 .project .repo:before {
-  font-size: 22px;
+  font-size: 20px;
   margin-left: 5px;
   font-family: FontAwesome;
   content: "\F09B";
