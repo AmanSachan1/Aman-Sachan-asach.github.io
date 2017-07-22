@@ -167,7 +167,7 @@ header .intro-text .name {
   border-color: #007fff;
 }
 
-@media (max-width: 955px) {
+@media (max-width: 650px) {
   .navbar-header {
       float: none;
   }
@@ -180,6 +180,9 @@ header .intro-text .name {
   .navbar-collapse {
       border-top: 1px solid transparent;
       box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .navbar-collapse.in {
+      overflow-y: visible;
   }
   .navbar-fixed-top {
       top: 0;
@@ -204,7 +207,7 @@ header .intro-text .name {
   }
 }
 
-@media (min-width: 955px) {
+@media (min-width: 755px) {
   .navbar-default {
     background-color: rgba(0, 0, 0, 0.5);
   }
@@ -359,6 +362,25 @@ div#maincontent {
 ///////////////////////// My custom styling effects //////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////
 */
+
+.project .repo {
+  float: right;
+  text-decoration: none;
+
+  font-size: 16px;
+  text-align: center;
+  vertical-align: middle;
+}
+.project .repo:before {
+  font-size: 20px;
+  margin-left: 5px;
+  font-family: FontAwesome;
+  content: "\F09B";
+}
+.project .repo:hover {
+    color: #6e5494;
+    text-shadow: 0px 0px 5px #6e5494;
+}
 
 /*
 ///////////////////////// ScrollBar //////////////////////////////////
@@ -931,7 +953,7 @@ input:checked + .slide-container .nav label { display: block; }
 }
 
 .dropdown_projects{
-  width: 175px;
+  width: 150px;
   z-index: 1;
 }
 
@@ -954,6 +976,7 @@ input:checked + .slide-container .nav label { display: block; }
     top: 100%;
     left: 0;
     right: 0;
+    z-index: 10;
 
     /* Styles */
     background: #000;

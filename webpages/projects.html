@@ -23,13 +23,6 @@
 	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
 </head>
 
 <body id="page-top" class="index">
@@ -49,6 +42,7 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
+
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
@@ -58,23 +52,14 @@
                         </a>
                     </li>
                     <li>
-                        <div id="dd_code" class="dropdown-wrapper dropdown_code" tabindex="1">
-                              <i class="fa fa-github" aria-hidden="true"></i>&nbsp; Repos
+                        <div id="dd_projects" class="dropdown-wrapper dropdown_projects" tabindex="1">Projects
                             <ul class="dropdown innerdropdown">
-                                <li><a href="https://github.com/Aman-Sachan-asach/Monte-Carlo-Path-Tracer">Path Tracer</a></li>
-                                <li><a href="https://github.com/Aman-Sachan-asach/MiniMineCraft">Mini Minecraft</a></li>
-                                <li><a href="https://github.com/Aman-Sachan-asach/Metaballs-using-marching-cubes">Metaballs</a></li>
-                                <li><a href="https://github.com/Aman-Sachan-asach/Dynamic-Procedural-City">Dynamic City</a></li>
-                                <li><a href="https://github.com/Aman-Sachan-asach/Shaders">Shaders</a></li>
-                                <li><a href="https://github.com/Aman-Sachan-asach/LSystem-in-Maya-">Maya L-System</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <div id="dd_projects" class="dropdown-wrapper dropdown_projects" tabindex="1"> All Projects
-                            <ul class="dropdown">
-                                <li><a href="../webpages/miscellaneous.html#Modelling">3D Modelling</a>
-                                <li><a href="../webpages/miscellaneous.html#Honors">Honors</a>                             
+                                <li><a href="#PathTracer">Path Tracer</a>
+                                <li><a href="#MiniMineCraft">Mini-MineCraft</a>
+                                <li><a href="#ProceduralCity">Procedural City</a>
+                                <li><a href="#Metaballs">Metaballs</a>
+                                <li><a href="#MayaLSystem">Maya L-System</a>
+                                <li><a href="#Behaviours">Agent Behaviours</a>
                             </ul>
                         </div>
                     </li>
@@ -98,7 +83,7 @@
 
             <div class="row">
                 <div class = "projects-wrapper clearfix">
-                    <div class="project-wrapper" data-toggle="modal" data-target="#Modal_PathTracer">
+                    <div class="project-wrapper" data-toggle="modal" data-target="#Modal_PathTracer" id="PathTracer">
                             <div class="project">
                                 <div class="summary">
                                     <div class="gif">
@@ -106,9 +91,9 @@
                                         	<img src="../assets/Demo_Reel_Gifs/PathTracerTLDR.gif" width="100%" height="100%" style="position:absolute" allowFullScreen>
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class ="col-lg-10 col-md-10 col-sm-10 summarytitle">Path Tracer</div>
-                                        <a href="https://github.com/Aman-Sachan-asach/Monte-Carlo-Path-Tracer" class="col-lg-2 col-md-2 col-sm-2 repo"></a>
+                                    <div class="row" style="margin:4px 0px">
+                                        <div class ="col-lg-8 col-md-8 col-sm-8 summarytitle">Path Tracer</div>
+                                        <a href="https://github.com/Aman-Sachan-asach/Monte-Carlo-Path-Tracer" class="col-lg-4 col-md-4 col-sm-4 repo"> REPO</a>
                                     </div>
 
                                     <p>behaviours was asdfghj aesrhffgfdsd fsrgwest gWEG WET wetf WTw rfefdsd fetg SEf efWE wefw efewfWE WEFWE
@@ -118,7 +103,7 @@
                         </a>
                     </div>
 
-                    <div class="project-wrapper" data-toggle="modal" data-target="#Modal_MiniMineCraft">
+                    <div class="project-wrapper" data-toggle="modal" data-target="#Modal_MiniMineCraft" id="MiniMineCraft">
                         <div class="project">                       
                             <div class="summary">
                                 <div class="gif">
@@ -126,9 +111,9 @@
                                             <img src="../assets/Demo_Reel_Gifs/MineCraftFinal.gif" width="100%" height="100%" style="position:absolute" allowFullScreen>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class ="col-lg-10 col-md-10 col-sm-10 summarytitle">Mini Minecraft</div>
-                                    <a href="https://github.com/Aman-Sachan-asach/MiniMineCraft" class="col-lg-2 col-md-2 col-sm-2 repo"></a>
+                                <div class="row" style="margin:4px 0px">
+                                    <div class ="col-lg-8 col-md-8 col-sm-8 summarytitle">Mini Minecraft</div>
+                                    <a href="https://github.com/Aman-Sachan-asach/MiniMineCraft" class="col-lg-4 col-md-4 col-sm-4 repo"> REPO</a>
                                 </div>
 
                                 <p>behaviours was asdfghj aesrhffgfdsd fsrgwest gWEG WET wetf WTw rfefdsd fetg SEf efWE wefw efewfWE WEFWE
@@ -137,7 +122,7 @@
                         </div>
                     </div>
 
-                    <div class="project-wrapper" data-toggle="modal" data-target="#Modal_ProceduralCity">
+                    <div class="project-wrapper" data-toggle="modal" data-target="#Modal_ProceduralCity" id="ProceduralCity">
                         <div class="project">                           
                             <div class="summary">
                                 <div class="gif">
@@ -145,9 +130,9 @@
                                         <img src="../assets/Demo_Reel_Gifs/ProceduralCityFinal.gif" width="100%" height="100%" style="position:absolute" allowFullScreen>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class ="col-lg-10 col-md-10 col-sm-10 summarytitle">Procedural City</div>
-                                    <a href="https://github.com/Aman-Sachan-asach/Dynamic-Procedural-City" class="col-lg-2 col-md-2 col-sm-2 repo"></a>
+                                <div class="row" style="margin:4px 0px">
+                                    <div class ="col-lg-8 col-md-8 col-sm-8 summarytitle">Procedural City</div>
+                                    <a href="https://github.com/Aman-Sachan-asach/Dynamic-Procedural-City" class="col-lg-4 col-md-4 col-sm-4 repo"> REPO</a>
                                 </div>
 
                                 <p>behaviours was asdfghj aesrhffgfdsd fsrgwest gWEG WET wetf WTw rfefdsd fetg SEf efWE wefw efewfWE WEFWE
@@ -156,7 +141,7 @@
                         </div>
                     </div>
 
-                    <div class="project-wrapper" data-toggle="modal" data-target="#Modal_MetaBalls">
+                    <div class="project-wrapper" data-toggle="modal" data-target="#Modal_MetaBalls" id="Metaballs">
                         <div class="project">
                             <div class="summary">
                                 <div class="gif">
@@ -164,9 +149,9 @@
                                         <img src="../assets/Demo_Reel_Gifs/MetaballsTLDR.gif" width="100%" height="100%" style="position:absolute" allowFullScreen>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class ="col-lg-10 col-md-10 col-sm-10 summarytitle">Metaballs</div>
-                                    <a href="https://github.com/Aman-Sachan-asach/Metaballs-using-marching-cubes" class="col-lg-2 col-md-2 col-sm-2 repo"></a>
+                                <div class="row" style="margin:4px 0px">
+                                    <div class ="col-lg-8 col-md-8 col-sm-8 summarytitle">Metaballs</div>
+                                    <a href="https://github.com/Aman-Sachan-asach/Metaballs-using-marching-cubes" class="col-lg-4 col-md-4 col-sm-4 repo"> REPO</a>
                                 </div>
 
                                 <p>behaviours was asdfghj aesrhffgfdsd fsrgwest gWEG WET wetf WTw rfefdsd fetg SEf efWE wefw efewfWE WEFWE
@@ -175,7 +160,7 @@
                         </div>
                     </div>
 
-                    <div class="project-wrapper" data-toggle="modal" data-target="#Modal_MayaLSystems">
+                    <div class="project-wrapper" data-toggle="modal" data-target="#Modal_MayaLSystems"  id="MayaLSystem">
                         <div class="project">
                             <div class="summary">
                                 <div class="gif">
@@ -184,9 +169,9 @@
                                     </div>
                                 </div>
                                 
-                                <div class="row">
-                                    <div class ="col-lg-10 col-md-10 col-sm-10 summarytitle">Maya Plugin: L-System</div>
-                                    <a href="https://github.com/Aman-Sachan-asach/ArtOfCollisions" class="col-lg-2 col-md-2 col-sm-2 repo"></a>
+                                <div class="row" style="margin:4px 0px">
+                                    <div class ="col-lg-8 col-md-8 col-sm-8 summarytitle">Maya Plugin: L-System</div>
+                                    <a href="https://github.com/Aman-Sachan-asach/ArtOfCollisions" class="col-lg-4 col-md-4 col-sm-4 repo"> REPO</a>
                                 </div>
 
                                 <p>behaviours was asdfghj aesrhffgfdsd fsrgwest gWEG WET wetf WTw rfefdsd fetg SEf efWE wefw efewfWE WEFWE
@@ -195,7 +180,7 @@
                         </div>
                     </div>
 
-                    <div class="project-wrapper" data-toggle="modal" data-target="#Modal_Behaviours">
+                    <div class="project-wrapper" data-toggle="modal" data-target="#Modal_Behaviours"  id="Behaviours">
                         <div class="project">
                             <div class="summary">
                                 <div class="gif">
@@ -203,9 +188,9 @@
                                         <img src="../assets/Demo_Reel_Gifs/Behaviours_TLDR.gif" width="100%" height="100%" style="position:absolute" allowFullScreen>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class ="col-lg-10 col-md-10 col-sm-10 summarytitle">Behaviours</div>
-                                    <a href="https://vimeo.com/amansachan" class="col-lg-2 col-md-2 col-sm-2 repo"></a>
+                                <div class="row" style="margin:4px 0px">
+                                    <div class ="col-lg-8 col-md-8 col-sm-8 summarytitle">Behaviours</div>
+                                    <a href="https://vimeo.com/amansachan" class="col-lg-4 col-md-4 col-sm-4 repo"> REPO</a>
                                 </div>
 
                                 <p>behaviours was asdfghj aesrhffgfdsd fsrgwest gWEG WET wetf WTw rfefdsd fetg SEf efWE wefw efewfWE WEFWE
@@ -1101,14 +1086,14 @@
     <!-- DropDown Menu javascript -->
     <script type="text/javascript">
         function DropDown(el) {
-            this.dd_code = el;
+            this.dd_projects = el;
             this.initEvents();
         }
         DropDown.prototype = {
             initEvents : function() {
                 var obj = this;
 
-                obj.dd_code.on('click', function(event){
+                obj.dd_projects.on('click', function(event){
                     $(this).toggleClass('active');
                     event.stopPropagation();
                 }); 
@@ -1117,35 +1102,7 @@
 
         $(function() {
 
-            var dd_code = new DropDown( $('#dd_code') );
-
-            $(document).click(function() {
-                // all dropdowns
-                $('.wrapper-dropdown-5').removeClass('active');
-            });
-
-        });
-    </script>
-
-    <script type="text/javascript">
-        function DropDown(el) {
-            this.dd_miscellaneous = el;
-            this.initEvents();
-        }
-        DropDown.prototype = {
-            initEvents : function() {
-                var obj = this;
-
-                obj.dd_miscellaneous.on('click', function(event){
-                    $(this).toggleClass('active');
-                    event.stopPropagation();
-                }); 
-            }
-        }
-
-        $(function() {
-
-            var dd_miscellaneous = new DropDown( $('#dd_miscellaneous') );
+            var dd_projects = new DropDown( $('#dd_projects') );
 
             $(document).click(function() {
                 // all dropdowns

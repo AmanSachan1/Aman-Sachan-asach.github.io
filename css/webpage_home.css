@@ -169,7 +169,7 @@ header .intro-text .name {
   border-color: #007fff;
 }
 
-@media (max-width: 820px) {
+@media (max-width: 850px) {
   .navbar-header {
       float: none;
   }
