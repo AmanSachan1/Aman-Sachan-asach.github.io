@@ -363,6 +363,14 @@ div#maincontent {
 //////////////////////////////////////////////////////////////////////////////////////
 */
 
+.equation {
+  font-size: 1.7em;
+}
+
+.equation * {
+  font-size: inherit
+}
+
 /*
 ///////////////////////// ScrollBar //////////////////////////////////
 */
@@ -387,11 +395,23 @@ div#maincontent {
 }
 
 /*
+///////////////////////// Single Images //////////////////////////////////
+*/
+
+.singleImage {
+    text-align: center;
+    margin: 0px auto;
+    width: 40vw;
+}
+
+/*
 ///////////////////////// Modal Content //////////////////////////////////
 */
 
 .modal-content{
   background-color: rgb(37, 37, 37);
+  width: 90%;
+  margin: auto;
 }
 
 .modal-dialog{
@@ -402,6 +422,7 @@ div#maincontent {
   text-align: center; !important
   display: inline-block;
   border: none;
+  padding: 15px 0px 5px 0px;
 }
 
 .modal-title{
@@ -410,7 +431,7 @@ div#maincontent {
   text-align: center;
   margin: 0px auto;
   padding: 0px;
-  font-size: 38px
+  font-size: 42px
 }
 
 .modal .close { /* select the close button */
@@ -441,20 +462,32 @@ div#maincontent {
   border-bottom: 1px solid #e5e5e5;
 }
 
-.modal-body p{
+.modal-body{
   width: 85%;
+  margin: 0px auto;
+}
+
+.modal-body p{  
   margin: 0px auto;
   color: #fff;
 }
 
+.technologies p{
+  text-align: center;
+  color: rgb(88, 188, 0);
+  font-size: 20px;
+}
+
 .modal-body h2,h3,h4,h5,h6{
-  width: 85%;
   font-family: 'Roboto Condensed', sans-serif;
   margin: 0px auto;
-  padding: 5px;
   text-align: center;
   padding: 0px 0px 0.5% 3%;
   color: #fff;
+}
+
+.modal-body h2{
+  padding: 5px 0px;
 }
 
 /*
@@ -486,9 +519,7 @@ div#maincontent {
 
 .vid {
   margin: 0px 9px;
-  padding:c 1px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
-  background: rgba(0, 0, 0, 1);
+  background: rgb(37, 37, 37);
   image-rendering: -moz-crisp-edges;
   /* Firefox */
   image-rendering: -o-crisp-edges;
@@ -499,18 +530,21 @@ div#maincontent {
   -ms-interpolation-mode: nearest-neighbor;
   /* IE (non-standard property) */
 }
-.vid:hover {
+
+.vid .summary {
+  background-color: #1b1b1b;
+  width: 94%;
+  padding: 15px;
+  margin: 0px auto;
+}
+
+.vid .summary:hover {
   cursor: pointer;
   outline-color: #007fff;
   outline-style: solid;
   outline-width: 1px;
 }
 
-.vid .summary {
-  background-color: #1b1b1b;
-  width: 100%;
-  padding: 15px;
-}
 .vid .summary .summarytitle {
   float: left;
   font-weight: 400;
@@ -544,6 +578,31 @@ div#maincontent {
   color: #fff;
 }
 
+/*
+//////////////////////////// live demo //////////////////////////////
+*/
+.demo {
+    padding: 0px;
+    margin: 0px;
+    -o-transition:.25s;
+    -ms-transition:.25s;
+    -moz-transition:.25s;
+    -webkit-transition:.25s;
+    transition: .25s;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    font-size: 22px;
+}
+
+.demo a{
+	color: #58bc00;
+	text-decoration: none;
+}
+
+.demo:hover {
+    text-shadow: 0px 0px 5px #58bc00;
+}
 
 /*
 ///////////////////////// Image Slider //////////////////////////////////
@@ -561,6 +620,7 @@ div#maincontent {
   */
 }
 
+.slidebackground,
 .slidebackgroundSif,
 .slidebackgroundSword,
 .slidebackgroundArtorias{
@@ -568,41 +628,32 @@ div#maincontent {
   position: relative;
   padding: 0px 0px;
   margin: 0px auto;
-  height: 70vh;
+  height: 40vh;
+}
+
+@media (min-width: 600px) {
+  .slidebackground {
+    height: 45vh;
+  }
+}
+@media (min-width: 768px) {
+  .slidebackground {
+    height: 50vh;
+  }
+}
+@media (min-width: 992px) {
+  .slidebackground{
+    height: 60vh;
+  }
+}
+@media (min-width: 1200px) {
+  .slidebackground{
+    height: 65vh;
+  }
 }
 
 .slidewrapper{
   margin: 0px auto;
-}
-@media (min-width: 768px) {
-  .slidewrapper {
-    width: 90%;
-  }
-  .slidebackgroundSif,
-  .slidebackgroundSword,
-  .slidebackgroundArtorias{
-    width: 80vw;
-  }
-}
-@media (min-width: 992px) {
-  .slidewrapper {
-    width: 85%;
-  }
-  .slidebackgroundSif,
-  .slidebackgroundSword,
-  .slidebackgroundArtorias{
-    width: 70vw;
-  }
-}
-@media (min-width: 1200px) {
-  .slidewrapper {
-    width: 85%;
-  }
-  .slidebackgroundSif,
-  .slidebackgroundSword,
-  .slidebackgroundArtorias{
-    width: 70vw;
-  }
 }
 
 .slides {
@@ -657,6 +708,7 @@ div#maincontent {
     opacity: 0;
     z-index: 9;
     cursor: pointer;
+    margin: 0px;
 
     transition: opacity .2s;
 
@@ -664,10 +716,31 @@ div#maincontent {
     font-size: 100pt;
     text-align: center;
     vertical-align: middle;
-    line-height: 70vh;
+    line-height: 40vh;
     font-family: "Varela Round", sans-serif;
     background-color: rgba(0,0,0,0);
     text-shadow: 0px 0px 5px #007fff;
+}
+
+@media (min-width: 600px) {
+  .nav label {
+    line-height: 45vh;
+  }
+}
+@media (min-width: 768px) {
+  .nav label {
+    line-height: 50vh;
+  }
+}
+@media (min-width: 992px) {
+  .nav label {
+    line-height: 60vh;
+  }
+}
+@media (min-width: 1200px) {
+  .nav label {
+    line-height: 65vh;
+  }
 }
 
 .slide:hover + .nav label { opacity: 0.5; }
@@ -955,20 +1028,35 @@ a {
 
 .project-wrapper {
   width: 100%;
+  margin: auto 0px;
+}
+
+@media (min-width: 400px) {
+  .project-wrapper {
+    height: 70vh;
+  }
+}
+@media (min-width: 600px) {
+  .project-wrapper {
+    height: 65vh;
+  }
 }
 @media (min-width: 768px) {
   .project-wrapper {
     width: 50%;
+    height: 78vh;
   }
 }
 @media (min-width: 992px) {
   .project-wrapper {
     width: 33%;
+    height: 67.5vh;
   }
 }
 @media (min-width: 1200px) {
   .project-wrapper {
     width: 33.3333%;
+    height: 67vh;
   }
 }
 .project-wrapper {
@@ -1050,6 +1138,13 @@ a {
 .project .summary p {
   font-weight: 400;
   font-size: 13px;
+  color: #fff;
+}
+
+.project .summary .technologies p{
+  text-align: center;
+  font-weight: 600;
+  font-size: 16px;
   color: #fff;
 }
 
@@ -1172,8 +1267,9 @@ a {
 }
 
 /*
-///////////////////////// Double Roll Button //////////////////////////////////
+///////////////////////// Button Base //////////////////////////////////
 */
+
 .button_base {
     margin: 0;
     border: 0;
@@ -1181,11 +1277,13 @@ a {
     position: relative;
     top: 50%;
     left: 50%;
-    margin-top: -25px;
-    margin-left: -100px;
-    width: 200px;
-    height: 50px;
+    margin-left: -58px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 120px;
+    height: 30px;
     text-align: center;
+    vertical-align: middle;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -1193,11 +1291,78 @@ a {
     cursor: default;
 }
 
+.bigButton {
+  width: 190px;
+}
+
 .button_base:hover {
     cursor: pointer;
 }
 
+/*
+///////////////////////// Skewed Slide Button //////////////////////////////////
+*/
+
+.button_skewed_slide_in {
+    overflow: hidden;}
+
+.button_skewed_slide_in div {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 30px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 0px;
+}
+
+.button_skewed_slide_in div:nth-child(1) {
+    color: #58bc00;
+    background-color: rgb(0, 85, 179);
+}
+
+.button_skewed_slide_in div:nth-child(2) {
+    background-color: #007fff;
+    width: 150px;
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    transform: translate(-250px, 0px) skewX(-30deg);
+    -webkit-transform: translate(-250px, 0px) skewX(-30deg);
+    -moz-transform: translate(-250px, 0px) skewX(-30deg);
+}
+
+.button_skewed_slide_in div:nth-child(3) {
+    color: #58bc00;
+    left: -200px;
+    transition: left 0.2s ease;
+    -webkit-transition: left 0.2s ease;
+    -moz-transition: left 0.2s ease;
+}
+
+.button_skewed_slide_in:hover div:nth-child(2) {
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transform: translate(-15px, 0px) skewX(-30deg);
+    -webkit-transform: translate(-15px, 0px) skewX(-30deg);
+    -moz-transform: translate(-15px, 0px) skewX(-30deg);
+}
+
+.button_skewed_slide_in:hover div:nth-child(3) {
+    left: 0px;
+    transition: left 0.30000000000000004s ease;
+    -webkit-transition: left 0.30000000000000004s ease;
+    -moz-transition: left 0.30000000000000004s ease;
+}
+
+/*
+///////////////////////// Double Roll Button //////////////////////////////////
+*/
+
 .button_3D_double_roll {
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     perspective: 500px;
     -webkit-perspective: 500px;
     -moz-perspective: 500px;
@@ -1208,7 +1373,7 @@ a {
 .button_3D_double_roll div {
     text-align: center;
     padding: 10px;
-    border: #007fff solid 1px;
+    border: #007fff solid 2px;
     pointer-events: none;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -1216,8 +1381,8 @@ a {
 }
 
 .button_3D_double_roll div:nth-child(1) {
-    color: #000000;
-    background-color: #ffffff;
+    color: #fff;
+    background-color: #545454;
     z-index: 0;
     width: 100%;
     height: 50px;
@@ -1254,8 +1419,8 @@ a {
 }
 
 .button_3D_double_roll div:nth-child(3) {
-    color: #000000;
-    background-color: #ffffff;
+    color: #fff;
+    background-color: #545454;
     z-index: 0;
     width: 100%;
     height: 50px;
@@ -1335,21 +1500,46 @@ a {
 ///////////////////////// CUSTOM BULLET TYPE //////////////////////////////////
 */
         
-.custom-bullet li {
+.custom-bullet1 li {
     display: block;
+    margin: auto;
 }
 
-.custom-bullet li:before
+.custom-bullet1 li p{
+}
+
+.custom-bullet1 li:before
 {
     /*Using a Bootstrap glyphicon as the bullet point*/
+    color: #fff;
     content: "\e092";
     font-family: 'Glyphicons Halflings';
     font-size: 9px;
     float: left;
+    margin-right: 2%;
     margin-top: 4px;
-    margin-left: -17px;
  }
 
+
+.custom-bullet2 li {
+    display: block;
+    margin: auto;
+}
+
+.custom-bullet2 li p{
+}
+
+.custom-bullet2 li:before
+{
+    /*Using a Bootstrap glyphicon as the bullet point*/
+    color: #fff;
+    content: "\e092";
+    font-family: 'Glyphicons Halflings';
+    font-size: 14px;
+    float: left;
+    margin-left: 7.5%;
+    margin-top: 4px;
+ }
 
 /*
 ///////////////////////// SOCIAL ICONS //////////////////////////////////
@@ -1370,7 +1560,7 @@ a {
 }
 .project-social-icons .social-icons li {
     vertical-align: top;
-    display: inline;
+    display: inline-block;
 }
 .project-social-icons .social-icons a {
     padding: 0px;
@@ -1413,7 +1603,6 @@ ul.social-icons {
 }
 .fa-linkedin-square:hover {
     color: #0073a4;
-    text-shadow: 0px 0px 5px #0073a4;
 }
 
 .fa-github-square {
@@ -1428,7 +1617,6 @@ ul.social-icons {
 }
 .fa-github-square:hover {
     color: #6e5494;
-    text-shadow: 0px 0px 5px #6e5494;
 }
 
 .fa-envelope {
@@ -1443,7 +1631,6 @@ ul.social-icons {
 }
 .fa-envelope:hover {
     color: #007fff;
-    text-shadow: 0px 0px 5px #007fff;
 }
 
 .fa-vimeo-square {
@@ -1458,7 +1645,6 @@ ul.social-icons {
 }
 .fa-vimeo-square:hover {
     color: #1ab7ea;
-    text-shadow: 0px 0px 5px #1ab7ea;
 }
 
 .fa-youtube-square {
@@ -1472,6 +1658,5 @@ ul.social-icons {
     color: #d3d3d3;
 }
 .fa-youtube-square:hover {
-    color: #d13838;
-    text-shadow: 0px 0px 5px #d13838;
+    color: #cd201f;
 }
