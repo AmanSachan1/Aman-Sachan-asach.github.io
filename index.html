@@ -97,175 +97,24 @@
     <!-- Header -->
     <header>
         <div class="container" id="maincontent" tabindex="-1" style="display:flex;justify-content:center;align-items:center;">
+			
+			<div class="infrontOfContainer"></div>
+				
 			<!-- Load the Paper.js library -->
 			<script type="text/javascript" src="scripts/voronoi/paper-full.js"></script>
 			<!-- create a canvas -->
 			<canvas id="voronoiCanvas" hidpi="off" resize></canvas>
-
-			<!-- Load external PaperScript and associate it with myCanvas  -->
-			<script type="text/javascript" src="scripts/voronoi/rhill-voronoi-core.js"></script>
-			<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/seedrandom/2.4.3/seedrandom.min.js"></script> <!-- Seedable RNG -->
 			<script type="text/paperscript" canvas="voronoiCanvas">
-				Math.seedrandom('hello.');
-				var voronoi =  new Voronoi();
-				var sites = generateBeeHivePoints(view.size / 150, true);
-				var bbox, diagram;
-				var oldSize = view.size;
-				var mousePos = view.center;
-				var sitecolors = generateColors();
-				
-				onResize();
-
-				function onMouseMove(event) 
-				{
-					mousePos = event.point;
-					sites[sites.length - 1] = event.point;
-					renderDiagram();
-				}
-
-				function renderDiagram() 
-				{
-					project.activeLayer.children = [];
-					var diagram = voronoi.compute(sites, bbox);
-					if (diagram) 
-					{
-						var background = new Path.Rectangle(view.bounds);
-						background.fillColor = '#000';
-						for (var i = 0, l = sites.length; i < l; i++) 
-						{
-							var cell = diagram.cells[sites[i].voronoiId];
-							if (cell) 
-							{
-								var halfedges = cell.halfedges,
-									length = halfedges.length;
-								if (length > 2) 
-								{
-									var points = [];					
-									for (var j = 0; j < length; j++) 
-									{
-										v = halfedges[j].getEndpoint();
-										points.push(new Point(v));						
-									}					
-									createPath(points, sitecolors[i], sites[i]);
-								}
-							}
-						}
-					}
-				}
-
-				function removeSmallBits(path) 
-				{
-					var averageLength = path.length / path.segments.length;
-					var min = path.length / 50;
-					for(var i = path.segments.length - 1; i >= 0; i--) 
-					{
-						var segment = path.segments[i];
-						var cur = segment.point;
-						var nextSegment = segment.next;
-						var next = nextSegment.point + nextSegment.handleIn;
-						if (cur.getDistance(next) < min) 
-						{
-							segment.remove();
-						}
-					}
-				}
-
-				function pickColor(t)
-				{
-					if(t<0.2)
-					{
-						return '#6ED6BC';//'#69BAD6';
-					}
-					else if(t<0.4)
-					{
-						return '#29A3B2';//'#2576B2';
-					}
-					else if(t<0.6)
-					{
-						return '#046BBE';//'#004CBE';
-					}
-					else if(t<0.8)
-					{
-						return '#3054D5';//'#2B52D5';
-					}
-					else
-					{
-						return '#5B4BCB';//'#474ECB';
-					}
-				}
-
-				function generateColors()
-				{
-					var t = [];
-					for(var i = 0; i < sites.length; i++)
-					{
-						t.push(pickColor(Math.random()));
-					}
-					return t;
-				}
-
-				function generateBeeHivePoints(size, loose) 
-				{
-					var points = [];
-					var col = view.size / size;
-					for(var i = -1; i < size.width + 1; i++) 
-					{
-						for(var j = -1; j < size.height + 1; j++) 
-						{
-							var point = new Point(i, j) / new Point(size) * view.size + col / 2;
-							if(j % 2)
-								point += new Point(col.width / 2, 0);
-							if(loose)
-								point += (col / 4) * Point.random() - col / 4;
-							points.push(point);
-						}
-					}
-					
-					return points;
-				}
-
-				function createPath(points, t, center) 
-				{
-					var path = new Path();
-					path.fillColor = t;
-					path.closed = true;
-
-					for (var i = 0, l = points.length; i < l; i++) 
-					{
-						var point = points[i];
-						var next = points[(i + 1) == points.length ? 0 : i + 1];
-						var vector = (next - point) / 2;
-						path.add({
-							point: point + vector,
-							handleIn: -vector,
-							handleOut: vector
-						});
-					}
-					path.scale(0.95);
-					removeSmallBits(path);
-					return path;
-				}
-
-				function onResize() 
-				{
-					var margin = 0;
-					bbox = {
-						xl: margin,
-						xr: view.bounds.width - margin,
-						yt: margin,
-						yb: view.bounds.height - margin
-					};
-					var sites = generateBeeHivePoints(view.size / 150, true);
-					for (var i = 0, l = sites.length; i < l; i++) 
-					{
-						sites[i] = sites[i] * view.size / oldSize;
-					}
-					oldSize = view.size;
-					renderDiagram();
-				}
+				var c = document.getElementById("voronoiCanvas");
+				var ctx = c.getContext("2d");
+				var img = new Image();
+				img.onload = function() {
+					ctx.drawImage(img, 0, 0);
+				};
+				img.src = 'assets/images/voronoi/voronoiFullScreen.png';
 			</script>
-			
-            <div class="row">
+
+            <div class="row" style="z-index: 2">
                 <div class="col-lg-12 col-md-12 col-sm-12">
                     <div class="intro-text center-block">
 
@@ -312,7 +161,8 @@
 
                     </div>
                 </div>
-            </div>
+			</div>
+
         </div>
     </header>
 
@@ -360,7 +210,7 @@
 					<hr>
 				</div>
             </div>
-            <div class="row">
+            <div class="row fix">
 				<div class = "projects-wrapper clearfix">
 					<div class="project-wrapper" data-toggle="modal" data-target="#Modal_PathTracer">
 						<div class="project">
@@ -379,7 +229,7 @@
 
 								<p>&nbsp; Monte Carlo Path tracing is a rendering technique that aims to represent global illumination as accurately as possible with respect to reality. When combined with physically accurate models of surfaces, accurate models light sources, and optically-correct cameras, path tracing can produce still images that are indistinguishable from photographs.</p>
 								<br>
-								
+
 							</div>
 						</div>
 					</div>
@@ -571,12 +421,6 @@
 				<p>&emsp; Monte Carlo Path tracing is a rendering technique that aims to represent global illumination as accurately as possible with respect to reality. The algorithm does this by approximating the integral over all the illuminance arriving at a point in the scene. A portion of this illuminance  will go towards the viewpoint camera, and this portion of illuminance is determined by a surface reflectance function (BRDF). This integration procedure is repeated for every pixel in the output image. When combined with physically accurate models of surfaces, accurate models light sources, and optically-correct cameras, path tracing can produce still images that are indistinguishable from photographs.</p>
 				<br>
 
-				<p>&emsp; Path tracing naturally simulates many effects that have to be added as special cases for other methods (such as ray tracing or scanline rendering); these effects include soft shadows, depth of field, motion blur, caustics, ambient occlusion, and indirect lighting, etc.</p>
-				<br>
-
-				<p>&emsp; Due to its accuracy and unbiased nature, path tracing is used to generate reference images when testing the quality of other rendering algorithms. In order to get high quality images from path tracing, a large number of rays must be traced to avoid visible noisy artifacts.</p>
-				<br>
-
                 <div class="clearfix">
                     <div class="vid-wrapper" style="float: none">
                         <div class="vid">
@@ -593,74 +437,615 @@
                     </div>
                 </div>
 
-                <h2> Heading 1</h2>
+				<p>&emsp; Path tracing naturally simulates many effects that have to be added as special cases for other methods (such as ray tracing or scanline rendering); these effects include soft shadows, depth of field, motion blur, caustics, ambient occlusion, and indirect lighting, etc.</p>
+				<br>
 
-                <div class="slidewrapper">
-                    <div class="row backgroundPrimary">
+				<p>&emsp; Due to its accuracy and unbiased nature, path tracing is used to generate reference images when testing the quality of other rendering algorithms. In order to get high quality images from path tracing, a large number of rays must be traced to avoid visible noisy artifacts.</p>
+				<br>
 
-                        <div class="slidebackground">
-                            <ul class="slides">
-                                <input type="radio" name="PathTracer" id="img-PathTracer-1" checked />
-                                <li class="slide-container">
-                                    <div class="slide"  align="middle">
-                                        <img src="assets/images/miscellaneous_webpage/ArtoriasGrave/Artorias_Grave_Render1.jpg" />
-                                    </div>
-                                    <div class="nav">
-                                        <label for="img-PathTracer-2" class="prev">&#x2039;</label>
-                                        <label for="img-PathTracer-2" class="next">&#x203a;</label>
-                                    </div>
-                                </li>
+                <h2> Features: </h2>
+				
+				<!--<h3> Photon Mapping </h3><h3> Kd Tree Accelleration </h3>-->
+				<div class="row" style="align-content: middle">
+					
+					<div class="col-sm-12 col-md-6 col-lg-6 hyperlink">
+						<h3> <a href="#pathtracer_volumetric"> Volumetric Rendering </a> </h3>
+					</div>
+					<div class="col-sm-12 col-md-6 col-lg-6 hyperlink">
+						<h3> <a href="#pathtracer_BVH""> BVH Acceleration Structure </a> </h3>
+					</div>
 
-                                <input type="radio" name="PathTracer" id="img-PathTracer-2" />
-                                <li class="slide-container">
-                                    <div class="slide" align="middle">
-                                        <img src="assets/images/miscellaneous_webpage/ArtoriasGrave/Artorias_Grave_Render2.jpg" />
-                                    </div>
-                                    <div class="nav">
-                                        <label for="img-PathTracer-1" class="prev">&#x2039;</label>
-                                        <label for="img-PathTracer-1" class="next">&#x203a;</label>
-                                    </div>
-                                </li>
+					<div class="col-sm-12 col-md-6 col-lg-6 hyperlink">
+						<h3> <a href="#pathtracer_lights"> Various Light Sources </a> </h3>
+					</div>
+					<div class="col-sm-12 col-md-6 col-lg-6 hyperlink">
+						<h3> <a href="#pathtracer_implicitSurfaces"> Complex Implicit Surfaces </a> </h3>
+					</div>
 
-                                <li class="nav-dots-Artorias">
-                                  <label for="img-PathTracer-1" class="nav-dot" id="img-PathTracer-dot-1"></label>
-                                  <label for="img-PathTracer-2" class="nav-dot" id="img-PathTracer-dot-2"></label>
-                                </li>
-                            </ul>
-                        </div>
+					<div class="col-sm-12 col-md-6 col-lg-6 hyperlink">
+						<h3> <a href="#pathtracer_thinLensCam"> Thin Lens Camera </a> </h3>
+					</div>
+					<div class="col-sm-12 col-md-6 col-lg-6 hyperlink">
+						<h3> <a href="#pathtracer_BSDFs"> Various BSDF's </a> </h3>
+					</div>
 
-                    </div>
-                </div>
+					<div class="col-sm-12 col-md-6 col-lg-6 hyperlink">
+						<h3> <a href="#pathtracer_fullLighting"> Full Lighting Integrator </a> </h3>
+					</div>
+					<div class="col-sm-12 col-md-6 col-lg-6 hyperlink">
+						<h3> <a href="#pathtracer_directLighting"> Direct Lighting Integrator </a> </h3>
+					</div>
 
-                <h2> Heading 2 </h2>
+					<div class="col-sm-12 col-md-6 col-lg-6 hyperlink">
+						<h3> <a href="#pathtracer_naive"> Naive Integrator </a> </h3>
+					</div>
+					<div class="col-sm-12 col-md-6 col-lg-6 hyperlink">
+						<h3> <a href="#pathtracer_heuristics"> Power &amp; Balance Heuristics </a> </h3>
+					</div>
 
-                <div class = "clearfix">
-                    <div class="vid-wrapper" style="float: none">
-                        <div class="vid">
-                            <div class="summary">
-                                <div class="gif">
-                                    <div style="width:100%;position:relative;">
-                                        <div class="videoWrapper">
-                                            <iframe width="854" height="480" src="https://www.youtube.com/embed/bOm_olR1RyY" frameborder="0" allowfullscreen></iframe>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+					<div class="col-sm-12 col-md-6 col-lg-6 hyperlink">
+						<h3> <a href="#pathtracer_russianRoullete"> Russian Roullete Termination </a> </h3>
+					</div>
+					<div class="col-sm-12 col-md-6 col-lg-6 hyperlink">
+						<h3> <a href="#pathtracer_primitevesAndSampling"> Primitive Handling &amp; Sampling </a> </h3>
+					</div>
+				</div>
+				
+				<br>
+				<h2 id="pathtracer_volumetric"> Volumetric Rendering </h2>
 
-                <p>&emsp; asfdghcgxd wesf adkg asekf UWHEFwh fwf wigwi wif ifuwge fkfgwi ifg wigfwi fgwjegei efgw pefgwef woiwe f
-                ef sefg wefgwe 
-                e fwlegf ewifgw piehg woehf w[ef
-                wef weiufg wefih wefo</p>
-                <br>
+				<div class="slidewrapper">
+					<div class="row backgroundPrimary">
 
-                <p>&emsp; asfdghcgxd wesf adkg asekf UWHEFwh fwf wigwi wif ifuwge fkfgwi ifg wigfwi fgwjegei efgw pefgwef woiwe f
-                ef sefg wefgwe 
-                e fwlegf ewifgw piehg woehf w[ef
-                wef weiufg wefih wefo</p>
-                <br>
+						<div class="slidebackground">
+							<ul class="slides">
+								<input type="radio" name="PathTracer" id="img-PathTracer-1" checked />
+								<li class="slide-container">
+									<div class="slide"  align="middle">
+										<img src="assets/images/miscellaneous_webpage/ArtoriasGrave/Artorias_Grave_Render1.jpg" />
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-2" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-2" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<input type="radio" name="PathTracer" id="img-PathTracer-2" />
+								<li class="slide-container">
+									<div class="slide" align="middle">
+										<img src="assets/images/miscellaneous_webpage/ArtoriasGrave/Artorias_Grave_Render2.jpg" />
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-1" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-1" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<li class="nav-dots-Artorias">
+									<label for="img-PathTracer-1" class="nav-dot" id="img-PathTracer-dot-1"></label>
+									<label for="img-PathTracer-2" class="nav-dot" id="img-PathTracer-dot-2"></label>
+								</li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+
+				<br>
+				<p>&emsp; asfdghcgxd wesf adkg asekf UWHEFwh fwf wigwi wif ifuwge fkfgwi ifg wigfwi fgwjegei efgw pefgwef woiwe f
+				ef sefg wefgwe 
+				e fwlegf ewifgw piehg woehf w[ef
+				wef weiufg wefih wefo</p>
+				<br>
+
+				<h2 id="pathtracer_BVH"> BVH Acceleration Structure </h2>
+
+				<div class="slidewrapper">
+					<div class="row backgroundPrimary">
+
+						<div class="slidebackground">
+							<ul class="slides">
+								<input type="radio" name="PathTracer" id="img-PathTracer-1" checked />
+								<li class="slide-container">
+									<div class="slide"  align="middle">
+										<img src="assets/images/miscellaneous_webpage/ArtoriasGrave/Artorias_Grave_Render1.jpg" />
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-2" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-2" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<input type="radio" name="PathTracer" id="img-PathTracer-2" />
+								<li class="slide-container">
+									<div class="slide" align="middle">
+										<img src="assets/images/miscellaneous_webpage/ArtoriasGrave/Artorias_Grave_Render2.jpg" />
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-1" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-1" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<li class="nav-dots-Artorias">
+									<label for="img-PathTracer-1" class="nav-dot" id="img-PathTracer-dot-1"></label>
+									<label for="img-PathTracer-2" class="nav-dot" id="img-PathTracer-dot-2"></label>
+								</li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+
+				<br>
+				<p>&emsp; asfdghcgxd wesf adkg asekf UWHEFwh fwf wigwi wif ifuwge fkfgwi ifg wigfwi fgwjegei efgw pefgwef woiwe f
+				ef sefg wefgwe 
+				e fwlegf ewifgw piehg woehf w[ef
+				wef weiufg wefih wefo</p>
+				<br>
+
+				<h2 id="pathtracer_lights"> Various Light Sources </h2>
+
+				<div class="slidewrapper">
+					<div class="row backgroundPrimary">
+
+						<div class="slidebackground">
+							<ul class="slides">
+								<input type="radio" name="PathTracer" id="img-PathTracer-1" checked />
+								<li class="slide-container">
+									<div class="slide"  align="middle">
+										<img src="assets/images/miscellaneous_webpage/ArtoriasGrave/Artorias_Grave_Render1.jpg" />
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-2" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-2" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<input type="radio" name="PathTracer" id="img-PathTracer-2" />
+								<li class="slide-container">
+									<div class="slide" align="middle">
+										<img src="assets/images/miscellaneous_webpage/ArtoriasGrave/Artorias_Grave_Render2.jpg" />
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-1" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-1" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<li class="nav-dots-Artorias">
+									<label for="img-PathTracer-1" class="nav-dot" id="img-PathTracer-dot-1"></label>
+									<label for="img-PathTracer-2" class="nav-dot" id="img-PathTracer-dot-2"></label>
+								</li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+
+				<br>
+				<p>&emsp; asfdghcgxd wesf adkg asekf UWHEFwh fwf wigwi wif ifuwge fkfgwi ifg wigfwi fgwjegei efgw pefgwef woiwe f
+				ef sefg wefgwe 
+				e fwlegf ewifgw piehg woehf w[ef
+				wef weiufg wefih wefo</p>
+				<br>
+
+				<h2 id="pathtracer_implicitSurfaces"> Complex Implicit Surfaces </h2>
+
+				<div class="slidewrapper">
+					<div class="row backgroundPrimary">
+
+						<div class="slidebackground">
+							<ul class="slides">
+								<input type="radio" name="PathTracer" id="img-PathTracer-1" checked />
+								<li class="slide-container">
+									<div class="slide"  align="middle">
+										<img src="assets/images/miscellaneous_webpage/ArtoriasGrave/Artorias_Grave_Render1.jpg" />
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-2" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-2" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<input type="radio" name="PathTracer" id="img-PathTracer-2" />
+								<li class="slide-container">
+									<div class="slide" align="middle">
+										<img src="assets/images/miscellaneous_webpage/ArtoriasGrave/Artorias_Grave_Render2.jpg" />
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-1" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-1" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<li class="nav-dots-Artorias">
+									<label for="img-PathTracer-1" class="nav-dot" id="img-PathTracer-dot-1"></label>
+									<label for="img-PathTracer-2" class="nav-dot" id="img-PathTracer-dot-2"></label>
+								</li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+
+				<br>
+				<p>&emsp; asfdghcgxd wesf adkg asekf UWHEFwh fwf wigwi wif ifuwge fkfgwi ifg wigfwi fgwjegei efgw pefgwef woiwe f
+				ef sefg wefgwe 
+				e fwlegf ewifgw piehg woehf w[ef
+				wef weiufg wefih wefo</p>
+				<br>
+
+				<h2 id="pathtracer_thinLensCam"> Thin Lens Camera </h2>
+
+				<div class="slidewrapper">
+					<div class="row backgroundPrimary">
+
+						<div class="slidebackground">
+							<ul class="slides">
+								<input type="radio" name="PathTracer" id="img-PathTracer-1" checked />
+								<li class="slide-container">
+									<div class="slide"  align="middle">
+										<img src="assets/images/miscellaneous_webpage/ArtoriasGrave/Artorias_Grave_Render1.jpg" />
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-2" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-2" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<input type="radio" name="PathTracer" id="img-PathTracer-2" />
+								<li class="slide-container">
+									<div class="slide" align="middle">
+										<img src="assets/images/miscellaneous_webpage/ArtoriasGrave/Artorias_Grave_Render2.jpg" />
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-1" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-1" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<li class="nav-dots-Artorias">
+									<label for="img-PathTracer-1" class="nav-dot" id="img-PathTracer-dot-1"></label>
+									<label for="img-PathTracer-2" class="nav-dot" id="img-PathTracer-dot-2"></label>
+								</li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+
+				<br>
+				<p>&emsp; asfdghcgxd wesf adkg asekf UWHEFwh fwf wigwi wif ifuwge fkfgwi ifg wigfwi fgwjegei efgw pefgwef woiwe f
+				ef sefg wefgwe 
+				e fwlegf ewifgw piehg woehf w[ef
+				wef weiufg wefih wefo</p>
+				<br>
+
+				<h2 id="pathtracer_BSDFs"> Various BSDF's </h2>
+
+				<div class="slidewrapper">
+					<div class="row backgroundPrimary">
+
+						<div class="slidebackground">
+							<ul class="slides">
+								<input type="radio" name="PathTracer" id="img-PathTracer-1" checked />
+								<li class="slide-container">
+									<div class="slide"  align="middle">
+										<img src="assets/images/miscellaneous_webpage/ArtoriasGrave/Artorias_Grave_Render1.jpg" />
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-2" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-2" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<input type="radio" name="PathTracer" id="img-PathTracer-2" />
+								<li class="slide-container">
+									<div class="slide" align="middle">
+										<img src="assets/images/miscellaneous_webpage/ArtoriasGrave/Artorias_Grave_Render2.jpg" />
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-1" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-1" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<li class="nav-dots-Artorias">
+									<label for="img-PathTracer-1" class="nav-dot" id="img-PathTracer-dot-1"></label>
+									<label for="img-PathTracer-2" class="nav-dot" id="img-PathTracer-dot-2"></label>
+								</li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+
+				<br>
+				<p>&emsp; asfdghcgxd wesf adkg asekf UWHEFwh fwf wigwi wif ifuwge fkfgwi ifg wigfwi fgwjegei efgw pefgwef woiwe f
+				ef sefg wefgwe 
+				e fwlegf ewifgw piehg woehf w[ef
+				wef weiufg wefih wefo</p>
+				<br>
+
+				<h2 id="pathtracer_fullLighting"> Full Lighting Integrator </h2>
+
+				<div class="slidewrapper">
+					<div class="row backgroundPrimary">
+
+						<div class="slidebackground">
+							<ul class="slides">
+								<input type="radio" name="PathTracer" id="img-PathTracer-1" checked />
+								<li class="slide-container">
+									<div class="slide"  align="middle">
+										<img src="assets/images/miscellaneous_webpage/ArtoriasGrave/Artorias_Grave_Render1.jpg" />
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-2" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-2" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<input type="radio" name="PathTracer" id="img-PathTracer-2" />
+								<li class="slide-container">
+									<div class="slide" align="middle">
+										<img src="assets/images/miscellaneous_webpage/ArtoriasGrave/Artorias_Grave_Render2.jpg" />
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-1" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-1" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<li class="nav-dots-Artorias">
+									<label for="img-PathTracer-1" class="nav-dot" id="img-PathTracer-dot-1"></label>
+									<label for="img-PathTracer-2" class="nav-dot" id="img-PathTracer-dot-2"></label>
+								</li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+
+				<br>
+				<p>&emsp; asfdghcgxd wesf adkg asekf UWHEFwh fwf wigwi wif ifuwge fkfgwi ifg wigfwi fgwjegei efgw pefgwef woiwe f
+				ef sefg wefgwe 
+				e fwlegf ewifgw piehg woehf w[ef
+				wef weiufg wefih wefo</p>
+				<br>
+
+				<h2 id="pathtracer_directLighting"> Direct Lighting Integrator </h2>
+
+				<div class="slidewrapper">
+					<div class="row backgroundPrimary">
+
+						<div class="slidebackground">
+							<ul class="slides">
+								<input type="radio" name="PathTracer" id="img-PathTracer-1" checked />
+								<li class="slide-container">
+									<div class="slide"  align="middle">
+										<img src="assets/images/miscellaneous_webpage/ArtoriasGrave/Artorias_Grave_Render1.jpg" />
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-2" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-2" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<input type="radio" name="PathTracer" id="img-PathTracer-2" />
+								<li class="slide-container">
+									<div class="slide" align="middle">
+										<img src="assets/images/miscellaneous_webpage/ArtoriasGrave/Artorias_Grave_Render2.jpg" />
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-1" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-1" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<li class="nav-dots-Artorias">
+									<label for="img-PathTracer-1" class="nav-dot" id="img-PathTracer-dot-1"></label>
+									<label for="img-PathTracer-2" class="nav-dot" id="img-PathTracer-dot-2"></label>
+								</li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+
+				<br>
+				<p>&emsp; asfdghcgxd wesf adkg asekf UWHEFwh fwf wigwi wif ifuwge fkfgwi ifg wigfwi fgwjegei efgw pefgwef woiwe f
+				ef sefg wefgwe 
+				e fwlegf ewifgw piehg woehf w[ef
+				wef weiufg wefih wefo</p>
+				<br>
+
+				<h2 id="pathtracer_naive"> Naive Integrator </h2>
+
+				<div class="slidewrapper">
+					<div class="row backgroundPrimary">
+
+						<div class="slidebackground">
+							<ul class="slides">
+								<input type="radio" name="PathTracer" id="img-PathTracer-1" checked />
+								<li class="slide-container">
+									<div class="slide"  align="middle">
+										<img src="assets/images/miscellaneous_webpage/ArtoriasGrave/Artorias_Grave_Render1.jpg" />
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-2" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-2" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<input type="radio" name="PathTracer" id="img-PathTracer-2" />
+								<li class="slide-container">
+									<div class="slide" align="middle">
+										<img src="assets/images/miscellaneous_webpage/ArtoriasGrave/Artorias_Grave_Render2.jpg" />
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-1" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-1" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<li class="nav-dots-Artorias">
+									<label for="img-PathTracer-1" class="nav-dot" id="img-PathTracer-dot-1"></label>
+									<label for="img-PathTracer-2" class="nav-dot" id="img-PathTracer-dot-2"></label>
+								</li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+
+				<br>
+				<p>&emsp; asfdghcgxd wesf adkg asekf UWHEFwh fwf wigwi wif ifuwge fkfgwi ifg wigfwi fgwjegei efgw pefgwef woiwe f
+				ef sefg wefgwe 
+				e fwlegf ewifgw piehg woehf w[ef
+				wef weiufg wefih wefo</p>
+				<br>
+
+				<h2 id="pathtracer_heuristics"> Power &amp; Balance Heuristics </h2>
+
+				<div class="slidewrapper">
+					<div class="row backgroundPrimary">
+
+						<div class="slidebackground">
+							<ul class="slides">
+								<input type="radio" name="PathTracer" id="img-PathTracer-1" checked />
+								<li class="slide-container">
+									<div class="slide"  align="middle">
+										<img src="assets/images/miscellaneous_webpage/ArtoriasGrave/Artorias_Grave_Render1.jpg" />
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-2" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-2" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<input type="radio" name="PathTracer" id="img-PathTracer-2" />
+								<li class="slide-container">
+									<div class="slide" align="middle">
+										<img src="assets/images/miscellaneous_webpage/ArtoriasGrave/Artorias_Grave_Render2.jpg" />
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-1" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-1" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<li class="nav-dots-Artorias">
+									<label for="img-PathTracer-1" class="nav-dot" id="img-PathTracer-dot-1"></label>
+									<label for="img-PathTracer-2" class="nav-dot" id="img-PathTracer-dot-2"></label>
+								</li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+
+				<br>
+				<p>&emsp; asfdghcgxd wesf adkg asekf UWHEFwh fwf wigwi wif ifuwge fkfgwi ifg wigfwi fgwjegei efgw pefgwef woiwe f
+				ef sefg wefgwe 
+				e fwlegf ewifgw piehg woehf w[ef
+				wef weiufg wefih wefo</p>
+				<br>
+
+				<h2 id="pathtracer_russianRoullete"> Russian Roullete Termination </h2>
+
+				<div class="slidewrapper">
+					<div class="row backgroundPrimary">
+
+						<div class="slidebackground">
+							<ul class="slides">
+								<input type="radio" name="PathTracer" id="img-PathTracer-1" checked />
+								<li class="slide-container">
+									<div class="slide"  align="middle">
+										<img src="assets/images/miscellaneous_webpage/ArtoriasGrave/Artorias_Grave_Render1.jpg" />
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-2" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-2" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<input type="radio" name="PathTracer" id="img-PathTracer-2" />
+								<li class="slide-container">
+									<div class="slide" align="middle">
+										<img src="assets/images/miscellaneous_webpage/ArtoriasGrave/Artorias_Grave_Render2.jpg" />
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-1" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-1" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<li class="nav-dots-Artorias">
+									<label for="img-PathTracer-1" class="nav-dot" id="img-PathTracer-dot-1"></label>
+									<label for="img-PathTracer-2" class="nav-dot" id="img-PathTracer-dot-2"></label>
+								</li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+
+				<br>
+				<p>&emsp; asfdghcgxd wesf adkg asekf UWHEFwh fwf wigwi wif ifuwge fkfgwi ifg wigfwi fgwjegei efgw pefgwef woiwe f
+				ef sefg wefgwe 
+				e fwlegf ewifgw piehg woehf w[ef
+				wef weiufg wefih wefo</p>
+				<br>
+
+				<h2 id="pathtracer_primitevesAndSampling"> Primitive Handling &amp; Sampling </h2>
+
+				<div class="slidewrapper">
+					<div class="row backgroundPrimary">
+
+						<div class="slidebackground">
+							<ul class="slides">
+								<input type="radio" name="PathTracer" id="img-PathTracer-1" checked />
+								<li class="slide-container">
+									<div class="slide"  align="middle">
+										<img src="assets/images/miscellaneous_webpage/ArtoriasGrave/Artorias_Grave_Render1.jpg" />
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-2" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-2" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<input type="radio" name="PathTracer" id="img-PathTracer-2" />
+								<li class="slide-container">
+									<div class="slide" align="middle">
+										<img src="assets/images/miscellaneous_webpage/ArtoriasGrave/Artorias_Grave_Render2.jpg" />
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-1" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-1" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<li class="nav-dots-Artorias">
+									<label for="img-PathTracer-1" class="nav-dot" id="img-PathTracer-dot-1"></label>
+									<label for="img-PathTracer-2" class="nav-dot" id="img-PathTracer-dot-2"></label>
+								</li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+
+				<br>
+				<p>&emsp; asfdghcgxd wesf adkg asekf UWHEFwh fwf wigwi wif ifuwge fkfgwi ifg wigfwi fgwjegei efgw pefgwef woiwe f
+				ef sefg wefgwe 
+				e fwlegf ewifgw piehg woehf w[ef
+				wef weiufg wefih wefo</p>
+				<br>
+
+				<br>
+				<br>
             </div>
         </div>
       </div>
@@ -1444,7 +1829,7 @@
 	<!-- ////////////////////////////////////////////////////////////////////////////////////// -->
 	<!-- SCRIPTS -->
 	<!-- ////////////////////////////////////////////////////////////////////////////////////// -->
-
+	
 	<!-- jQuery -->
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
@@ -1452,6 +1837,8 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 	<!-- DropDown Menu javascript -->
+	<!--
+
 	<script type="text/javascript">
 		function DropDown(el) {
 			this.dd_code = el;
@@ -1508,5 +1895,175 @@
 		});
 	</script>
 
+	-->
+
+	<!-- ////////////////////////////////////////////////////////////////////// -->
+	<!-- /////////////////////////// Voronoi stuff //////////////////////////// -->
+	<!-- ////////////////////////////////////////////////////////////////////// -->
+
+	<!-- Load external PaperScript and associate it with myCanvas  -->
+	<script type="text/javascript" src="scripts/voronoi/rhill-voronoi-core.js"></script>
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/seedrandom/2.4.3/seedrandom.min.js"></script> <!-- Seedable RNG -->
+	
+	<script type="text/paperscript" canvas="voronoiCanvas">
+		Math.seedrandom('hello.');
+		var voronoi =  new Voronoi();
+		var sites = generateBeeHivePoints(view.size / 150, true);
+		var bbox, diagram;
+		var oldSize = view.size;
+		var mousePos = view.center;
+		var sitecolors = generateColors();
+		
+		onResize();
+
+		function onMouseMove(event) 
+		{
+			mousePos = event.point;
+			sites[sites.length - 1] = event.point;
+			renderDiagram();
+		}
+
+		function renderDiagram() 
+		{
+			project.activeLayer.children = [];
+			var diagram = voronoi.compute(sites, bbox);
+			if (diagram) 
+			{
+				var background = new Path.Rectangle(view.bounds);
+				background.fillColor = '#000';
+				for (var i = 0, l = sites.length; i < l; i++) 
+				{
+					var cell = diagram.cells[sites[i].voronoiId];
+					if (cell) 
+					{
+						var halfedges = cell.halfedges,
+							length = halfedges.length;
+						if (length > 2) 
+						{
+							var points = [];					
+							for (var j = 0; j < length; j++) 
+							{
+								v = halfedges[j].getEndpoint();
+								points.push(new Point(v));						
+							}					
+							createPath(points, sitecolors[i], sites[i]);
+						}
+					}
+				}
+			}
+		}
+
+		function removeSmallBits(path) 
+		{
+			var averageLength = path.length / path.segments.length;
+			var min = path.length / 50;
+			for(var i = path.segments.length - 1; i >= 0; i--) 
+			{
+				var segment = path.segments[i];
+				var cur = segment.point;
+				var nextSegment = segment.next;
+				var next = nextSegment.point + nextSegment.handleIn;
+				if (cur.getDistance(next) < min) 
+				{
+					segment.remove();
+				}
+			}
+		}
+
+		function pickColor(t)
+		{
+			if(t<0.2)
+			{
+				return '#6ED6BC';//'#69BAD6';
+			}
+			else if(t<0.4)
+			{
+				return '#29A3B2';//'#2576B2';
+			}
+			else if(t<0.6)
+			{
+				return '#046BBE';//'#004CBE';
+			}
+			else if(t<0.8)
+			{
+				return '#3054D5';//'#2B52D5';
+			}
+			else
+			{
+				return '#5B4BCB';//'#474ECB';
+			}
+		}
+
+		function generateColors()
+		{
+			var t = [];
+			for(var i = 0; i < sites.length; i++)
+			{
+				t.push(pickColor(Math.random()));
+			}
+			return t;
+		}
+
+		function generateBeeHivePoints(size, loose) 
+		{
+			var points = [];
+			var col = view.size / size;
+			for(var i = -1; i < size.width + 1; i++) 
+			{
+				for(var j = -1; j < size.height + 1; j++) 
+				{
+					var point = new Point(i, j) / new Point(size) * view.size + col / 2;
+					if(j % 2)
+						point += new Point(col.width / 2, 0);
+					if(loose)
+						point += (col / 4) * Point.random() - col / 4;
+					points.push(point);
+				}
+			}
+			
+			return points;
+		}
+
+		function createPath(points, t, center) 
+		{
+			var path = new Path();
+			path.fillColor = t;
+			path.closed = true;
+
+			for (var i = 0, l = points.length; i < l; i++) 
+			{
+				var point = points[i];
+				var next = points[(i + 1) == points.length ? 0 : i + 1];
+				var vector = (next - point) / 2;
+				path.add({
+					point: point + vector,
+					handleIn: -vector,
+					handleOut: vector
+				});
+			}
+			path.scale(0.95);
+			removeSmallBits(path);
+			return path;
+		}
+
+		function onResize() 
+		{
+			var margin = 0;
+			bbox = {
+				xl: margin,
+				xr: view.bounds.width - margin,
+				yt: margin,
+				yb: view.bounds.height - margin
+			};
+			var sites = generateBeeHivePoints(view.size / 150, true);
+			for (var i = 0, l = sites.length; i < l; i++) 
+			{
+				sites[i] = sites[i] * view.size / oldSize;
+			}
+			oldSize = view.size;
+			renderDiagram();
+		}
+	</script>
+	
 </body>
 </html>

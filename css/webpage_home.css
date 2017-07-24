@@ -10,6 +10,7 @@ html, body {
   font-family: 'Raleway', sans-serif;
   /*overflow-x: hidden;*/
 }
+
 p {
   font-size: 20px;
 }
@@ -60,7 +61,10 @@ h1{
 header .container {
   min-height: 100vh;
   margin: 0 auto;
-  background: rgba(0,0,0,0);
+  z-index: -1;
+  /* background: rgba(0,0,0,0); */
+  background-image: url("../assets/images/voronoi/voronoiFullScreen.png");
+  background-size: 1522.4px 783.2px;
   vertical-align: middle;
   padding-top: 10px;
   padding-bottom: 50px;
@@ -91,7 +95,7 @@ header .intro-text .name {
 
 @media (min-width: 768px) {
   header .container {
-  	min-height: 100vh;
+  	min-height: 97vh;
 	  margin: auto;
     padding-top: 125px;
     padding-bottom: 125px;
@@ -363,6 +367,10 @@ div#maincontent {
 //////////////////////////////////////////////////////////////////////////////////////
 */
 
+/*
+///////////////////////// Mathjax stuff //////////////////////////////////
+*/
+
 .equation {
   font-size: 1.7em;
 }
@@ -410,12 +418,12 @@ div#maincontent {
 
 .modal-content{
   background-color: rgb(37, 37, 37);
-  width: 90%;
+  width: 100%;
   margin: auto;
 }
 
 .modal-dialog{
-  width:100%;
+  width:90%;
 }
 
 .modal-header{
@@ -489,6 +497,39 @@ div#maincontent {
 .modal-body h2{
   padding: 5px 0px;
 }
+
+.hyperlink h3:hover{
+    /*Using a Bootstrap glyphicon as the bullet point*/
+    color: #007fff;
+}
+
+.hyperlink h3{
+    /*Using a Bootstrap glyphicon as the bullet point*/
+    padding: 0 0 2.5% 0;
+}
+
+.leftshift{
+    position: relative;
+    left: 0%;
+}
+
+@media (min-width: 992px) {
+  .leftshift {
+    left: -2.5%;
+  }
+}
+
+/*
+.hyperlink:before{
+    color: #fff;
+    content: "\e092";
+    font-family: 'Glyphicons Halflings';
+    font-size: 9px;
+    float: left;
+    margin-right: 2%;
+    margin-top: 4px;
+}
+*/
 
 /*
 ///////////////////////// Project GIF and Description //////////////////////////////////
@@ -1004,13 +1045,22 @@ a {
     left:0;
     width:100%;
     height:100%;
-    z-index:-1;
   }
 
 #voronoiCanvas[resize]
 {
     width:100%;
     height:100%;
+}
+
+.infrontOfContainer{
+    background: rgba(0,0,0,0.3);
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 }
 
 /*
@@ -1026,6 +1076,12 @@ a {
     margin: 0px 0px;
 }
 
+.row.fix {
+  display: flex;
+  flex-wrap: wrap;
+  width:100%; /*not always necessary*/
+}
+
 .project-wrapper {
   width: 100%;
   margin: auto 0px;
@@ -1038,7 +1094,7 @@ a {
 }
 @media (min-width: 600px) {
   .project-wrapper {
-    height: 65vh;
+    height: 74vh;
   }
 }
 @media (min-width: 768px) {
@@ -1059,6 +1115,7 @@ a {
     height: 67vh;
   }
 }
+
 .project-wrapper {
   float: left;
   position: relative;
