@@ -18,6 +18,7 @@
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
 	<!-- My custom CSS -->
+	<link href="css/bootstrap4cards.css" rel="stylesheet">
 	<link href="css/webpage_home.css" rel="stylesheet">
 
 	<!-- Fonts -->
@@ -201,141 +202,159 @@
 		</div>
     </section>
 
-    <!-- Projects Grid Section -->
-    <section id="HighLighted Projects">
-        <div class="container-fluid">
-            <div class="row">
+<!-- Project Cards Section -->
+	<section id="HighLighted Projects">
+		<div class="container-fluid">
+			
+			<div class="row">
 				<div class="col-lg-12 text-center heading">
 					<h2> Projects </h2>
 					<hr>
 				</div>
-            </div>
-            <div class="row fix">
-				<div class = "projects-wrapper clearfix">
-					<div class="project-wrapper" data-toggle="modal" data-target="#Modal_PathTracer">
-						<div class="project">
-							<div class="summary">
-								<div class="gif">
-									<div style="width:100%;height:0;padding-bottom:53%;position:relative;">
-										<img src="assets/Demo_Reel_Gifs/PathTracerTLDR.gif" width="100%" height="100%" style="position:absolute" allowFullScreen>
-									</div>
+			</div>
+
+			<div class="card-columns">				
+				<div class="card" data-toggle="modal" data-target="#Modal_PathTracer">					
+					<div class="project">
+						<div class="summary">
+
+							<div class="gif">
+								<div style="width:100%;height:0;padding-bottom:53%;position:relative;">
+									<img src="assets/Demo_Reel_Gifs/PathTracerTLDR.gif" width="100%" height="100%" style="position:absolute" allowFullScreen>
 								</div>
-								<div class="row" style="margin:4px 0px">
-									<div class ="col-lg-8 col-md-7 col-sm-8 summarytitle">Monte Carlo Path Tracer</div>
-									<a href="https://github.com/Aman-Sachan-asach/Monte-Carlo-Path-Tracer" class="col-lg-4 col-md-5 col-sm-4 repo"> REPO</a>
-								</div>
-
-								<div class="technologies"><p>C++, OpenGL</p></div>
-
-								<p>&nbsp; Monte Carlo Path tracing is a rendering technique that aims to represent global illumination as accurately as possible with respect to reality. When combined with physically accurate models of surfaces, accurate models light sources, and optically-correct cameras, path tracing can produce still images that are indistinguishable from photographs.</p>
-								<br>
-
 							</div>
+
+							<div class="d-flex justify-content-start">
+								<div class="p-2 summarytitle">Monte Carlo Path Tracer</div>
+								<a href="https://github.com/Aman-Sachan-asach/Monte-Carlo-Path-Tracer" class="ml-auto p-2 repo"> REPO</a>
+							</div>
+
+							<div class="technologies"><p>C++, OpenGL</p></div>
+
+							<p>&nbsp; Monte Carlo Path tracing is a rendering technique that aims to represent global illumination as accurately as possible with respect to reality. When combined with physically accurate models of surfaces, accurate models light sources, and optically-correct cameras, path tracing can produce still images that are indistinguishable from photographs.</p>
+
 						</div>
 					</div>
-					<div class="project-wrapper" data-toggle="modal" data-target="#Modal_MiniMineCraft">
-						<div class="project">						
-							<div class="summary">
-								<div class="gif">
-									<div style="width:100%;height:0;padding-bottom:53%;position:relative;">
-										<img src="assets/Demo_Reel_Gifs/MineCraftFinal.gif" width="100%" height="100%" style="position:absolute" allowFullScreen>
-									</div>
-								</div>
-								<div class="row" style="margin:4px 0px">
-									<div class ="col-lg-8 col-md-7 col-sm-8 summarytitle">Mini Minecraft</div>
-									<a href="https://github.com/Aman-Sachan-asach/MiniMineCraft" class="col-lg-4 col-md-5 col-sm-4 repo"> REPO</a>
-								</div>
+				</div>
 
-								<div class="technologies"><p>C++, OpenGL, GLSL</p></div>
+				<div class="card" data-toggle="modal" data-target="#Modal_MiniMineCraft">
+					<div class="project">
+						<div class="summary">
 
-								<p>behaviours was asdfghj aesrhffgfdsd fsrgwest gWEG WET wetf WTw rfefdsd fetg SEf efWE wefw efewfWE WEFWE
-								E WEFW EF WF RGA g sg sg ergergrgf erg erg erg g</p>
+							<div class="gif">
+								<div style="width:100%;height:0;padding-bottom:53%;position:relative;">
+									<img src="assets/Demo_Reel_Gifs/MineCraftFinal.gif" width="100%" height="100%" style="position:absolute" allowFullScreen>
+								</div>
 							</div>
+
+							<div class="d-flex justify-content-start">
+								<div class="p-2 summarytitle">Mini Minecraft</div>
+								<a href="https://github.com/Aman-Sachan-asach/MiniMineCraft" class="ml-auto p-2 repo"> REPO</a>
+							</div>
+
+							<div class="technologies"><p>C++, OpenGL, GLSL</p></div>
+
+							<p>&nbsp; Monte Carlo Path tracing is a rendering technique that aims to represent global illumination as accurately as possible with respect to reality. When combined with physically accurate models of surfaces, accurate models light sources, and optically-correct cameras, path tracing can produce still images that are indistinguishable from photographs.</p>
+
 						</div>
 					</div>
-			        <div class="project-wrapper" data-toggle="modal" data-target="#Modal_ProceduralCity">
-			        	<div class="project">							
-							<div class="summary">
-								<div class="gif">
-									<div style="width:100%;height:0;padding-bottom:53%;position:relative;">
-										<img src="assets/Demo_Reel_Gifs/ProceduralCityFinal.gif" width="100%" height="100%" style="position:absolute" allowFullScreen>
-									</div>
-								</div>
-								<div class="row" style="margin:4px 0px">
-									<div class ="col-lg-8 col-md-7 col-sm-8 summarytitle">Procedural City</div>
-									<a href="https://github.com/Aman-Sachan-asach/Dynamic-Procedural-City" class="col-lg-4 col-md-5 col-sm-4 repo"> REPO</a>
-								</div>
+				</div>
 
-								<div class="technologies"><p>Javascript, WebGL</p></div>
-
-								<p>behaviours was asdfghj aesrhffgfdsd fsrgwest gWEG WET wetf WTw rfefdsd fetg SEf efWE wefw efewfWE WEFWE
-								E WEFW EF WF RGA g sg sg ergergrgf erg erg erg g</p>
+				<div class="card" data-toggle="modal" data-target="#Modal_ProceduralCity">
+					<div class="project">
+						<div class="summary">
+							
+							<div class="gif">
+								<div style="width:100%;height:0;padding-bottom:53%;position:relative;">
+									<img src="assets/Demo_Reel_Gifs/ProceduralCityFinal.gif" width="100%" height="100%" style="position:absolute" allowFullScreen>
+								</div>
 							</div>
+							
+							<div class="d-flex justify-content-start">
+								<div class="p-2 summarytitle">Procedural City</div>
+								<a href="https://github.com/Aman-Sachan-asach/Dynamic-Procedural-City" class="ml-auto p-2 repo"> REPO</a>
+							</div>
+
+							<div class="technologies"><p>Javascript, WebGL</p></div>
+
+							<p>&nbsp; Monte Carlo Path tracing is a rendering technique that aims to represent global illumination as accurately as possible with respect to reality. When combined with physically accurate models of surfaces, accurate models light sources, and optically-correct cameras, path tracing can produce still images that are indistinguishable from photographs.</p>
+
 						</div>
 					</div>
-			        <div class="project-wrapper" data-toggle="modal" data-target="#Modal_MetaBalls">
-						<div class="project">
-							<div class="summary">
-								<div class="gif">
-									<div style="width:100%;height:0;padding-bottom:53%;position:relative;">
-										<img src="assets/Demo_Reel_Gifs/MetaballsTLDR.gif" width="100%" height="100%" style="position:absolute" allowFullScreen>
-									</div>
+				</div>
+				
+				<div class="card" data-toggle="modal" data-target="#Modal_MetaBalls">
+					<div class="project">
+						<div class="summary">
+							
+							<div class="gif">
+								<div style="width:100%;height:0;padding-bottom:53%;position:relative;">
+									<img src="assets/Demo_Reel_Gifs/MetaballsTLDR.gif" width="100%" height="100%" style="position:absolute" allowFullScreen>
 								</div>
-								<div class="row" style="margin:4px 0px">
-									<div class ="col-lg-8 col-md-7 col-sm-8 summarytitle">Metaballs</div>
-									<a href="https://github.com/Aman-Sachan-asach/Metaballs-using-marching-cubes" class="col-lg-4 col-md-5 col-sm-4 repo"> REPO</a>
-								</div>
-
-								<div class="technologies"><p>Javascript, WebGL</p></div>
-
-								<p>	&nbsp; Simulation of 3D Metaballs, which are organic looking n-dimensional objects</p>
 							</div>
+							
+							<div class="d-flex justify-content-start">
+								<div class="p-2 summarytitle">Metaballs</div>
+								<a href="https://github.com/Aman-Sachan-asach/Metaballs-using-marching-cubes" class="ml-auto p-2 repo"> REPO</a>
+							</div>
+
+							<div class="technologies"><p>Javascript, WebGL</p></div>
+
+							<p>	&nbsp; Simulation of 3D Metaballs, which are organic looking n-dimensional objects</p>
+
 						</div>
 					</div>
-			        <div class="project-wrapper" data-toggle="modal" data-target="#Modal_MayaLSystems">
-						<div class="project">
-							<div class="summary">
-								<div class="gif">
-									<div style="width:100%;height:0;padding-bottom:53%;position:relative;">
-										<img src="assets/Demo_Reel_Gifs/MayaPlugin_LSystemsFinalCut.gif" width="100%" height="100%" style="position:absolute" allowFullScreen>
-									</div>
-								</div>
-								
-								<div class="row" style="margin:4px 0px">
-									<div class ="col-lg-8 col-md-7 col-sm-8 summarytitle">Maya Plugin: L-System</div>
-									<a href="https://github.com/Aman-Sachan-asach/ArtOfCollisions" class="col-lg-4 col-md-5 col-sm-4 repo"> REPO</a>
-								</div>
+				</div>
 
-								<div class="technologies"><p>C++, Maya API, MEL</p></div>
+				<div class="card" data-toggle="modal" data-target="#Modal_MayaLSystems">
+					<div class="project">
+						<div class="summary">
 
-								<p>behaviours was asdfghj aesrhffgfdsd fsrgwest gWEG WET wetf WTw rfefdsd fetg SEf efWE wefw efewfWE WEFWE
-								E WEFW EF WF RGA g sg sg ergergrgf erg erg erg g</p>
+							<div class="gif">
+								<div style="width:100%;height:0;padding-bottom:53%;position:relative;">
+									<img src="assets/Demo_Reel_Gifs/MayaPlugin_LSystemsFinalCut.gif" width="100%" height="100%" style="position:absolute" allowFullScreen>
+								</div>
 							</div>
+							
+							<div class="d-flex justify-content-start">
+								<div class="p-2 summarytitle">Maya Plugin: L-System</div>
+								<a href="https://github.com/Aman-Sachan-asach/ArtOfCollisions" class="ml-auto p-2 repo"> REPO</a>
+							</div>
+
+							<div class="technologies"><p>C++, Maya API, MEL</p></div>
+
+							<p>	&nbsp; Simulation of 3D Metaballs, which are organic looking n-dimensional objects</p>
+
 						</div>
 					</div>
-			        <div class="project-wrapper" data-toggle="modal" data-target="#Modal_Behaviours">
-						<div class="project">
-							<div class="summary">
-								<div class="gif">
-									<div style="width:100%;height:0;padding-bottom:53%;position:relative;">
-										<img src="assets/Demo_Reel_Gifs/Behaviours_TLDR.gif" width="100%" height="100%" style="position:absolute" allowFullScreen>
-									</div>
-								</div>
-								<div class="row" style="margin:4px 0px">
-									<div class ="col-lg-8 col-md-7 col-sm-8 summarytitle"> Agent Behaviours</div>
-									<a href="https://vimeo.com/amansachan" class="col-lg-4 col-md-5 col-sm-4 repo"> REPO</a>
-								</div>
+				</div>
 
-								<div class="technologies"><p>C++</p></div>
-
-								<p>behaviours was asdfghj aesrhffgfdsd fsrgwest gWEG WET wetf WTw rfefdsd fetg SEf efWE wefw efewfWE WEFWE
-								E WEFW EF WF RGA g sg sg ergergrgf erg erg erg g</p>
+				<div class="card" data-toggle="modal" data-target="#Modal_Behaviours">
+					<div class="project">
+						<div class="summary">
+							
+							<div class="gif">
+								<div style="width:100%;height:0;padding-bottom:53%;position:relative;">
+									<img src="assets/Demo_Reel_Gifs/Behaviours_TLDR.gif" width="100%" height="100%" style="position:absolute" allowFullScreen>
+								</div>
 							</div>
+							
+							<div class="d-flex justify-content-start">
+								<div class="p-2 summarytitle">Agent Behaviours</div>
+								<a href="https://vimeo.com/amansachan" class="ml-auto p-2 repo"> REPO</a>
+							</div>
+
+							<div class="technologies"><p>C++</p></div>
+
+							<p>	&nbsp; Simulation of 3D Metaballs, which are organic looking n-dimensional objects</p>
+
 						</div>
 					</div>
-                </div>
-            </div>
-			<div class="row">
+				</div>
+
+			</div> <!-- card columns-->
+
+			<div class="d-flex justify-content-center">
 				<div class="moreProjects">
 					<a href="webpages/projects.html">
 						<div class="button_base bigButton button_3D_double_roll">
@@ -347,8 +366,9 @@
 					</a>
 				</div>
 			</div>
-        </div>
-    </section>
+
+		</div><!-- container -->
+	</section>
 
     <!-- Footer -->
     <footer class="text-center">
@@ -443,6 +463,132 @@
 				<p>&emsp; Due to its accuracy and unbiased nature, path tracing is used to generate reference images when testing the quality of other rendering algorithms. In order to get high quality images from path tracing, a large number of rays must be traced to avoid visible noisy artifacts.</p>
 				<br>
 
+				<div class="slidewrapper">
+					<div class="row backgroundPrimary">
+
+						<div class="slidebackground">
+							<ul class="slides">
+								<input type="radio" name="PathTracerPretty" id="img-PathTracer-Pretty-1" checked />
+								<li class="slide-container">
+									<div class="slide"  align="middle">
+										<img src="assets/images/Projects/PathTracer/pretty/stanfordDragon_FullLighting_EnvironmentMap_1225Samples_Depth10.png" />
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-Pretty-9" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-Pretty-2" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<input type="radio" name="PathTracerPretty" id="img-PathTracer-Pretty-2" />
+								<li class="slide-container">
+									<div class="slide" align="middle">
+										<img src="assets/images/Projects/PathTracer/pretty/partyAnimals_900Samples_Depth10.png" />
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-Pretty-1" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-Pretty-3" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<input type="radio" name="PathTracerPretty" id="img-PathTracer-Pretty-3" />
+								<li class="slide-container">
+									<div class="slide" align="middle">
+										<img src="assets/images/Projects/PathTracer/pretty/VeachScene_FullLighting_2500Samples_depth10.png" />
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-Pretty-2" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-Pretty-4" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+
+								<input type="radio" name="PathTracerPretty" id="img-PathTracer-Pretty-4" />
+								<li class="slide-container">
+									<div class="slide" align="middle">
+										<img src="assets/images/Projects/PathTracer/pretty/Spectrum1_FullLighting_625Samples_depth10.png" />
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-Pretty-3" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-Pretty-5" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+
+								<input type="radio" name="PathTracerPretty" id="img-PathTracer-Pretty-5" />
+								<li class="slide-container">
+									<div class="slide" align="middle">
+										<img src="assets/images/Projects/PathTracer/pretty/environment1.png" />
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-Pretty-4" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-Pretty-6" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+
+								<input type="radio" name="PathTracerPretty" id="img-PathTracer-Pretty-6" />
+								<li class="slide-container">
+									<div class="slide" align="middle">
+										<img src="assets/images/Projects/PathTracer/pretty/ParticipatingMedia14.png" />
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-Pretty-5" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-Pretty-7" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+
+								<input type="radio" name="PathTracerPretty" id="img-PathTracer-Pretty-7" />
+								<li class="slide-container">
+									<div class="slide" align="middle">
+										<img src="assets/images/Projects/PathTracer/pretty/implicit2.png" />
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-Pretty-6" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-Pretty-8" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+
+								<input type="radio" name="PathTracerPretty" id="img-PathTracer-Pretty-8" />
+								<li class="slide-container">
+									<div class="slide" align="middle">
+										<img src="assets/images/Projects/PathTracer/pretty/BowBeforeMeYouFools_FullLighting_625Samples_depth10.png" />
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-Pretty-7" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-Pretty-9" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<input type="radio" name="PathTracerPretty" id="img-PathTracer-Pretty-9" />
+								<li class="slide-container">
+									<div class="slide" align="middle">
+										<img src="assets/images/Projects/PathTracer/pretty/TransmitBox_FullLighting_400Samples_depth10.png" />
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-Pretty-8" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-Pretty-1" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<li class="nav-dots">
+									<label for="img-PathTracer-Pretty-1" class="nav-dot" id="img-PathTracer-dot-Pretty-1"></label>
+									<label for="img-PathTracer-Pretty-2" class="nav-dot" id="img-PathTracer-dot-Pretty-2"></label>
+									<label for="img-PathTracer-Pretty-3" class="nav-dot" id="img-PathTracer-dot-Pretty-3"></label>
+									<label for="img-PathTracer-Pretty-4" class="nav-dot" id="img-PathTracer-dot-Pretty-4"></label>
+									<label for="img-PathTracer-Pretty-5" class="nav-dot" id="img-PathTracer-dot-Pretty-5"></label>
+									<label for="img-PathTracer-Pretty-6" class="nav-dot" id="img-PathTracer-dot-Pretty-6"></label>
+									<label for="img-PathTracer-Pretty-7" class="nav-dot" id="img-PathTracer-dot-Pretty-7"></label>
+									<label for="img-PathTracer-Pretty-8" class="nav-dot" id="img-PathTracer-dot-Pretty-8"></label>
+									<label for="img-PathTracer-Pretty-9" class="nav-dot" id="img-PathTracer-dot-Pretty-9"></label>
+								</li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+
                 <h2> Features: </h2>
 				
 				<!--<h3> Photon Mapping </h3><h3> Kd Tree Accelleration </h3>-->
@@ -521,7 +667,7 @@
 									</div>
 								</li>
 
-								<li class="nav-dots-Artorias">
+								<li class="nav-dots">
 									<label for="img-PathTracer-1" class="nav-dot" id="img-PathTracer-dot-1"></label>
 									<label for="img-PathTracer-2" class="nav-dot" id="img-PathTracer-dot-2"></label>
 								</li>
@@ -567,7 +713,7 @@
 									</div>
 								</li>
 
-								<li class="nav-dots-Artorias">
+								<li class="nav-dots">
 									<label for="img-PathTracer-1" class="nav-dot" id="img-PathTracer-dot-1"></label>
 									<label for="img-PathTracer-2" class="nav-dot" id="img-PathTracer-dot-2"></label>
 								</li>
@@ -613,7 +759,7 @@
 									</div>
 								</li>
 
-								<li class="nav-dots-Artorias">
+								<li class="nav-dots">
 									<label for="img-PathTracer-1" class="nav-dot" id="img-PathTracer-dot-1"></label>
 									<label for="img-PathTracer-2" class="nav-dot" id="img-PathTracer-dot-2"></label>
 								</li>
@@ -659,7 +805,7 @@
 									</div>
 								</li>
 
-								<li class="nav-dots-Artorias">
+								<li class="nav-dots">
 									<label for="img-PathTracer-1" class="nav-dot" id="img-PathTracer-dot-1"></label>
 									<label for="img-PathTracer-2" class="nav-dot" id="img-PathTracer-dot-2"></label>
 								</li>
@@ -705,7 +851,7 @@
 									</div>
 								</li>
 
-								<li class="nav-dots-Artorias">
+								<li class="nav-dots">
 									<label for="img-PathTracer-1" class="nav-dot" id="img-PathTracer-dot-1"></label>
 									<label for="img-PathTracer-2" class="nav-dot" id="img-PathTracer-dot-2"></label>
 								</li>
@@ -751,7 +897,7 @@
 									</div>
 								</li>
 
-								<li class="nav-dots-Artorias">
+								<li class="nav-dots">
 									<label for="img-PathTracer-1" class="nav-dot" id="img-PathTracer-dot-1"></label>
 									<label for="img-PathTracer-2" class="nav-dot" id="img-PathTracer-dot-2"></label>
 								</li>
@@ -797,7 +943,7 @@
 									</div>
 								</li>
 
-								<li class="nav-dots-Artorias">
+								<li class="nav-dots">
 									<label for="img-PathTracer-1" class="nav-dot" id="img-PathTracer-dot-1"></label>
 									<label for="img-PathTracer-2" class="nav-dot" id="img-PathTracer-dot-2"></label>
 								</li>
@@ -843,7 +989,7 @@
 									</div>
 								</li>
 
-								<li class="nav-dots-Artorias">
+								<li class="nav-dots">
 									<label for="img-PathTracer-1" class="nav-dot" id="img-PathTracer-dot-1"></label>
 									<label for="img-PathTracer-2" class="nav-dot" id="img-PathTracer-dot-2"></label>
 								</li>
@@ -889,7 +1035,7 @@
 									</div>
 								</li>
 
-								<li class="nav-dots-Artorias">
+								<li class="nav-dots">
 									<label for="img-PathTracer-1" class="nav-dot" id="img-PathTracer-dot-1"></label>
 									<label for="img-PathTracer-2" class="nav-dot" id="img-PathTracer-dot-2"></label>
 								</li>
@@ -935,7 +1081,7 @@
 									</div>
 								</li>
 
-								<li class="nav-dots-Artorias">
+								<li class="nav-dots">
 									<label for="img-PathTracer-1" class="nav-dot" id="img-PathTracer-dot-1"></label>
 									<label for="img-PathTracer-2" class="nav-dot" id="img-PathTracer-dot-2"></label>
 								</li>
@@ -981,7 +1127,7 @@
 									</div>
 								</li>
 
-								<li class="nav-dots-Artorias">
+								<li class="nav-dots">
 									<label for="img-PathTracer-1" class="nav-dot" id="img-PathTracer-dot-1"></label>
 									<label for="img-PathTracer-2" class="nav-dot" id="img-PathTracer-dot-2"></label>
 								</li>
@@ -1027,7 +1173,7 @@
 									</div>
 								</li>
 
-								<li class="nav-dots-Artorias">
+								<li class="nav-dots">
 									<label for="img-PathTracer-1" class="nav-dot" id="img-PathTracer-dot-1"></label>
 									<label for="img-PathTracer-2" class="nav-dot" id="img-PathTracer-dot-2"></label>
 								</li>
@@ -1127,7 +1273,7 @@
                                     </div>
                                 </li>
 
-                                <li class="nav-dots-Artorias">
+                                <li class="nav-dots">
                                   <label for="img-MiniMineCraft-1" class="nav-dot" id="img-MiniMineCraft-dot-1"></label>
                                   <label for="img-MiniMineCraft-2" class="nav-dot" id="img-MiniMineCraft-dot-2"></label>
                                 </li>
@@ -1411,7 +1557,7 @@
                                     </div>
                                 </li>
 
-                                <li class="nav-dots-Artorias">
+                                <li class="nav-dots">
                                   <label for="img-LevelGenerator-1" class="nav-dot" id="img-LevelGenerator-dot-1"></label>
                                   <label for="img-LevelGenerator-2" class="nav-dot" id="img-LevelGenerator-dot-2"></label>
                                 </li>
@@ -1531,7 +1677,7 @@
                                     </div>
                                 </li>
 
-                                <li class="nav-dots-Artorias">
+                                <li class="nav-dots">
                                   <label for="img-ProceduralCity-1" class="nav-dot" id="img-ProceduralCity-dot-1"></label>
                                   <label for="img-ProceduralCity-2" class="nav-dot" id="img-ProceduralCity-dot-2"></label>
                                 </li>
@@ -1651,7 +1797,7 @@
                                     </div>
                                 </li>
 
-                                <li class="nav-dots-Artorias">
+                                <li class="nav-dots">
                                   <label for="img-Behaviours-1" class="nav-dot" id="img-Behaviours-dot-1"></label>
                                   <label for="img-Behaviours-2" class="nav-dot" id="img-Behaviours-dot-2"></label>
                                 </li>
@@ -1771,7 +1917,7 @@
                                     </div>
                                 </li>
 
-                                <li class="nav-dots-Artorias">
+                                <li class="nav-dots">
                                   <label for="img-MayaLSystems-1" class="nav-dot" id="img-MayaLSystems-dot-1"></label>
                                   <label for="img-MayaLSystems-2" class="nav-dot" id="img-MayaLSystems-dot-2"></label>
                                 </li>
@@ -1832,7 +1978,6 @@
 	
 	<!-- jQuery -->
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-
 	<!-- Bootstrap Core JavaScript min -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 

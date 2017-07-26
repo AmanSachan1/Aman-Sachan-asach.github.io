@@ -23,6 +23,7 @@ a:focus,
 a:active,
 a.active {
   color: #007fff;
+  text-decoration: none;
 }
 h1,
 h2,
@@ -58,13 +59,12 @@ h1{
   0px 0px 0 #000,
   0px 0px 0 #000; 
 }
+
 header .container {
   min-height: 100vh;
   margin: 0 auto;
-  z-index: -1;
-  /* background: rgba(0,0,0,0); */
   background-image: url("../assets/images/voronoi/voronoiFullScreen.png");
-  background-size: 1522.4px 783.2px;
+  background-size: 1526px 759px;
   vertical-align: middle;
   padding-top: 10px;
   padding-bottom: 50px;
@@ -95,7 +95,7 @@ header .intro-text .name {
 
 @media (min-width: 768px) {
   header .container {
-  	min-height: 97vh;
+  	min-height: 100vh;
 	  margin: auto;
     padding-top: 125px;
     padding-bottom: 125px;
@@ -113,6 +113,83 @@ header .intro-text .name {
     font-size: 72px;
   }
 }
+
+section {
+  padding: 40px 0px 10px 0px;
+  background: rgba(0,0,0,1);
+}
+section h2 {
+  margin: 0;
+  font-size: 3em;
+}
+
+footer {
+  color: white;
+}
+footer h3 {
+  margin-bottom: 30px;
+}
+footer .footer-above {
+  padding-top: 50px;
+  background-color: #2C3E50;
+}
+footer .footer-col {
+  margin-bottom: 50px;
+}
+footer .footer-below {
+  padding: 8px;
+  font-size: 10px;
+  background-color: #333;
+}
+.scroll-top {
+  position: fixed;
+  right: 2%;
+  bottom: 2%;
+  width: 50px;
+  height: 50px;
+  z-index: 1049;
+}
+.scroll-top .btn {
+  font-size: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  line-height: 28px;
+}
+#skipnav a {
+  padding: 6px;
+  position: absolute;
+  top: -40px;
+  left: 0px;
+  color: white;
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+  border-bottom-right-radius: 8px;
+  background: transparent;
+  transition: top 1s ease-out, background 1s linear;
+  z-index: 2000;
+}
+#skipnav a:focus {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background: #007fff;
+  outline: 0;
+  transition: top 0.1s ease-in, background 0.5s linear;
+}
+div#maincontent {
+  outline: none;
+}
+
+/*
+//////////////////////////////////////////////////////////////////////////////////////
+///////////////////////// My custom styling effects //////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////
+*/
+
+/*
+///////////////////////// Navbar stuff //////////////////////////////////
+*/
 
 .navbar-default {
   text-shadow: 0px 0px 5px #007fff;
@@ -233,139 +310,6 @@ header .intro-text .name {
     font-size: 1.5em;
   }
 }
-section {
-  padding: 40px 0px 10px 0px;
-  background: rgba(0,0,0,1);
-}
-section h2 {
-  margin: 0;
-  font-size: 3em;
-}
-section.success {
-  color: white;
-}
-@media (max-width: 767px) {
-  section {
-    padding: 40px 0px 10px 0px;
-  }
-  section.first {
-    padding-top: 75px;
-  }
-}
-
-.floating-label-form-group {
-  position: relative;
-  margin-bottom: 0;
-  padding-bottom: 0.5em;
-  border-bottom: 1px solid #eeeeee;
-}
-.floating-label-form-group input,
-.floating-label-form-group textarea {
-  z-index: 1;
-  position: relative;
-  padding-right: 0;
-  padding-left: 0;
-  border: none;
-  border-radius: 0;
-  font-size: 1.5em;
-  background: none;
-  box-shadow: none !important;
-  resize: none;
-}
-.floating-label-form-group label {
-  display: block;
-  z-index: 0;
-  position: relative;
-  top: 2em;
-  margin: 0;
-  font-size: 0.85em;
-  line-height: 1.764705882em;
-  vertical-align: middle;
-  vertical-align: baseline;
-  opacity: 0;
-  -webkit-transition: top 0.3s ease,opacity 0.3s ease;
-  -moz-transition: top 0.3s ease,opacity 0.3s ease;
-  -ms-transition: top 0.3s ease,opacity 0.3s ease;
-  transition: top 0.3s ease,opacity 0.3s ease;
-}
-.floating-label-form-group:not(:first-child) {
-  padding-left: 14px;
-  border-left: 1px solid #eeeeee;
-}
-.floating-label-form-group-with-value label {
-  top: 0;
-  opacity: 1;
-}
-.floating-label-form-group-with-focus label {
-  color: #007fff;
-}
-form .row:first-child .floating-label-form-group {
-  border-top: 1px solid #eeeeee;
-}
-footer {
-  color: white;
-}
-footer h3 {
-  margin-bottom: 30px;
-}
-footer .footer-above {
-  padding-top: 50px;
-  background-color: #2C3E50;
-}
-footer .footer-col {
-  margin-bottom: 50px;
-}
-footer .footer-below {
-  padding: 8px;
-  font-size: 10px;
-  background-color: #333;
-}
-.scroll-top {
-  position: fixed;
-  right: 2%;
-  bottom: 2%;
-  width: 50px;
-  height: 50px;
-  z-index: 1049;
-}
-.scroll-top .btn {
-  font-size: 20px;
-  width: 50px;
-  height: 50px;
-  border-radius: 100%;
-  line-height: 28px;
-}
-#skipnav a {
-  padding: 6px;
-  position: absolute;
-  top: -40px;
-  left: 0px;
-  color: white;
-  border-right: 1px solid white;
-  border-bottom: 1px solid white;
-  border-bottom-right-radius: 8px;
-  background: transparent;
-  transition: top 1s ease-out, background 1s linear;
-  z-index: 2000;
-}
-#skipnav a:focus {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  background: #007fff;
-  outline: 0;
-  transition: top 0.1s ease-in, background 0.5s linear;
-}
-div#maincontent {
-  outline: none;
-}
-
-
-/*
-//////////////////////////////////////////////////////////////////////////////////////
-///////////////////////// My custom styling effects //////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////
-*/
 
 /*
 ///////////////////////// Mathjax stuff //////////////////////////////////
@@ -501,6 +445,7 @@ div#maincontent {
 .hyperlink h3:hover{
     /*Using a Bootstrap glyphicon as the bullet point*/
     color: #007fff;
+    text-decoration: none;
 }
 
 .hyperlink h3{
@@ -653,18 +598,9 @@ div#maincontent {
   padding: 5px;
   margin: 15px auto;
   background: rgb(51, 51, 51);
-  /*
-  background: -webkit-radial-gradient(rgba(46,11,145,0.8) 99%, rgba(46,11,145,0.0.55) 0.95%, rgba(0,0,0,0) 0.05%); 
-  background: -o-radial-gradient(rgba(46,11,145,0.8) 99%, rgba(46,11,145,0.0.55) 0.95%, rgba(0,0,0,0) 0.05%); 
-  background: -moz-radial-gradient(rgba(46,11,145,0.8) 99%, rgba(46,11,145,0.0.55) 0.95%, rgba(0,0,0,0) 0.05%); 
-  background: radial-gradient(rgba(46,11,145,0.8) 99%, rgba(46,11,145,0.0.55) 0.95%, rgba(0,0,0,0) 0.05%); 
-  */
 }
 
-.slidebackground,
-.slidebackgroundSif,
-.slidebackgroundSword,
-.slidebackgroundArtorias{
+.slidebackground{
   background: rgba(0, 0, 0, 0);
   position: relative;
   padding: 0px 0px;
@@ -798,9 +734,7 @@ input:checked + .slide-container  .slide {
 
 input:checked + .slide-container .nav label { display: block; }
 
-.nav-dots-Sif,
-.nav-dots-Artorias,
-.nav-dots-Sword {
+.nav-dots {
   width: 100%;
   bottom: 9px;
   height: 11px;
@@ -809,9 +743,7 @@ input:checked + .slide-container .nav label { display: block; }
   text-align: center;
 }
 
-.nav-dots-Sif .nav-dot,
-.nav-dots-Sword .nav-dot,
-.nav-dots-Artorias .nav-dot {
+.nav-dots .nav-dot{
   top: -5px;
   width: 11px;
   height: 11px;
@@ -822,9 +754,7 @@ input:checked + .slide-container .nav label { display: block; }
   background-color: rgba(122, 122, 122, 0.5);
 }
 
-.nav-dots-Sif .nav-dot:hover,
-.nav-dots-Sword .nav-dot:hover,  
-.nav-dots-Artorias .nav-dot:hover{
+.nav-dots .nav-dot:hover{
   cursor: pointer;
   background-color: #007fff;
 }
@@ -1064,81 +994,53 @@ a {
 }
 
 /*
+///////////////////////// Project Cards //////////////////////////////////
+*/
+
+.card-columns{
+  margin: 10px 0px;
+}
+
+.card-columns {
+  column-count: 1;
+}
+
+@media (min-width: 400px) {
+  .card-columns {
+    column-count: 1;
+  }
+}
+@media (min-width: 768px) {
+  .card-columns {
+    column-count: 2;
+  }
+}
+@media (min-width: 1200px) {
+  .card-columns {
+    column-count: 3;
+  }
+}
+
+.card {
+  background: rgb(69, 69, 69);
+}
+
+.card:hover {  
+  background: #007fff;
+}
+
+/*
 ///////////////////////// Project GIF and Description //////////////////////////////////
 */
 
 .moreProjects{
-    margin: 50px 0px;
-}
-
-.projects-wrapper {
-    padding: 0px 15px;
-    margin: 0px 0px;
-}
-
-.row.fix {
-  display: flex;
-  flex-wrap: wrap;
-  width:100%; /*not always necessary*/
-}
-
-.project-wrapper {
-  width: 100%;
-  margin: auto 0px;
-}
-
-@media (min-width: 400px) {
-  .project-wrapper {
-    height: 70vh;
-  }
-}
-@media (min-width: 600px) {
-  .project-wrapper {
-    height: 74vh;
-  }
-}
-@media (min-width: 768px) {
-  .project-wrapper {
-    width: 50%;
-    height: 78vh;
-  }
-}
-@media (min-width: 992px) {
-  .project-wrapper {
-    width: 33%;
-    height: 67.5vh;
-  }
-}
-@media (min-width: 1200px) {
-  .project-wrapper {
-    width: 33.3333%;
-    height: 67vh;
-  }
-}
-
-.project-wrapper {
-  float: left;
-  position: relative;
-}
-.project-wrapper:before {
-  display: block;
-  content: "";
-  width: 100%;
-}
-.project-wrapper::before {
-  padding-top: 3%;
-}
-@media (max-width: 767px) {
-  .project-wrapper::before {
-    padding-top: 1.5%;
-  }
+    margin: 15px 0px;
 }
 
 .project {
-  margin: 0px 9px;
-  padding:c 1px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
-  background: rgba(0, 0, 0, 1);
+  margin: 1;
+  padding: 1px;
+
   image-rendering: -moz-crisp-edges;
   /* Firefox */
   image-rendering: -o-crisp-edges;
@@ -1151,9 +1053,6 @@ a {
 }
 .project:hover {
   cursor: pointer;
-  outline-color: #007fff;
-  outline-style: solid;
-  outline-width: 1px;
 }
 
 .project .summary {
@@ -1328,19 +1227,10 @@ a {
 */
 
 .button_base {
-    margin: 0;
-    border: 0;
+    margin: 0px;
     font-size: 22px;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    margin-left: -58px;
-    margin-bottom: 10px;
-    margin-top: 10px;
     width: 120px;
     height: 30px;
-    text-align: center;
-    vertical-align: middle;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -1350,6 +1240,7 @@ a {
 
 .bigButton {
   width: 190px;
+  margin: -10px 0px 20px 0px;
 }
 
 .button_base:hover {
