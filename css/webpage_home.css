@@ -40,6 +40,11 @@ h6 {
   margin: 0 auto;
 }
 
+.centervid {
+  margin: auto;
+  vertical-align: middle;
+}
+
 header {
   text-align: center;
   margin: auto;
@@ -923,6 +928,11 @@ input:checked + .slide-container .nav label { display: block; }
   color: #fff;
 }
 
+.centeredheading h1,h2,h3,h4,h5,h6{
+  padding: 0px;
+  vertical-align: middle;
+}
+
 /* Scale canvas with resize attribute to full size */
 canvas[resize] {
     width: 100%;
@@ -942,6 +952,9 @@ canvas[resize] {
 .demo-reel-breakdown-title{
     padding: 10px 0px;
     margin: 0px;
+    text-align: center;
+    font-size: 27px;
+    text-transform: uppercase;
 }
 
 .demo-reel-breakdown ul{
@@ -972,6 +985,7 @@ a {
     text-decoration: none;
     color: #fff;
 }
+
 
 /*
 ///////////////////////// Video Wrapper //////////////////////////////////
@@ -1144,7 +1158,7 @@ a {
   color: #fff;
 }
 
-.project .summary .technologies p{
+.project .summary .centered_headings p{
   text-align: center;
   font-weight: 600;
   font-size: 16px;
@@ -1510,6 +1524,20 @@ a {
 .custom-bullet1 li {
     display: block;
     margin: auto;
+}
+
+.custom-bullet1 li h1,h2,h3,h4,h5,h6{
+  display: inline-flex;
+}
+
+.custom-bullet1 li h4{
+    text-align: left;
+    color: rgb(44, 174, 46);
+}
+
+.custom-bullet1 li h5,h6{
+    text-align: left;
+    color: #007fff;
 }
 
 .custom-bullet1 li p{
