@@ -40,9 +40,11 @@ h6 {
   margin: 0 auto;
 }
 
-.centervid {
-  margin: auto;
-  vertical-align: middle;
+.centercolumn {
+    vertical-align: middle;
+    margin: 0px auto;
+    align-self: center;
+    float: none;
 }
 
 header {
@@ -476,18 +478,6 @@ div#maincontent {
     left: -2.5%;
   }
 }
-
-/*
-.hyperlink:before{
-    color: #fff;
-    content: "\e092";
-    font-family: 'Glyphicons Halflings';
-    font-size: 9px;
-    float: left;
-    margin-right: 2%;
-    margin-top: 4px;
-}
-*/
 
 /*
 ///////////////////////// Project GIF and Description //////////////////////////////////
@@ -986,7 +976,6 @@ a {
     color: #fff;
 }
 
-
 /*
 ///////////////////////// Video Wrapper //////////////////////////////////
 */
@@ -1084,6 +1073,7 @@ a {
 
 .card {
   background: rgb(69, 69, 69);
+  position: static;
 }
 
 .card:hover {  
@@ -1555,7 +1545,6 @@ a {
     margin-top: 4px;
  }
 
-
 .custom-bullet2 li {
     display: block;
     margin: auto;
@@ -1579,6 +1568,7 @@ a {
 /*
 ///////////////////////// SOCIAL ICONS //////////////////////////////////
 */
+
 .project-social-icons {
     display: inline-block;
     width: 100%;
