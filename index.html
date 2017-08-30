@@ -249,7 +249,7 @@
 			</div>
 
 			<div class="card-columns">
-				<div class="card" data-toggle="modal" data-target="#Modal_PathTracer">					
+				<div class="card" data-toggle="modal" data-target="#Modal_PathTracer">
 					<div class="project">
 						<div class="summary">
 
@@ -1744,7 +1744,287 @@
 
             <div class="modal-body">
 				
-				<p>&emsp; COMING SOON! </p>
+				<h2> Introduction </h2>
+
+				<p>&emsp; The 'Interesting Level Generator' is a procedural multi-layer dungeon generator that generates levels based on a dynamically generated voronoi like graph after it has been heavily modified by various filters. </p>
+
+				<p>&emsp; Realistic fog, crumbling pathways, and terrain are added over the basic level layout to give it a unique mysterious foreign world aesthetic.</p>
+				<br>
+
+                <div class="clearfix">
+                    <div class="vid-wrapper" style="float: none">
+                        <div class="vid">
+                            <div class="summary">
+	                            <div class="gif">
+									<div style="width:100%;height:0;padding-bottom:53%;position:relative;">
+										<div class="videoWrapperModal">
+											<iframe class="center-block" width="854" height="480" src="https://player.vimeo.com/video/227360081?loop=1&autoplay=0&rel=0&showinfo=0&controls=0&autohide=1&autopause=0" 
+											frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+										</div>
+									</div>
+								</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+				
+				<h2> Scrrenshots </h2>
+
+				<div class="slidewrapper captionedslidewrapper">
+					<div class="row backgroundPrimary">
+
+						<div class="slidebackground">
+							<ul class="slides">
+								<input type="radio" name="LevelGenerator" id="img-LevelGenerator-1" checked />
+								<li class="slide-container">
+									<div class="slide"  align="middle">
+										<img src="assets/images/Projects/InterestingLevelGenerator/Crossroads_emergent_behaviour.png" />
+
+										<div class="caption">
+											<h3>Emergent Behaviour: Crossroads</h3>
+											<p> crossroads were not something I was planning but a happy surprise! :) </p>
+										</div>
+									</div>
+
+									<div class="nav">
+										<label for="img-LevelGenerator-9" class="prev">&#x2039;</label>
+										<label for="img-LevelGenerator-2" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<input type="radio" name="LevelGenerator" id="img-LevelGenerator-2" />
+								<li class="slide-container">
+									<div class="slide" align="middle">
+										<img src="assets/images/Projects/InterestingLevelGenerator/Fog_min.png" />
+
+										<div class="caption">
+											<h3>Fog: min</h3>
+										</div>
+									</div>
+
+									<div class="nav">
+										<label for="img-LevelGenerator-1" class="prev">&#x2039;</label>
+										<label for="img-LevelGenerator-3" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<input type="radio" name="LevelGenerator" id="img-LevelGenerator-3" />
+								<li class="slide-container">
+									<div class="slide" align="middle">
+										<img src="assets/images/Projects/InterestingLevelGenerator/Fog_max.png" />
+
+										<div class="caption">
+											<h3>Fog: max</h3>
+										</div>
+									</div>
+
+									<div class="nav">
+										<label for="img-LevelGenerator-2" class="prev">&#x2039;</label>
+										<label for="img-LevelGenerator-4" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+
+								<input type="radio" name="LevelGenerator" id="img-LevelGenerator-4" />
+								<li class="slide-container">
+									<div class="slide" align="middle">
+										<img src="assets/images/Projects/InterestingLevelGenerator/Terrain.png" />
+										
+										<div class="caption">
+											<h3>Terrain</h3>
+										</div>
+									</div>
+
+									<div class="nav">
+										<label for="img-LevelGenerator-3" class="prev">&#x2039;</label>
+										<label for="img-LevelGenerator-5" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+
+								<input type="radio" name="LevelGenerator" id="img-LevelGenerator-5" />
+								<li class="slide-container">
+									<div class="slide" align="middle">
+										<img src="assets/images/Projects/InterestingLevelGenerator/MultipleLayers.png" />
+
+										<div class="caption">
+											<h3>Multiple Layers</h3>
+										</div>
+									</div>
+
+									<div class="nav">
+										<label for="img-LevelGenerator-4" class="prev">&#x2039;</label>
+										<label for="img-LevelGenerator-6" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+
+								<input type="radio" name="LevelGenerator" id="img-LevelGenerator-6" />
+								<li class="slide-container">
+									<div class="slide" align="middle">
+										<img src="assets/images/Projects/InterestingLevelGenerator/LayerConnectivity.png" />
+
+										<div class="caption">
+											<h3>Inter Layer Connectivity</h3>
+											<p> Creating connections between individual 2D maps on each layer in an interesting manner while avoiding creating non-traversable paths because of either self intersection or intersecting with the walkways in the layers above and below the inter-layerconnection. </p>
+										</div>
+									</div>
+
+									<div class="nav">
+										<label for="img-LevelGenerator-5" class="prev">&#x2039;</label>
+										<label for="img-LevelGenerator-7" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+
+								<input type="radio" name="LevelGenerator" id="img-LevelGenerator-7" />
+								<li class="slide-container">
+									<div class="slide" align="middle">
+										<img src="assets/images/Projects/InterestingLevelGenerator/voronoi1.png" />
+
+										<div class="caption">
+											<h3>Voronoi Pattern</h3>
+											<p> The voronoi pattern is hard to identify due to the various levels of filtering the original voronoi graph went through. These include removing overlapping connections, removing random connections, shifting connections to more aesthetically pleasing locations, etc. </p>
+										</div>
+									</div>
+									<div class="nav">
+										<label for="img-LevelGenerator-6" class="prev">&#x2039;</label>
+										<label for="img-LevelGenerator-8" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+
+								<input type="radio" name="LevelGenerator" id="img-LevelGenerator-8" />
+								<li class="slide-container">
+									<div class="slide" align="middle">
+										<img src="assets/images/Projects/InterestingLevelGenerator/voronoi2.png" />
+
+										<div class="caption">
+											<h3>Another voronoi Pattern </h3>
+											<p> The voronoi pattern is hard to identify due to the various levels of filtering the original voronoi graph went through. These include removing overlapping connections, removing random connections, shifting connections to more aesthetically pleasing locations, etc. </p>
+										</div>
+									</div>
+									<div class="nav">
+										<label for="img-LevelGenerator-7" class="prev">&#x2039;</label>
+										<label for="img-LevelGenerator-9" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<input type="radio" name="LevelGenerator" id="img-LevelGenerator-9" />
+								<li class="slide-container">
+									<div class="slide" align="middle">
+										<img src="assets/images/Projects/InterestingLevelGenerator/NoCrumble.png" />
+
+										<div class="caption">
+											<h3>Crumbling Pathways (No crumble)</h3>
+										</div>
+									</div>
+									<div class="nav">
+										<label for="img-LevelGenerator-8" class="prev">&#x2039;</label>
+										<label for="img-LevelGenerator-10" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<input type="radio" name="LevelGenerator" id="img-LevelGenerator-10" />
+								<li class="slide-container">
+									<div class="slide" align="middle">
+										<img src="assets/images/Projects/InterestingLevelGenerator/SomeCrumble.png" />
+
+										<div class="caption">
+											<h3>Crumbling Pathways (50% crumble)</h3>
+										</div>
+									</div>
+									<div class="nav">
+										<label for="img-LevelGenerator-9" class="prev">&#x2039;</label>
+										<label for="img-LevelGenerator-11" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<input type="radio" name="LevelGenerator" id="img-LevelGenerator-11" />
+								<li class="slide-container">
+									<div class="slide" align="middle">
+										<img src="assets/images/Projects/InterestingLevelGenerator/ThickWalkway.png" />
+
+										<div class="caption">
+											<h3>Thick Walkway</h3>
+										</div>
+									</div>
+									<div class="nav">
+										<label for="img-LevelGenerator-10" class="prev">&#x2039;</label>
+										<label for="img-LevelGenerator-12" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<input type="radio" name="LevelGenerator" id="img-LevelGenerator-12" />
+								<li class="slide-container">
+									<div class="slide" align="middle">
+										<img src="assets/images/Projects/InterestingLevelGenerator/ThinWalkway.png" />
+
+										<div class="caption">
+											<h3>Thin Walkways</h3>
+										</div>
+									</div>
+									<div class="nav">
+										<label for="img-LevelGenerator-11" class="prev">&#x2039;</label>
+										<label for="img-LevelGenerator-13" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+
+								<input type="radio" name="LevelGenerator" id="img-LevelGenerator-13" />
+								<li class="slide-container">
+									<div class="slide" align="middle">
+										<img src="assets/images/Projects/InterestingLevelGenerator/variableRoomSize.png" />
+
+										<div class="caption">
+											<h3>Variable Room Size</h3>
+										</div>
+									</div>
+									<div class="nav">
+										<label for="img-LevelGenerator-12" class="prev">&#x2039;</label>
+										<label for="img-LevelGenerator-1" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<li class="nav-dots">
+									<label for="img-LevelGenerator-1" class="nav-dot" id="img-PathTracer-dot-Pretty-1"></label>
+									<label for="img-LevelGenerator-2" class="nav-dot" id="img-PathTracer-dot-Pretty-2"></label>
+									<label for="img-LevelGenerator-3" class="nav-dot" id="img-PathTracer-dot-Pretty-3"></label>
+									<label for="img-LevelGenerator-4" class="nav-dot" id="img-PathTracer-dot-Pretty-4"></label>
+									<label for="img-LevelGenerator-5" class="nav-dot" id="img-PathTracer-dot-Pretty-5"></label>
+									<label for="img-LevelGenerator-6" class="nav-dot" id="img-PathTracer-dot-Pretty-6"></label>
+									<label for="img-LevelGenerator-7" class="nav-dot" id="img-PathTracer-dot-Pretty-7"></label>
+									<label for="img-LevelGenerator-8" class="nav-dot" id="img-PathTracer-dot-Pretty-8"></label>
+									<label for="img-LevelGenerator-9" class="nav-dot" id="img-PathTracer-dot-Pretty-9"></label>
+									<label for="img-LevelGenerator-10" class="nav-dot" id="img-PathTracer-dot-Pretty-10"></label>
+									<label for="img-LevelGenerator-11" class="nav-dot" id="img-PathTracer-dot-Pretty-11"></label>
+									<label for="img-LevelGenerator-12" class="nav-dot" id="img-PathTracer-dot-Pretty-12"></label>
+									<label for="img-LevelGenerator-13" class="nav-dot" id="img-PathTracer-dot-Pretty-13"></label>
+								</li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+
+				<h2> Future Work </h2>
+
+				<ul class="custom-bullet2">
+					<li> <p>  &nbsp; kD tree acceleration Structure for Collision Handling</p> </li>
+					<li> <p>  &nbsp; Character with basic character controls</li>
+					<li> <p>  &nbsp; Collision handling for the character </p> </li>
+					<li> <p>  &nbsp; Trampolines to fill up empty and negative space </p> </li>
+				</ul>
+				<br>
+
+				<h2> Resources </h2>
+
+				<ul class="custom-bullet2">
+					<li> <p>  &nbsp; Terrain: http://www.redblobgames.com/maps/terrain-from-noise/
+					</p> </li>
+					<li> <p>  &nbsp; Fog: http://in2gpu.com/2014/07/22/create-fog-shader/
+					</p> </li>
+				</ul>
 				<br>
 
             </div>
