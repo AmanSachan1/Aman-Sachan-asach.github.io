@@ -1768,7 +1768,7 @@
                     </div>
                 </div>
 				
-				<h2> Scrrenshots </h2>
+				<h2> Screenshots </h2>
 
 				<div class="slidewrapper captionedslidewrapper">
 					<div class="row backgroundPrimary">
@@ -2007,9 +2007,99 @@
 					</div>
 				</div>
 
+				<h2> Original design goals </h2>
+
+				<ul class="custom-bullet3">
+					<li> <p>  &nbsp; Procedural 3D game level ( multiple stacks of 2D maps ). </p></li>
+					<li> <p>  &nbsp; Implicit surfaces to create terrain on the resulting map floors </p></li>
+					<li> <p>  &nbsp; Custom fog shader </p></li>
+				</ul>
+
+				<p> The specifications below will be implemented if I have enough time in the final week</p>
+				<ul class="custom-bullet3">
+					<li> <p>  &nbsp; Collision handling so player can’t walk through geometry. </p></li>
+				</ul>
+
+				<h2> Techniques Used </h2>
+				<br>
+				<br>
+				<h3> Level Generation: </h3>
+				<br>
+
+				<ul class="custom-bullet3">
+					<li>
+						<p>  &nbsp; 2D maps: </p>
+						<p> &nbsp; Using sampling and rejection to layout the slabs in a given space.</p>
+						<p> &nbsp; Then use a fake voronoi generation technique to create a graph. The fake voronoi technique consists of first starting with 3 connected nodes, and then for every new node you want to add to the graph you find the 2 closest neighbours from the existing graph and form edges between them.</p>
+						<p> &nbsp; We can improve the above technique a bit more by sorting the positions of the slabs along one axis. This makes the connections look more like a voronoi pattern.</p>
+						<p> &nbsp; This graph is highly connected so we randomly remove connections.</p>
+						<p> &nbsp; The graph can end up with intersecting edges in a few edge cases, so we carry out 2D line intersection tests and remove any intersections if they exist.</p>
+						<br>
+					</li>
+
+					<li>
+						<p>  &nbsp; Walkways between slabs: </p>
+						<p> &nbsp; Because of the graph we created above we have edge and node data, in other words we know which points to connect. So between any 2 points we could lay out planes to connect them, but this is boring.</p>
+						<p> &nbsp; Instead we can use instancing to place many many tiny cubes along the line segment and then randomly remove cubes to make it look like a crumbling walkway.</p>
+						<p> &nbsp; We also need to give the walkway some width so we take the cross product of the direction of the line segment and the y axis (up) to get a horizontal ortho-normal direction for width. Add instanced cubes not just on the line segment but for a certain width for each line segment.</p>
+						<br>
+					</li>
+
+					<li>
+						<p>  &nbsp; 3D Level: </p>						
+						<p> &nbsp; We can create multiple 2D maps at different heights. </p>
+						<br>
+					</li>
+
+					<li>
+						<p>  &nbsp; Interlevel Connecting Paths: </p>
+						<p> &nbsp; This is a similar problem to the one we solved in “Walkway between slabs” section; But now it’s in 3D. </p>
+						<p> &nbsp; For every layer we pick a random node/slab as the starting point of our path between layers. </p>
+						<p> &nbsp; For the end point of that line segment we search through the nodes in the layer above for rooms that are beyond a certain distance from the randomly picked starting node (so paths don’t go straight up and there is more complexity in connections), and form a list of these “toNodes”. </p>
+						<p> &nbsp; Pick a random “toNode”, and using the random starting node we have a 3D line segment. </p>
+						<p> &nbsp; Create a similar instancing cubes setup for these paths as we did with the walkways. </p>
+						<p> &nbsp; Remove random lines, and also carry out 3D intersection tests and remove any intersecting paths, if they exist. </p>
+						<br>
+					</li>
+
+					<li>
+						<p>  &nbsp; Path shifting for Paths: </p>
+						<p> &nbsp; To make the paths connecting walkways seem more organic and prevent janky looking paths that start at the center of each cell and end at the center of the other one ( this is a problem as a player can never go to a higher layer, they will be stuck underneath the “toNode” ). </p>
+						<p> &nbsp; We need to shift paths to the edges of the cells they are connecting. Simply offset by the width and length in the correct direction. </p>
+						<p> &nbsp; To add organic paths we should shift by both the width and length. </p>
+						<br>
+					</li>
+
+					<li>
+						<p>  &nbsp; Fog: </p>
+						<p> &nbsp; Created in the shader, with global control of density, color, and a on/off switch. </p>
+						<p> &nbsp; A good approximation of fog fall-off is: e-(fogDensity2 x distance2)  </p>
+						<p> &nbsp; Fog also appears to have different densities at the periphery of our vision, so we need to account for rimColor. </p>
+						<p> &nbsp; Resource: http://in2gpu.com/2014/07/22/create-fog-shader/ </p>
+						<br>
+					</li>
+
+					<li>
+						<p>  &nbsp; Terrain: </p>
+						<p> &nbsp; Terrain was created in the shader. </p>
+						<p> &nbsp; Create an elevation map and a moisture map using smoothed 2D noise with different seed values (or different noise functions). </p>
+						<p> &nbsp; Use the elevation map to deform vertices in the shader. </p>
+						<p> &nbsp; Create a moisture map ( similar to the elevation map ). </p>
+						<p> &nbsp; Use the float values from the elevation and moisture as uv values to determine colors from gradients. </p>
+						<br>
+					</li>
+
+					<li>
+						<p>  &nbsp; Grid based Acceleration: </p>
+						<p> &nbsp; Takes too much memory, and so was never used for anything. </p>
+						<br>
+					</li>
+
+				</ul>
+
 				<h2> Future Work </h2>
 
-				<ul class="custom-bullet2">
+				<ul class="custom-bullet3">
 					<li> <p>  &nbsp; kD tree acceleration Structure for Collision Handling</p> </li>
 					<li> <p>  &nbsp; Character with basic character controls</li>
 					<li> <p>  &nbsp; Collision handling for the character </p> </li>
@@ -2019,7 +2109,7 @@
 
 				<h2> Resources </h2>
 
-				<ul class="custom-bullet2">
+				<ul class="custom-bullet3">
 					<li> <p>  &nbsp; Terrain: http://www.redblobgames.com/maps/terrain-from-noise/
 					</p> </li>
 					<li> <p>  &nbsp; Fog: http://in2gpu.com/2014/07/22/create-fog-shader/

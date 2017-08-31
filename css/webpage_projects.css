@@ -1421,6 +1421,25 @@ input:checked + .slide-container .nav label { display: block; }
     margin-top: 4px;
  }
 
+ .custom-bullet3 li {
+    display: block;
+    margin: auto;
+}
+
+.custom-bullet3 li p{
+}
+
+.custom-bullet3 li:before
+{
+    /*Using a Bootstrap glyphicon as the bullet point*/
+    color: #fff;
+    content: "\e092";
+    font-family: 'Glyphicons Halflings';
+    font-size: 14px;
+    float: left;
+    margin-top: 4px;
+ }
+
 /*
 ///////////////////////// SOCIAL ICONS //////////////////////////////////
 */
