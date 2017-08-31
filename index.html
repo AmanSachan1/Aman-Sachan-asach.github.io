@@ -400,11 +400,11 @@
 						</div>
 					</div>
 				</div>
-
-				<div class="card" data-toggle="modal" data-target="#Modal_ProceduralCity">
+				
+				<div class="card">  <!-- data-toggle="modal" data-target="#Modal_ProceduralCity"> -->
 					<div class="project">
 						<div class="summary">
-							
+								
 							<div class="gif">
 								<div style="width:100%;height:0;padding-bottom:53%;position:relative;">
 									<div class="videoWrapper">
@@ -437,7 +437,7 @@
 						</div>
 					</div>
 				</div>
-
+				
 			</div> <!-- card columns-->
 
 			<div class="d-flex justify-content-center clearfix">
@@ -1524,8 +1524,59 @@
 
             <div class="modal-body">
 
-				<p>&emsp; COMING SOON! </p>
+				<h3> Teammates: Meghana Seshadri, Jon Lee </h3>
 				<br>
+				
+                <div class="clearfix">
+                    <div class="vid-wrapper" style="float: none">
+                        <div class="vid">
+                            <div class="summary">
+	                            <div class="gif">
+									<div style="width:100%;height:0;padding-bottom:53%;position:relative;">
+										<div class="videoWrapperModal">
+											<iframe class="center-block" width="854" height="480" src="https://player.vimeo.com/video/231615497?loop=1&autoplay=0&rel=0&showinfo=0&controls=0&autohide=1&autopause=0" 
+											frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+										</div>
+									</div>
+								</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+				
+				<br>
+				<h2> I implemented the following features: </h2>
+
+				<ul class="custom-bullet3">
+					<li> 
+						<p>  &nbsp; Efficient Terrain Rendering: </p>
+						<p>  &nbsp; Rendering only the hull of the terrain; </p>
+						<p>  &nbsp; Using interleaved VBOs, i.e one VBO that holds all the data (position, color, normals, textures, etc); </p>
+						<p>  &nbsp; Dividing the terrain into Chunks and generating the VBO for every chunk only once; </p>
+					</li>
+
+					<li> 
+						<p>  &nbsp; Generalized Scheme for Texture Mapping, Normal Mapping, Specular Mapping, and Animated Textures </p>
+					</li>
+
+					<li> 
+						<p>  &nbsp; Weather (Snow and Rain) and Cloud: </p>
+						<p>  &nbsp; Snow and Rain weather effects were achieved via billboards that have a texture with transparency; </p>
+						<p>  &nbsp; Volumetric Clouds, rendered in a way similar to the ground; </p>
+					</li>
+
+					<li> 
+						<p>  &nbsp; Day and Night Cycle: </p>
+						<p>  &nbsp; Changing Sky Color; </p>
+						<p>  &nbsp; Changing Light Color; </p>
+						<p>  &nbsp; Changing Light Direction; </p>
+						<p>  &nbsp; Changing Light Intensity; </p>
+					</li>
+
+					<li> 
+						<p>  &nbsp; Tiny Dynamic Compass  </p>
+					</li>
+				</ul>
 
             </div>
         </div>
@@ -2028,7 +2079,7 @@
 
 				<ul class="custom-bullet3">
 					<li>
-						<p>  &nbsp; 2D maps: </p>
+						<p> &nbsp; 2D maps: </p>
 						<p> &nbsp; Using sampling and rejection to layout the slabs in a given space.</p>
 						<p> &nbsp; Then use a fake voronoi generation technique to create a graph. The fake voronoi technique consists of first starting with 3 connected nodes, and then for every new node you want to add to the graph you find the 2 closest neighbours from the existing graph and form edges between them.</p>
 						<p> &nbsp; We can improve the above technique a bit more by sorting the positions of the slabs along one axis. This makes the connections look more like a voronoi pattern.</p>
@@ -2122,146 +2173,6 @@
       </div>
     </div>
 
-    <!-- Modal for Procedural City -->
-    <div class="modal fade" id="Modal_ProceduralCity" tabindex="-1" role="dialog" aria-labelledby="ProceduralCity" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="row">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Procedural City</h5>
-                    <i class="fa fa-times fa-3x" class="close" data-dismiss="modal" aria-label="Close"></i>
-                </div>
-            </div>
-
-            <div class="row center-block">
-                <div class="project-social-icons">
-                    <ul class="social-icons">
-                        <li>
-                            <a href="https://github.com/Aman-Sachan-asach/Dynamic-Procedural-City" class="social-icon">
-                            <i class="fa fa-github-square fa-3x">
-                        </i></a></li>
-                        <li>
-                            <a href="https://vimeo.com/amansachan" class="social-icon">
-                            <i class="fa fa-vimeo-square fa-3x">
-                        </i></a></li>
-
-                        <li>
-                            <a href="https://www.youtube.com/channel/UCgt_lAI0-x_RhlGyv6DEBAw" class="social-icon">
-                            <i class="fa fa-youtube-square fa-3x">
-                        </i></a></li>
-                    </ul>
-                </div>
-            </div>
-
-			<div class="row">
-				<a href="http://amansachan.com/Dynamic-Procedural-City/">
-					<div class="button_base demobutton button_skewed_slide_in">
-						<div>Demo!</div>
-						<div></div>
-						<div>Demo!</div>
-					</div>
-				</a>
-			</div>
-
-            <div class="row-fluid divline">
-            </div>
-
-            <div class="modal-body">
-
-				<p>&emsp; COMING SOON! </p>
-				<br>
-
-            	<!--
-
-                <p>&emsp; asfdghcgxd wesf adkg asekf UWHEFwh fwf wigwi wif ifuwge fkfgwi ifg wigfwi fgwjegei efgw pefgwef woiwe f
-                ef sefg wefgwe 
-                e fwlegf ewifgw piehg woehf w[ef
-                wef weiufg wefih wefo</p>
-                <br>
-
-                <p>&emsp; asfdghcgxd wesf adkg asekf UWHEFwh fwf wigwi wif ifuwge fkfgwi ifg wigfwi fgwjegei efgw pefgwef woiwe f
-                ef sefg wefgwe 
-                e fwlegf ewifgw piehg woehf w[ef
-                wef weiufg wefih wefo</p>
-                <br>
-
-                <h2> Heading 1</h2>
-
-                <div class="slidewrapper">
-                    <div class="row backgroundPrimary">
-
-                        <div class="slidebackground">
-                            <ul class="slides">
-                                <input type="radio" name="ProceduralCity" id="img-ProceduralCity-1" checked />
-                                <li class="slide-container">
-                                    <div class="slide"  align="middle">
-                                        <img src="assets/images/miscellaneous_webpage/ArtoriasGrave/Artorias_Grave_Render1.jpg" />
-                                    </div>
-                                    <div class="nav">
-                                        <label for="img-ProceduralCity-2" class="prev">&#x2039;</label>
-                                        <label for="img-ProceduralCity-2" class="next">&#x203a;</label>
-                                    </div>
-                                </li>
-
-                                <input type="radio" name="ProceduralCity" id="img-ProceduralCity-2" />
-                                <li class="slide-container">
-                                    <div class="slide" align="middle">
-                                        <img src="assets/images/miscellaneous_webpage/ArtoriasGrave/Artorias_Grave_Render2.jpg" />
-                                    </div>
-                                    <div class="nav">
-                                        <label for="img-ProceduralCity-1" class="prev">&#x2039;</label>
-                                        <label for="img-ProceduralCity-1" class="next">&#x203a;</label>
-                                    </div>
-                                </li>
-
-                                <li class="nav-dots">
-                                  <label for="img-ProceduralCity-1" class="nav-dot" id="img-ProceduralCity-dot-1"></label>
-                                  <label for="img-ProceduralCity-2" class="nav-dot" id="img-ProceduralCity-dot-2"></label>
-                                </li>
-                            </ul>
-                        </div>
-
-                    </div>
-                </div>
-
-                <h2> Heading 2 </h2>
-
-                <div class = "clearfix">
-                    <div class="vid-wrapper" style="float: none">
-                        <div class="vid">
-                            <div class="summary">
-                                <div class="gif">
-                                    <div style="width:100%;position:relative;">
-                                        <div class="videoWrapperModal">
-                                            <iframe width="854" height="480" src="https://www.youtube.com/embed/bOm_olR1RyY" frameborder="0" allowfullscreen></iframe>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <p>&emsp; asfdghcgxd wesf adkg asekf UWHEFwh fwf wigwi wif ifuwge fkfgwi ifg wigfwi fgwjegei efgw pefgwef woiwe f
-                ef sefg wefgwe 
-                e fwlegf ewifgw piehg woehf w[ef
-                wef weiufg wefih wefo</p>
-                <br>
-
-                <p>&emsp; asfdghcgxd wesf adkg asekf UWHEFwh fwf wigwi wif ifuwge fkfgwi ifg wigfwi fgwjegei efgw pefgwef woiwe f
-                ef sefg wefgwe 
-                e fwlegf ewifgw piehg woehf w[ef
-                wef weiufg wefih wefo</p>
-                <br>
-
-                -->
-
-
-            </div>
-        </div>
-      </div>
-    </div>
-
     <!-- Modal for Art Of Collisions -->
     <div class="modal fade" id="Modal_ArtOfCollisions" tabindex="-1" role="dialog" aria-labelledby="ArtOfCollisions" aria-hidden="true">
       <div class="modal-dialog" role="document">
@@ -2298,95 +2209,74 @@
 
             <div class="modal-body">
 
-				<p>&emsp; COMING SOON! </p>
+				<h2> Introduction </h2>
+
+				<p>&emsp; "Art Of Collisions" is a real-time simulation of particle-based rigid body dynamics based on the paper "Unified Particle Physics for Real-Time Applications" by Macklin, Muller, Chentanez, and Kim.</p>
 				<br>
 
-            	<!--
+				<p>&emsp; Two reasons that real-time simulation of three dimensional objects has been difficult in recent years within the computer graphics industry are: 1. Having to create individual solvers for each object type, and 2. Simulating physical phenomena based off calculating forces. They focus mainly on accuracy of result rather than robustness and efficiency. We address some common problems with traditional particle-based methods and describe a parallel constraint solver based on position-based dynamics, a method that is efficient enough for real-time applications, and hence popular in computer games and interactive applications for its simplicity and stability. </p>
+				<br>
 
+				<p>&emsp; A unified particle solver was too broad in scope to implement well in the month and a half we had. Thus, we implemented a good chunk of the frame work in a way that is easily extendable but works for only Rigid Bodies at the moment.</p>
+				<br>
 
-                <p>&emsp; asfdghcgxd wesf adkg asekf UWHEFwh fwf wigwi wif ifuwge fkfgwi ifg wigfwi fgwjegei efgw pefgwef woiwe f
-                ef sefg wefgwe 
-                e fwlegf ewifgw piehg woehf w[ef
-                wef weiufg wefih wefo</p>
-                <br>
-
-                <p>&emsp; asfdghcgxd wesf adkg asekf UWHEFwh fwf wigwi wif ifuwge fkfgwi ifg wigfwi fgwjegei efgw pefgwef woiwe f
-                ef sefg wefgwe 
-                e fwlegf ewifgw piehg woehf w[ef
-                wef weiufg wefih wefo</p>
-                <br>
-
-                <h2> Heading 1</h2>
-
-                <div class="slidewrapper">
-                    <div class="row backgroundPrimary">
-
-                        <div class="slidebackground">
-                            <ul class="slides">
-                                <input type="radio" name="ArtOfCollisions" id="img-ArtOfCollisions-1" checked />
-                                <li class="slide-container">
-                                    <div class="slide"  align="middle">
-                                        <img src="assets/images/miscellaneous_webpage/ArtoriasGrave/Artorias_Grave_Render1.jpg" />
-                                    </div>
-                                    <div class="nav">
-                                        <label for="img-ArtOfCollisions-2" class="prev">&#x2039;</label>
-                                        <label for="img-ArtOfCollisions-2" class="next">&#x203a;</label>
-                                    </div>
-                                </li>
-
-                                <input type="radio" name="ArtOfCollisions" id="img-ArtOfCollisions-2" />
-                                <li class="slide-container">
-                                    <div class="slide" align="middle">
-                                        <img src="assets/images/miscellaneous_webpage/ArtoriasGrave/Artorias_Grave_Render2.jpg" />
-                                    </div>
-                                    <div class="nav">
-                                        <label for="img-ArtOfCollisions-1" class="prev">&#x2039;</label>
-                                        <label for="img-ArtOfCollisions-1" class="next">&#x203a;</label>
-                                    </div>
-                                </li>
-
-                                <li class="nav-dots">
-                                  <label for="img-ArtOfCollisions-1" class="nav-dot" id="img-ArtOfCollisions-dot-1"></label>
-                                  <label for="img-ArtOfCollisions-2" class="nav-dot" id="img-ArtOfCollisions-dot-2"></label>
-                                </li>
-                            </ul>
-                        </div>
-
-                    </div>
-                </div>
-
-                <h2> Heading 2 </h2>
-
-                <div class = "clearfix">
+                <div class="clearfix">
                     <div class="vid-wrapper" style="float: none">
                         <div class="vid">
                             <div class="summary">
-                                <div class="gif">
-                                    <div style="width:100%;position:relative;">
-                                        <div class="videoWrapperModal">
-                                            <iframe width="854" height="480" src="https://www.youtube.com/embed/bOm_olR1RyY" frameborder="0" allowfullscreen></iframe>
-                                        </div>
-                                    </div>
-                                </div>
+	                            <div class="gif">
+									<div style="width:100%;height:0;padding-bottom:53%;position:relative;">
+										<div class="videoWrapperModal">
+											<iframe class="center-block" width="854" height="480" src="https://player.vimeo.com/video/231615681?loop=1&autoplay=0&rel=0&showinfo=0&controls=0&autohide=1&autopause=0" 
+											frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+										</div>
+									</div>
+								</div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <p>&emsp; asfdghcgxd wesf adkg asekf UWHEFwh fwf wigwi wif ifuwge fkfgwi ifg wigfwi fgwjegei efgw pefgwef woiwe f
-                ef sefg wefgwe 
-                e fwlegf ewifgw piehg woehf w[ef
-                wef weiufg wefih wefo</p>
-                <br>
+				<h2> Need for the Solver </h2>
 
-                <p>&emsp; asfdghcgxd wesf adkg asekf UWHEFwh fwf wigwi wif ifuwge fkfgwi ifg wigfwi fgwjegei efgw pefgwef woiwe f
-                ef sefg wefgwe 
-                e fwlegf ewifgw piehg woehf w[ef
-                wef weiufg wefih wefo</p>
-                <br>
+				<p> &nbsp; In recent years, To simulate objects accurately in real-time has usually meant that they must be simulated in isolation and required individual solvers for each object type. Particle based solvers can be easily unified as they work on a base object type. </p>
+				<br>
 
-                -->
+				<h2> Capabilities of the Solver </h2>
 
+				<ul class="custom-bullet3">
+					<li> <p>  &nbsp; Efficient real-time simulation of particle-based rigid body dynamics. </p></li>
+					<li> <p>  &nbsp; Built using a parallel constraint solver extended from position-based dynamics. </p></li>
+					<li> <p>  &nbsp; Represent rigid bodies and maintain particle configurations using shape matching constraints. </p></li>
+					<li> <p>  &nbsp; Unconditionally stable simulation based on semi-implicit methods to solve constraints. </p></li>
+					<li> <p>  &nbsp; Maya Interface has been made such that any arbitrary forces can be appended to the simulation along with multiple meshes, with a high degree of user control. </p></li>
+					<li> <p>  &nbsp; Framework for adding more constraints and extending the system to a unififed particle solver exists. </p></li>
+				</ul>
+				<br>
+
+				<h2> Techniques Used: </h2>
+
+				<ul class="custom-bullet3">
+					<li> 
+						<p>  &nbsp; Intersection tests via ray marching were used to create particle filled representations of meshes. </p>
+					</li>
+					<li> <p>  &nbsp; Sphere instancing used to represent resultant particles. </p></li>
+					<li> 
+						<p>  &nbsp; Parallel constraint solver extended from position-based dynamics: </p>
+						
+						<ul class="custom-bullet3">
+							<li> <p>  &nbsp; Shape Matching -- Represent rigid bodies and maintain particle configurations </p></li>
+							<li> <p>  &nbsp; Distance Constraint -- maintain Particle Separation/closeness </p></li>
+						</ul>
+					</li>
+					<li> <p>  &nbsp; Semi-implicit Euler Integration for solving applied forces. </p></li>
+					<li> <p>  &nbsp; Callback functionality piggybacks on maya’s animation controller. </p></li>
+					<li> <p>  &nbsp; Redefining flags as output variables allowed for dynamic re-evaluation of the compute function, and hence updating of the simulation. </p></li>
+				</ul>
+
+				<h2> Reference Paper: </h2> 
+				<p>“Unified Particle Physics for Real-Time Applications” </p>
+				<p>	By: Miles Macklin, Matthias Muller, Nuttapong Chentanez, Tae-Yong Kim </p>
 
             </div>
         </div>
