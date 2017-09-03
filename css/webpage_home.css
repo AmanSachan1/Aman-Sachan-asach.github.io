@@ -1084,6 +1084,10 @@ a {
   background: #007fff;
 }
 
+.noHighlight .card:hover{
+  background: rgb(69, 69, 69);
+}
+
 /*
 ///////////////////////// Project GIF and Description //////////////////////////////////
 */

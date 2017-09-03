@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- 
+REFERENCES:
+Voronoi: http://paperjs.org/examples/voronoi/
+Image Carosels: https://codepen.io/AMKohn/pen/EKJHf
+Rotating Text Animation: https://codepen.io/gregleibowitz/pen/zrJXov
+-->
+
 <head>
 
     <meta charset="utf-8">
@@ -401,39 +408,41 @@
 					</div>
 				</div>
 				
-				<div class="card">  <!-- data-toggle="modal" data-target="#Modal_ProceduralCity"> -->
-					<div class="project">
-						<div class="summary">
-								
-							<div class="gif">
-								<div style="width:100%;height:0;padding-bottom:53%;position:relative;">
-									<div class="videoWrapper">
-										<iframe class="center-block" width="640" height="358" src="https://player.vimeo.com/video/231604217?loop=1&autoplay=1&rel=0&showinfo=0&controls=0&autohide=1&autopause=0" 
-										frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+				<div class="noHighlight">
+					<div class="card">  <!-- data-toggle="modal" data-target="#Modal_ProceduralCity"> -->
+						<div class="project">
+							<div class="summary">
+									
+								<div class="gif">
+									<div style="width:100%;height:0;padding-bottom:53%;position:relative;">
+										<div class="videoWrapper">
+											<iframe class="center-block" width="640" height="358" src="https://player.vimeo.com/video/231604217?loop=1&autoplay=1&rel=0&showinfo=0&controls=0&autohide=1&autopause=0" 
+											frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+										</div>
 									</div>
 								</div>
+								
+								<div class="d-flex justify-content-start">
+									<div class="p-2 summarytitle">Procedural City</div>
+									<a href="https://github.com/Aman-Sachan-asach/Dynamic-Procedural-City" class="ml-auto p-2 repo"> REPO</a>
+								</div>
+
+								<div class="centered_headings"><p>Javascript, WebGL</p></div>
+
+								<div class="row" style="width: 140px;margin: 0px auto;">
+									<a href="http://amansachan.com/Dynamic-Procedural-City/">
+										<div class="button_base demobutton button_skewed_slide_in">
+											<div>Demo!</div>
+											<div></div>
+											<div>Demo!</div>
+										</div>
+									</a>
+								</div>
+
+								<p>&nbsp; A procedural city built using shape grammar; The city is dynamic and changes with every build. 
+								</p>
+
 							</div>
-							
-							<div class="d-flex justify-content-start">
-								<div class="p-2 summarytitle">Procedural City</div>
-								<a href="https://github.com/Aman-Sachan-asach/Dynamic-Procedural-City" class="ml-auto p-2 repo"> REPO</a>
-							</div>
-
-							<div class="centered_headings"><p>Javascript, WebGL</p></div>
-
-							<div class="row" style="width: 140px;margin: 0px auto;">
-								<a href="http://amansachan.com/Dynamic-Procedural-City/">
-									<div class="button_base demobutton button_skewed_slide_in">
-										<div>Demo!</div>
-										<div></div>
-										<div>Demo!</div>
-									</div>
-								</a>
-							</div>
-
-							<p>&nbsp; A procedural city built using shape grammar; The city is dynamic and changes with every build. 
-							</p>
-
 						</div>
 					</div>
 				</div>
@@ -2371,7 +2380,7 @@
 	<!-- Load external PaperScript and associate it with myCanvas  -->
 	<script type="text/javascript" src="scripts/voronoi/rhill-voronoi-core.js"></script>
 	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/seedrandom/2.4.3/seedrandom.min.js"></script> <!-- Seedable RNG -->
-	
+	<!-- Voronoi Reference: http://paperjs.org/examples/voronoi/-->
 	<script type="text/paperscript" canvas="voronoiCanvas">
 		Math.seedrandom('hello.');
 		var voronoi =  new Voronoi();
