@@ -1276,11 +1276,11 @@ input:checked + .slide-container .nav label { display: block; }
   z-index: 2;
 }
 .dropdown_code .innerdropdown{
-  width: 150px;
+  width: 165px;
 }
 
 .dropdown_projects{
-  width: 150px;
+  width: 170px;
   z-index: 1;
 }
 
@@ -1290,7 +1290,7 @@ input:checked + .slide-container .nav label { display: block; }
     height: 0;
     position: absolute;
     top: 50%;
-    right: 15px;
+    right: 50px;
     margin-top: -3px;
     border-width: 6px 6px 0 6px;
     border-style: solid;
@@ -1363,7 +1363,7 @@ input:checked + .slide-container .nav label { display: block; }
 }
 
 .dropdown-wrapper.active:after {
-    border-color: #fff;
+    border-color: #007fff;
 }
 
 .dropdown-wrapper.active .dropdown {
