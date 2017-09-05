@@ -1156,7 +1156,7 @@ input:checked + .slide-container .nav label { display: block; }
     column-count: 2;
   }
 }
-@media (min-width: 1050px) {
+@media (min-width: 1000px) {
   .card-columns {
     column-count: 3;
   }
