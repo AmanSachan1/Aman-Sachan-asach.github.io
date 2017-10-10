@@ -67,7 +67,11 @@
                         <div id="dd_projects" class="dropdown-wrapper dropdown_projects" tabindex="1">Projects
                             <ul class="dropdown innerdropdown">
                                 <li><a href="#HighLighted Projects">HighLighted Projects</a>
-                                <li><a href="#More_Procedural_Graphics">More Procedural Graphics</a>
+                                <li><a href="#Rendering">Rendering</a>
+                                <li><a href="#GPU_Accelerated">GPU Accelerated</a>
+                                <li><a href="#Procedural_Graphics">Procedural Graphics</a>
+                                <li><a href="#Maya_Plugins">Maya Plugin</a>
+                                <li><a href="#Games">Games</a>
                                 <li><a href="#Miscellaneous">Miscellaneous Projects</a>
                             </ul>
                         </div>
@@ -118,7 +122,7 @@
 
                         </div>
                     </div>
-                </div>       
+                </div>
                 
                 <div class="card" data-toggle="modal" data-target="#Modal_MiniMineCraft">
                     <div class="project">
@@ -281,16 +285,212 @@
         </div><!-- container -->
     </section>
 
-    <section id="More_Procedural_Graphics">
+    <section id="Rendering">
         <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 text-center heading">
-                <h3> More Procedural Graphics </h3>
+            <div class="col-lg-12 col-md-12 col-sm-12 heading">
+                <h3> Rendering </h3>
             </div>
             <hr>
         </div>
 
         <div class="container-fluid">
             <div class="card-columns">
+				
+				<div class="card" data-toggle="modal" data-target="#Modal_PathTracer">
+                    <div class="project">
+                        <div class="summary">
+
+                            <div class="gif">
+                                <div style="width:100%;height:0;padding-bottom:53%;position:relative;">
+                                    <div class="videoWrapper">
+                                        <iframe class="center-block" width="640" height="358" src="https://player.vimeo.com/video/235422890?loop=1&autoplay=1&rel=0&showinfo=0&controls=0&autohide=1&autopause=0" 
+                                        frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-start">
+                                <div class="p-2 summarytitle">CPU Monte Carlo Path Tracer</div>
+                                <a href="https://github.com/Aman-Sachan-asach/Monte-Carlo-Path-Tracer" class="ml-auto p-2 repo"> REPO</a>
+                            </div>
+
+                            <div class="centered_headings"><p>C++, OpenGL</p></div>
+
+                            <p>&nbsp; Monte Carlo Path tracing is a rendering technique that aims to represent global illumination as accurately as possible with respect to reality. When combined with physically accurate models of surfaces, accurate models light sources, and optically-correct cameras, path tracing can produce still images that are indistinguishable from photographs.</p>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div> <!-- card columns-->
+        </div><!-- container -->
+    </section>
+
+    <section id="GPU_Accelerated">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 heading">
+                <h3> GPU Accelerated </h3>
+            </div>
+            <hr>
+        </div>
+
+        <div class="container-fluid">
+            <div class="card-columns">
+				
+				<div class="card" data-toggle="modal" data-target="#Modal_Boids">
+					<div class="project">
+						<div class="summary">
+								
+							<div class="gif">
+								<div style="width:100%;height:0;padding-bottom:53%;position:relative;">
+									<div class="videoWrapper">
+										<iframe class="center-block" width="640" height="358" src="https://player.vimeo.com/video/233558094?loop=1&autoplay=1&rel=0&showinfo=0&controls=0&autohide=1&autopause=0" 
+										frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+									</div>
+								</div>
+							</div>
+							
+							<div class="d-flex justify-content-start">
+								<div class="p-2 summarytitle">Boids with CUDA</div>
+								<a href="https://github.com/Aman-Sachan-asach/CUDA-Boid-Flocking" class="ml-auto p-2 repo"> REPO</a>
+							</div>
+
+							<div class="centered_headings"><p>C/C++, CUDA</p></div>
+
+							<p>&nbsp; GPU Flocking Simulation written in CUDA </p>
+							
+							<h6><b>Visualize 1.6 million particles running at 60fps</b></h6>
+
+							<p> Tested on: Windows 10, i7-7700HQ @ 2.8GHz 32GB, GTX 1070(laptop GPU) 8074MB </p>
+						</div>
+					</div>
+				</div>
+
+            </div> <!-- card columns-->
+        </div><!-- container -->
+    </section>
+
+    <section id="Procedural_Graphics">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 text-center heading">
+                <h3> Procedural Graphics </h3>
+            </div>
+            <hr>
+        </div>
+
+        <div class="container-fluid">
+            <div class="card-columns">
+
+	                <div class="card" data-toggle="modal" data-target="#Modal_LevelGenerator">
+	                    <div class="project">
+	                        <div class="summary">
+	                            
+	                            <div class="gif">
+	                                <div style="width:100%;height:0;padding-bottom:53%;position:relative;">
+	                                    <div class="videoWrapper">
+	                                        <iframe class="center-block" width="640" height="358" src="https://player.vimeo.com/video/231603238?loop=1&autoplay=1&rel=0&showinfo=0&controls=0&autohide=1&autopause=0" 
+	                                        frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                            
+	                            <div class="d-flex justify-content-start">
+	                                <div class="p-2 summarytitle">Interesting Level Generator</div>
+	                                <a href="https://github.com/Aman-Sachan-asach/InterestingLevelGenerator" class="ml-auto p-2 repo"> REPO</a>
+	                            </div>
+
+	                            <div class="centered_headings"><p>Javescript, WebGL</p></div>
+
+	                            <div class="row" style="width: 140px;margin: 0px auto;">
+	                                <a href="http://amansachan.com/InterestingLevelGenerator/">
+	                                    <div class="button_base demobutton button_skewed_slide_in">
+	                                        <div>Demo!</div>
+	                                        <div></div>
+	                                        <div>Demo!</div>
+	                                    </div>
+	                                </a>
+	                            </div>
+
+	                            <p> &nbsp; A procedural multi-layer dungeon generator that generates levels based on a dynamically generated voronoi like graph after it has been heavily modified by various filters.</p> 
+	                            <p> &nbsp; Realistic fog, crumbling pathways, and terrain are added over the basic level layout to give it a unique mysterious foreign world aesthetic.</p>
+
+	                        </div>
+	                    </div>
+	                </div>
+
+                    <div class="noHighlight">
+                        <div class="card"> <!-- data-toggle="modal" data-target="#Modal_Shaders"> -->
+                            <div class="project">
+                                <div class="summary">
+                                    
+                                    <div class="gif">
+                                        <div style="width:100%;height:0;padding-bottom:53%;position:relative;">
+                                            <div class="videoWrapper">
+                                                <iframe class="center-block" width="640" height="358" src="https://player.vimeo.com/video/231613912?loop=1&autoplay=1&rel=0&showinfo=0&controls=0&autohide=1&autopause=0" 
+                                                frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="d-flex justify-content-start">
+                                        <div class="p-2 summarytitle">Shaders</div>
+                                        <a href="https://github.com/Aman-Sachan-asach/Shaders" class="ml-auto p-2 repo"> REPO</a>
+                                    </div>
+
+                                    <div class="centered_headings"><p>Javascript, WebGL</p></div>
+                                        
+                                    <div class="row" style="width: 140px;margin: 0px auto;">
+                                        <a href="http://amansachan.com/Shaders_in_WebGL/">
+                                            <div class="button_base demobutton button_skewed_slide_in">
+                                                <div>Demo!</div>
+                                                <div></div>
+                                                <div>Demo!</div>
+                                            </div>
+                                        </a>
+                                    </div> 
+
+                                    <p> &nbsp; A variety of Shaders and Post-Processing Effects </p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+					<div class="card" data-toggle="modal" data-target="#Modal_MetaBalls">
+	                    <div class="project">
+	                        <div class="summary">
+	                            
+	                            <div class="gif">
+	                                <div style="width:100%;height:0;padding-bottom:53%;position:relative;">
+	                                    <div class="videoWrapper">
+	                                        <iframe class="center-block" width="640" height="358" src="https://player.vimeo.com/video/231577695?loop=1&autoplay=1&rel=0&showinfo=0&controls=0&autohide=1&autopause=0" 
+	                                        frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                            
+	                            <div class="d-flex justify-content-start">
+	                                <div class="p-2 summarytitle">Metaballs</div>
+	                                <a href="https://github.com/Aman-Sachan-asach/Metaballic-Lava-Lamp" class="ml-auto p-2 repo"> REPO</a>
+	                            </div>
+
+	                            <div class="centered_headings"><p>Javascript, WebGL</p></div>
+	                                
+	                            <div class="row" style="width: 140px;margin: 0px auto;">
+	                                <a href="http://amansachan.com/Metaballic-Lava-Lamp/">
+	                                    <div class="button_base demobutton button_skewed_slide_in">
+	                                        <div>Demo!</div>
+	                                        <div></div>
+	                                        <div>Demo!</div>
+	                                    </div>
+	                                </a>
+	                            </div>
+
+	                            <p> &nbsp; Simulation of 3D Metaballs, which are organic looking n-dimensional objects</p>
+
+	                        </div>
+	                    </div>
+	                </div>
 
                     <div class="noHighlight">
                         <div class="card">  <!-- data-toggle="modal" data-target="#Modal_ProceduralCity"> -->
@@ -370,43 +570,90 @@
                         </div>
                     </div>
 
-                    <div class="noHighlight">
-                        <div class="card"> <!-- data-toggle="modal" data-target="#Modal_Shaders"> -->
-                            <div class="project">
-                                <div class="summary">
-                                    
-                                    <div class="gif">
-                                        <div style="width:100%;height:0;padding-bottom:53%;position:relative;">
-                                            <div class="videoWrapper">
-                                                <iframe class="center-block" width="640" height="358" src="https://player.vimeo.com/video/231613912?loop=1&autoplay=1&rel=0&showinfo=0&controls=0&autohide=1&autopause=0" 
-                                                frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                                            </div>
+            </div> <!-- card columns-->
+        </div><!-- container -->
+    </section>
+
+    <section id="Maya_Plugins">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 text-center heading">
+                <h3> Maya Plugins </h3>
+            </div>
+            <hr>
+        </div>
+
+        <div class="container-fluid">
+            <div class="card-columns">
+
+				<div class="card" data-toggle="modal" data-target="#Modal_ArtOfCollisions">
+                    <div class="project">
+                        <div class="summary">
+
+                            <div class="gif">
+                                <div style="width:100%;height:0;padding-bottom:53%;position:relative;">
+                                    <div class="videoWrapper">
+                                        <iframe class="center-block" width="640" height="358" src="https://player.vimeo.com/video/231615628?loop=1&autoplay=1&rel=0&showinfo=0&controls=0&autohide=1&autopause=0" 
+                                        frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex justify-content-start">
+                                <div class="p-2 summarytitle">Art Of Collisions (Maya Plugin)</div>
+                                <a href="https://github.com/Aman-Sachan-asach/ArtOfCollisions" class="ml-auto p-2 repo"> REPO</a>
+                            </div>
+
+                            <div class="centered_headings"><p>C++, Maya API, MEL</p></div>
+                            <div class="centered_headings"><p>Group Project</p></div>
+
+                            <p> &nbsp; A real-time simulation of particle-based rigid body dynamics based on the paper "Unified Particle Physics for Real-Time Applications" by Macklin, Muller, Chentanez, and Kim.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="noHighlight">
+                    <div class="card"> <!-- data-toggle="modal" data-target="#Modal_LSystems_MayaPlugin"> -->
+                        <div class="project">
+                            <div class="summary">
+                                
+                                <div class="gif">
+                                    <div style="width:100%;height:0;padding-bottom:53%;position:relative;">
+                                        <div class="videoWrapper">
+                                            <iframe class="center-block" width="640" height="358" src="https://player.vimeo.com/video/232434772?loop=1&autoplay=1&rel=0&showinfo=0&controls=0&autohide=1&autopause=0" 
+                                            frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                                         </div>
                                     </div>
-                                    
-                                    <div class="d-flex justify-content-start">
-                                        <div class="p-2 summarytitle">Shaders</div>
-                                        <a href="https://github.com/Aman-Sachan-asach/Shaders" class="ml-auto p-2 repo"> REPO</a>
-                                    </div>
-
-                                    <div class="centered_headings"><p>Javascript, WebGL</p></div>
-                                        
-                                    <div class="row" style="width: 140px;margin: 0px auto;">
-                                        <a href="http://amansachan.com/Shaders_in_WebGL/">
-                                            <div class="button_base demobutton button_skewed_slide_in">
-                                                <div>Demo!</div>
-                                                <div></div>
-                                                <div>Demo!</div>
-                                            </div>
-                                        </a>
-                                    </div> 
-
-                                    <p> &nbsp; A variety of Shaders and Post-Processing Effects </p>
-
                                 </div>
+                                
+                                <div class="d-flex justify-content-start">
+                                    <div class="p-2 summarytitle">LSystems - A Maya Plugin</div>
+                                </div>
+
+                                <div class="centered_headings"><p>C++, Maya API, MEL</p></div>
+                                
+                                <p> &nbsp; An Implementation of LSystems as a maya plugin. </p>
+
                             </div>
                         </div>
                     </div>
+                </div>
+
+            </div> <!-- card columns-->
+        </div><!-- container -->
+    </section>
+
+    <section id="Games">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 text-center heading">
+                <h3> Games </h3>
+            </div>
+            <hr>
+        </div>
+
+        <div class="container-fluid">
+            <div class="card-columns">
+
 
             </div> <!-- card columns-->
         </div><!-- container -->
@@ -422,6 +669,35 @@
 
         <div class="container-fluid">
             <div class="card-columns">
+
+                    <div class="card" data-toggle="modal" data-target="#Modal_MiniMineCraft">
+	                    <div class="project">
+	                        <div class="summary">
+
+	                            <div class="gif">
+	                                <div style="width:100%;height:0;padding-bottom:53%;position:relative;">
+	                                    <div class="videoWrapper">
+	                                        <iframe class="center-block" width="640" height="358" src="https://player.vimeo.com/video/231614466?loop=1&autoplay=1&rel=0&showinfo=0&controls=0&autohide=1&autopause=0" 
+	                                        frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	                                    </div>
+	                                </div>
+	                            </div>
+
+	                            <div class="d-flex justify-content-start">
+	                                <div class="p-2 summarytitle">Mini Minecraft</div>
+	                                <a href="https://github.com/Aman-Sachan-asach/MiniMineCraft" class="ml-auto p-2 repo"> REPO</a>
+	                            </div>
+
+	                            <div class="centered_headings"><p>C++, OpenGL, GLSL</p></div>
+	                            <div class="centered_headings"><p>Group Project</p></div>
+
+	                            <p>&nbsp; A tiny game built from scratch in the style of Minecraft.</p>
+
+	                            <p>&nbsp; Features I Implemented: Efficient Terrain Generation (interleaved VBO's and mesh hull drawing), general material property mapping scheme, weather, clouds, a day and night cycle, animated textures and more.</p>
+
+	                        </div>
+	                    </div>
+	                </div>
 
                     <div class="noHighlight">
                         <div class="card"> <!-- data-toggle="modal" data-target="#Modal_MeshEditor"> -->
@@ -444,33 +720,6 @@
                                     <div class="centered_headings"><p>C++, OpenGL</p></div>
                                     
                                     <p> &nbsp; HalfEdge Mesh Data Structure; Catmull Clark Subdivision; Skeletons and Skinning </p>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="noHighlight">
-                        <div class="card"> <!-- data-toggle="modal" data-target="#Modal_LSystems_MayaPlugin"> -->
-                            <div class="project">
-                                <div class="summary">
-                                    
-                                    <div class="gif">
-                                        <div style="width:100%;height:0;padding-bottom:53%;position:relative;">
-                                            <div class="videoWrapper">
-                                                <iframe class="center-block" width="640" height="358" src="https://player.vimeo.com/video/232434772?loop=1&autoplay=1&rel=0&showinfo=0&controls=0&autohide=1&autopause=0" 
-                                                frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="d-flex justify-content-start">
-                                        <div class="p-2 summarytitle">LSystems - A Maya Plugin</div>
-                                    </div>
-
-                                    <div class="centered_headings"><p>C++, Maya API, MEL</p></div>
-                                    
-                                    <p> &nbsp; An Implementation of LSystems as a maya plugin. </p>
 
                                 </div>
                             </div>
