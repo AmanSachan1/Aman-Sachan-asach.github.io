@@ -195,6 +195,16 @@ div#maincontent {
 */
 
 /*
+///////////////////////// Modal Center Heading //////////////////////////////////
+*/
+
+.modal-content .centered_headings {
+  color: #9db2ff;
+  text-align: center;
+  font-size: 22px;
+}
+
+/*
 ///////////////////////// Navbar stuff //////////////////////////////////
 */
 
