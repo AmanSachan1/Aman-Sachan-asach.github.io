@@ -400,6 +400,12 @@ a {
     width: 40vw;
 }
 
+.singleBigImage {
+    text-align: center;
+    margin: 0px auto;
+    width: 70vw;
+}
+
 .twoimages {
     display: inline-flex;
 }
@@ -711,7 +717,7 @@ a {
 }
 
 .videoWrapperModal {
-  position: relative;
+  /* position: relative; */
   padding-bottom: 56.25%; /* 16:9 */
   padding-top: 25px;
   height: 0;
@@ -1267,7 +1273,7 @@ input:checked + .slide-container .nav label { display: block; }
 }
 
 .biggerText {
-  font-size: 18px;
+  font-size: 22px;
 }
 
 .bigText {
@@ -1283,7 +1289,7 @@ input:checked + .slide-container .nav label { display: block; }
     position: relative;
     width: 130px;
     height: 23px;
-    margin: 12px 15px;
+    margin: 14px 15px 12px 0px;
     padding: 0px 10px;
     z-index: 1;
 
@@ -1305,7 +1311,7 @@ input:checked + .slide-container .nav label { display: block; }
 }
 
 .dropdown_projects{
-  width: 170px;
+  width: 200px;
   z-index: 1;
 }
 
@@ -1313,10 +1319,11 @@ input:checked + .slide-container .nav label { display: block; }
     content: "";
     width: 0;
     height: 0;
-    position: absolute;
+    position: relative;
     top: 50%;
+    left: 0%;
     right: 50px;
-    margin-top: -3px;
+    margin-top: 0px;
     border-width: 6px 6px 0 6px;
     border-style: solid;
     border-color: #007fff transparent;
@@ -1394,7 +1401,7 @@ input:checked + .slide-container .nav label { display: block; }
 .dropdown-wrapper.active .dropdown {
     border-bottom: 1px solid #007fff;
     border-top: 1px solid #007fff;
-    max-height: 400px;
+    max-height: 600px;
 }
 
 /*
