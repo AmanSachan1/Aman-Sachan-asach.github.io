@@ -373,6 +373,12 @@ div#maincontent {
     width: 40vw;
 }
 
+.singleBigImage {
+    text-align: center;
+    margin: 0px auto;
+    width: 70vw;
+}
+
 .twoimages {
     display: inline-flex;
 }
