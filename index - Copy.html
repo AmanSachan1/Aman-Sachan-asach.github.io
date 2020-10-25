@@ -1,0 +1,1821 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 
+REFERENCES:
+Voronoi: http://paperjs.org/examples/voronoi/
+Image Carosels: https://codepen.io/AMKohn/pen/EKJHf
+Rotating Text Animation: https://codepen.io/gregleibowitz/pen/zrJXov
+-->
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	<!-- Open Graph Tags: Controls how the page looks when linked to other websites like facebook and linkedIn -->
+	<meta property="og:url"          content="http://www.amansachan.com" />
+	<meta property="og:type"         content="text/html" />
+	<meta property="og:title"        content="Aman Sachan's Portfolio" />
+	<meta property="og:image"        content="assets/images/readme/website1.png" />
+
+	<title>Aman Sachan</title>
+
+	<!-- Bootstrap Core CSS min-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+	<!-- Fonts -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+	<!-- My custom CSS -->
+	<link href="css/bootstrap4cards.css" rel="stylesheet">
+	<link href="css/webpage_home.css" rel="stylesheet">
+
+
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+</head>
+
+<body id="page-top" class="index">
+<div id="skipnav"><a href="#maincontent">Skip to main content</a></div>
+
+	<!-- Navigation -->
+	<nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header page-scroll">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+				</button>
+				<a class="navbar-brand" href="#page-top">Aman Sachan</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+
+					<li class="hidden">
+						<a href="#page-top"></a>
+					</li>
+					<li class="page-scroll">
+						<a href="#Demo Reel">Demo Reel</a>
+					</li>
+					<li class="page-scroll">
+						<a href="webpages/projects.html">Projects</a>
+					</li>
+					<li class="page-scroll">
+						<a href="webpages/miscellaneous.html#Modelling">3D Modelling</a>
+					</li>
+					<li class="page-scroll">
+						<a href="webpages/miscellaneous.html#Honors">Awards and Honors</a>
+					</li>
+					<!--
+					SITE UNDER CONSTRUCTION 
+					<li class="page-scroll">
+						<a href="https://sites.google.com/view/cg-notes/">Blog</a>
+					</li>
+					-->
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
+
+	<!-- Header -->
+	<header>
+		<div class="container" id="maincontent" tabindex="-1" style="display:flex;justify-content:center;align-items:center;">
+			
+			<div class="infrontOfContainer"></div>
+				
+			<!-- Load the Paper.js library -->
+			<script type="text/javascript" src="scripts/voronoi/paper-full.js"></script>
+			<!-- create a canvas -->
+			<canvas id="voronoiCanvas" hidpi="off" resize></canvas>
+			<script type="text/paperscript" canvas="voronoiCanvas">
+				var c = document.getElementById("voronoiCanvas");
+				var ctx = c.getContext("2d");
+				var img = new Image();
+				img.onload = function() {
+					ctx.drawImage(img, 0, 0);
+				};
+				img.src = 'assets/images/voronoi/voronoiFullScreen_4K.png';
+			</script>
+
+			<div class="row" style="z-index: 2">
+				<div class="col-lg-12 col-md-12 col-sm-12">
+					<div class="intro-text center-block">
+
+						<h1 class="name">Aman Sachan</h1>
+						<div class="row-fluid">
+							<div class="labelwrapper">
+								<div class="skills">Graphics Programmer<span class="divider">  |  </span>Software Engineer<span class="divider">  |  </span>Game Developer</div>
+							</div>
+						</div>
+						<!-- <br>
+						<span class="skills">University of Pennsylvania '18</span> -->
+
+						<!-- All the connect with me icons-->
+						<div class="footer-social-icons">
+							<ul class="social-icons">
+								<li>
+									<a href="https://vimeo.com/amansachan" class="social-icon">
+									<i class="fa fa-vimeo-square fa-4x">
+								</i></a></li>
+								<li>
+									<a href="https://www.linkedin.com/in/amansachan1/" class="social-icon">
+									<i class="fa fa-linkedin-square fa-4x">
+								</i></a></li>
+								<li>
+									<a href="https://github.com/AmanSachan1" class="social-icon">
+									<i class="fa fa-github-square fa-4x">
+								</i></a></li>
+								<li>
+									<a href="mailto:aman9740@gmail.com" class="social-icon">
+									<i class="fa fa-envelope fa-4x">
+								</i></a></li>
+							</ul>
+						</div>
+
+						<div class="grid__item color-11">
+							<a class="link link--yaku" href="assets/downloadable/Aman_Sachan_Resume.pdf" download>
+								<i class="fa fa-download" aria-hidden="true">&nbsp;</i><span>R</span><span>e</span><span>s</span><span>u</span><span>m</span><span>e</span> 
+							</a>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</header>
+
+	<!-- Demo Reel -->
+	<section class="demoreelwrapper" id="Demo Reel">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-12 text-center heading centeredheading">
+					<h2> Demo Reel</h2>
+					<h3>(Tech Focused)</h3>
+				</div>
+				<div class="col-lg-12 text-center heading centeredheading">
+					<h4> Last Updated: 27th Sept, 2017 </h4>
+					<hr>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-8 col-md-10 col-sm-12 centercolumn">
+					<!-- Demo Reel -->
+					<div class="videoWrapperModal">
+						<iframe class="center-block" width="854" height="480" src="https://player.vimeo.com/video/235781828?loop=1&autoplay=1&rel=0&showinfo=0&controls=0&autohide=1&autopause=0" 
+						frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+					</div>
+				</div>
+
+				<div class="col-lg-8 col-md-12 col-sm-12 centercolumn">
+					<!-- Demo Reel Breakdown -->
+					<div class="demo-reel-breakdown">
+						<div class="demo-reel-breakdown-title">
+							<div class="text-center">
+								<div class="grid__item color-11">
+									<a class="link link--yaku" href="assets/downloadable/Aman_Sachan_Demo_Reel_Breakdown.pdf" download>
+										<i class="fa fa-download" aria-hidden="true">&nbsp;</i><span>Reel</span> <span>Breakdown</span> 
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Project Cards Section -->
+	<section id="HighLighted Projects">
+		<div class="container-fluid">
+			
+			<div class="row">
+				<div class="col-lg-12 text-center heading">
+					<h2> Projects </h2>
+				</div>
+				<div class="col-lg-12 text-center heading">
+					<h6 style="padding: 0px;"> Click on the projects to learn more about them </h6>
+				</div>
+				<hr>
+			</div>
+
+			<div class="card-columns">
+				
+				<div class="card" data-toggle="modal" data-target="#Modal_Meteoros">
+					<div class="project">
+						<div class="summary">
+
+							<div class="gif">
+								<div style="width:100%;height:0;padding-bottom:53%;position:relative;">
+									<div class="videoWrapper">
+										<iframe class="center-block" width="640" height="358" src="https://player.vimeo.com/video/247662072?loop=1&autoplay=0&rel=0&showinfo=0&controls=0&autohide=1&autopause=0" 
+										frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+									</div>
+								</div>
+							</div>
+							
+							<div class="d-flex justify-content-start">
+								<div class="p-2 summarytitle">Meteoros</div>
+								<a href="https://github.com/Aman-Sachan-asach/Meteoros" class="ml-auto p-2 repo"> REPO</a>
+							</div>
+
+							<div class="centered_headings"><p>Vulkan, C++, GLSL</p></div>
+
+							<p>	&nbsp; A real-time cloudscape renderer in Vulkan.</p>
+							<p>	&nbsp; It is based on the cloud system 'NUBIS' that was implemented for the Decima Engine by Guerrilla Games for the game 'Horizon Zero Dawn' </p>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="card" data-toggle="modal" data-target="#Modal_HandOfGod">
+					<div class="project">
+						<div class="summary">
+							
+							<div class="gif">
+								<div style="width:100%;height:0;padding-bottom:53%;position:relative;">
+									<div class="videoWrapper">
+										<iframe class="center-block" width="640" height="358" src="https://www.youtube.com/embed/UKGqr8qPlbg" frameborder="0" gesture="media" allow="encrypted-media" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+									</div>
+								</div>
+							</div>
+							
+							<div class="d-flex justify-content-start">
+								<div class="p-2 summarytitle">Hand Of God</div>
+								<a href="https://github.com/Aman-Sachan-asach/Hand_of_God" class="ml-auto p-2 repo"> REPO</a>
+							</div>
+
+							<div class="centered_headings"><p>Unreal Engine 4</p></div>
+
+							<p>	&nbsp; Hand of God is an asymmetric co-op game, where one player is the ‘Runner’ and uses a traditional game controller while the other is a ‘God’ and uses the HTC Vive to reach into the world for an immersive feel. </p>
+
+							<p>	&nbsp; The goal is for the 'Runner' to move and stay ahead of the Darkness that swirls around along their dangerous path and for the 'God' to help the runner through this arduous journey. If the Runner cannot move forward fast enough, the darkness envelops them for a grim end.</p>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="card" data-toggle="modal" data-target="#Modal_PathTracer">
+					<div class="project">
+						<div class="summary">
+
+							<div class="gif">
+								<div style="width:100%;height:0;padding-bottom:53%;position:relative;">
+									<div class="videoWrapper">
+										<iframe class="center-block" width="640" height="358" src="https://player.vimeo.com/video/235422890?loop=1&autoplay=0&rel=0&showinfo=0&controls=0&autohide=1&autopause=0" 
+										frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+									</div>
+								</div>
+							</div>
+
+							<div class="d-flex justify-content-start">
+								<div class="p-2 summarytitle">CPU Monte Carlo Path Tracer</div>
+								<a href="https://github.com/Aman-Sachan-asach/Monte-Carlo-Path-Tracer" class="ml-auto p-2 repo"> REPO</a>
+							</div>
+
+							<div class="centered_headings"><p>C++, OpenGL</p></div>
+
+							<p>&nbsp; Monte Carlo Path tracing is a rendering technique that aims to represent global illumination as accurately as possible with respect to reality. When combined with physically accurate models of surfaces, accurate models light sources, and optically-correct cameras, path tracing can produce still images that are indistinguishable from photographs.</p>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="noHighlight">
+					<div class="card"> <!-- BOID FLOCKING -->
+						<div class="project">
+							<!--- <div onclick="location.href='https://github.com/AmanSachan1/CUDA-Boid-Flocking';" class="summary" style="cursor: pointer;"> --->
+							<div class="summary">		
+								<div class="gif">
+									<div style="width:100%;height:0;padding-bottom:53%;position:relative;">
+										<div class="videoWrapper">
+											<iframe class="center-block" width="640" height="358" src="https://player.vimeo.com/video/233558094?loop=1&autoplay=0&rel=0&showinfo=0&controls=0&autohide=1&autopause=0" 
+											frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+										</div>
+									</div>
+								</div>
+								
+								<div class="d-flex justify-content-start">
+									<a href="https://github.com/AmanSachan1/CUDA-Boid-Flocking" class="p-2 summarytitle">Boids with CUDA</a>
+									<a href="https://github.com/AmanSachan1/CUDA-Boid-Flocking" class="ml-auto p-2 repo"> REPO</a>
+								</div>
+
+								<div class="centered_headings"><p>C/C++, CUDA</p></div>
+
+								<p>&nbsp; GPU Flocking Simulation written in CUDA </p>
+								
+								<h6><b>Visualize 1.6 million particles running at 60fps</b></h6>
+
+								<p> Tested on: Windows 10, i7-7700HQ @ 2.8GHz 32GB, GTX 1070(laptop GPU) 8074MB </p>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="card" data-toggle="modal" data-target="#Modal_ClusteredDeferredShading">
+					<div class="project">
+						<div class="summary">
+
+							<div class="gif">
+								<div style="width:100%;height:0;padding-bottom:53%;position:relative;">
+									<div class="videoWrapper">
+										<iframe class="center-block" width="640" height="320" src="https://player.vimeo.com/video/240254058?loop=1&autoplay=0&rel=0&showinfo=0&controls=0&autohide=1&autopause=0" 
+										frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+									</div>
+								</div>
+							</div>
+
+							<div class="d-flex justify-content-start">
+								<div class="p-2 summarytitle">WebGL Clustered Deferred &amp; <br /> Forward Plus Shading</div>
+								<a href="https://github.com/Aman-Sachan-asach/WebGL-Clustered-Deferred-Forward-Plus" class="ml-auto p-2 repo"> REPO</a>
+							</div>
+
+							<div class="centered_headings"><p>Javascript, WebGL, GLSL</p></div>
+							
+							<div class="row" style="width: 140px;margin: 0px auto;">
+								<a href="https://amansachan1.github.io/WebGL-Clustered-Deferred-Forward-Plus/">
+									<div class="button_base demobutton button_skewed_slide_in">
+										<div>Demo!</div>
+										<div></div>
+										<div>Demo!</div>
+									</div>
+								</a>
+							</div>
+
+							<p>&nbsp; Can simulate over 2100 lights at 60 FPS.</p>
+							<p>&nbsp; A WebGL implementation of Clustered Deferred and Clustered Forward Shading Techniques.</p>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="noHighlight">
+					<div class="card"> <!-- JELLO SIM -->
+						<div class="project">
+							<!--- <div onclick="location.href='https://github.com/AmanSachan1/JelloSim';" class="summary" style="cursor: pointer;"> --->
+							<div class="summary">			
+								<div class="gif">
+									<div style="width:100%;height:0;padding-bottom:53%;position:relative;">
+										<div class="videoWrapper">
+											<iframe class="center-block" width="640" height="320" src="https://player.vimeo.com/video/260037661?loop=1&autoplay=0&rel=0&showinfo=0&controls=0&autohide=1&autopause=0" 
+											frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+										</div>
+									</div>
+								</div>
+
+								<div class="d-flex justify-content-start">
+									<a href="https://github.com/AmanSachan1/JelloSim" class="p-2 summarytitle">Jello Sim</a>
+									<a href="https://github.com/AmanSachan1/JelloSim" class="ml-auto p-2 repo"> REPO</a>
+								</div>
+
+								<div class="centered_headings"><p>C++, Houdini</p></div>
+
+								<p>	&nbsp; A Jello Simulator based on the Finite Element Method using a Fixed Corotated Elastic Model</p> 
+							</div>						
+						</div>
+					</div>
+				</div>
+
+			</div> <!-- card columns-->
+
+			<div class="d-flex justify-content-center clearfix">
+				<div class="moreProjects">
+					<a href="webpages/projects.html">
+						<div class="button_base bigButton button_3D_double_roll">
+							<div>More Projects</div>
+							<div>More Projects</div>
+							<div>More Projects</div>
+							<div>More Projects</div>
+						</div>
+					</a>
+				</div>
+			</div>
+
+		</div><!-- container -->
+	</section>
+
+	<!-- Footer -->
+	<footer class="text-center">
+		<div class="footer-below">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						&copy; Aman Sachan 2020. All Rights Reserved.
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+	<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+	<!-- Modals for Projects -->
+	<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+	<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+	
+	<!-- Math for descriptive modals-->
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+	<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+	</script>
+
+	<!-- Modal for Meteoros -->
+	<div class="modal fade" id="Modal_Meteoros" tabindex="-1" role="dialog" aria-labelledby="Meteoros" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="row">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">Meteoros</h5>
+					<i class="fa fa-times fa-3x" class="close" data-dismiss="modal" aria-label="Close"></i>
+				</div>
+			</div>
+
+			<div class="centered_headings">
+				<p>Vulkan, C++, GLSL</p>
+			</div>
+
+			<div class="row center-block">
+				<div class="project-social-icons">
+					<ul class="social-icons">
+						<li>
+							<a href="https://github.com/Aman-Sachan-asach/Meteoros" class="social-icon">
+							<i class="fa fa-github-square fa-3x">
+						</i></a></li>
+
+						<li>
+							<a href="https://vimeo.com/amansachan" class="social-icon">
+							<i class="fa fa-vimeo-square fa-3x">
+						</i></a></li>
+
+						<li>
+							<a href="https://www.youtube.com/channel/UCgt_lAI0-x_RhlGyv6DEBAw" class="social-icon">
+							<i class="fa fa-youtube-square fa-3x">
+						</i></a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="row-fluid divline">
+			</div>
+
+			<div class="modal-body">
+
+				<h2> Introduction </h2>
+
+				<p>&emsp; This project is a real-time cloudscape renderer in Vulkan that was made as the final project for the course, CIS 565: GPU Programming and Architecture, at the University of Pennsylvania. It is based on the cloud system 'NUBIS' that was implemented for the Decima Engine by Guerrilla Games. The clouds were originally made for the game 'Horizon Zero Dawn' and were described in the following SIGGRAPH 2015 and 2017 presentations: </p>
+				<br>
+
+				<ul class="custom-bullet2">
+					<li> <p>  &nbsp; <a href="https://www.guerrilla-games.com/read/the-real-time-volumetric-cloudscapes-of-horizon-zero-dawn">2015: The Real-time Volumetric Cloudscapes of Horizon Zero Dawn</a> </p> </li> 
+					<li> <p>  &nbsp; <a href="https://www.guerrilla-games.com/read/nubis-authoring-real-time-volumetric-cloudscapes-with-the-decima-engine">2017 Nubis: Authoring Realtime Volumetric Cloudscapes with the Decima Engine</a> </p> </li> 
+				</ul>
+
+				<div class = "clearfix">
+					<div class="vid-wrapper" style="float: none">
+						<div class="vid">
+							<div class="summary">
+								<div class="gif">
+									<div style="width:100%;height:0;padding-bottom:53%;position:relative;">
+										<div class="videoWrapperModal">
+											<iframe class="center-block" width="854" height="480" src="https://player.vimeo.com/video/247662072?loop=1&autoplay=0&rel=0&showinfo=0&controls=0&autohide=1&autopause=0" 
+											frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<br>
+				
+				<div style="text-align: center; margin-left: -2.5%">
+					<p>&emsp; The project is explained pretty well on the <a href="https://github.com/Aman-Sachan-asach/Meteoros"> <span class="biggerText">github repository</span> </a>.</p>
+					<br>
+				</div>
+
+			</div>
+		</div>
+	  </div>
+	</div>
+
+	<!-- Modal for PathTracer -->
+	<div class="modal fade" id="Modal_PathTracer" tabindex="-1" role="dialog" aria-labelledby="PathTracer" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="row">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">Monte Carlo Path Tracer</h5>
+					<i class="fa fa-times fa-3x" class="close" data-dismiss="modal" aria-label="Close"></i>
+				</div>
+			</div>
+
+			<div class="centered_headings">
+				<p>C++, OpenGL</p>
+			</div>
+
+			<div class="row center-block">
+				<div class="project-social-icons">
+					<ul class="social-icons">
+						<li>
+							<a href="https://github.com/Aman-Sachan-asach/Monte-Carlo-Path-Tracer" class="social-icon">
+							<i class="fa fa-github-square fa-3x">
+						</i></a></li>
+						<li>
+							<a href="https://vimeo.com/amansachan" class="social-icon">
+							<i class="fa fa-vimeo-square fa-3x">
+						</i></a></li>
+
+						<li>
+							<a href="https://www.youtube.com/channel/UCgt_lAI0-x_RhlGyv6DEBAw" class="social-icon">
+							<i class="fa fa-youtube-square fa-3x">
+						</i></a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="row-fluid divline">
+			</div>
+
+			<div class="modal-body">
+
+				<h2> Introduction </h2>
+
+				<p>&emsp; Monte Carlo Path tracing is a rendering technique that aims to represent global illumination as accurately as possible with respect to reality. The algorithm does this by approximating the integral over all the illuminance arriving at a point in the scene. A portion of this illuminance  will go towards the viewpoint camera, and this portion of illuminance is determined by a surface reflectance function (BRDF). This integration procedure is repeated for every pixel in the output image. When combined with physically accurate models of surfaces, accurate models light sources, and optically-correct cameras, path tracing can produce still images that are indistinguishable from photographs.</p>
+				<br>
+
+				<div class = "clearfix">
+					<div class="vid-wrapper" style="float: none">
+						<div class="vid">
+							<div class="summary">
+								<div class="gif">
+									<div style="width:100%;height:0;padding-bottom:53%;position:relative;">
+										<div class="videoWrapperModal">
+											<iframe class="center-block" width="854" height="480" src="https://player.vimeo.com/video/235422890?loop=1&autoplay=0&rel=0&showinfo=0&controls=0&autohide=1&autopause=0" 
+											frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<p>&emsp; Path tracing naturally simulates many effects that have to be added as special cases for other methods (such as ray tracing or scanline rendering); these effects include soft shadows, depth of field, motion blur, caustics, ambient occlusion, and indirect lighting, etc.</p>
+				<br>
+
+				<p>&emsp; Due to its accuracy and unbiased nature, path tracing is used to generate reference images when testing the quality of other rendering algorithms. In order to get high quality images from path tracing, a large number of rays must be traced to avoid visible noisy artifacts.</p>
+				<br>
+
+				<div class="slidewrapper captionedslidewrapper">
+					<div class="row backgroundPrimary">
+
+						<div class="slidebackground">
+							<ul class="slides">
+								<input type="radio" name="PathTracerPretty" id="img-PathTracer-Pretty-1" checked />
+								<li class="slide-container">
+									<div class="slide"  align="middle">
+										<img src="assets/images/Projects/PathTracer/pretty/stanfordDragon_FullLighting_EnvironmentMap_1225Samples_Depth10.png" />
+
+										<div class="caption">
+											<h3>Draggo</h3>
+											<p>Full Lighting Integrator; &emsp; 1225 samples/pixel;&emsp;  Recursion depth: 10; &emsp; 1024x1024 pixels</p>
+											<p> Prominent Techniques: Environment Mapping; Glass Materials; </p>
+										</div>
+									</div>
+
+									<div class="nav">
+										<label for="img-PathTracer-Pretty-9" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-Pretty-2" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<input type="radio" name="PathTracerPretty" id="img-PathTracer-Pretty-2" />
+								<li class="slide-container">
+									<div class="slide" align="middle">
+										<img src="assets/images/Projects/PathTracer/pretty/partyAnimals_900Samples_Depth10.png" />
+
+										<div class="caption">
+											<h3>Party Animals</h3>											
+											<p> Full Lighting Integrator; &emsp; 900 samples/pixel; &emsp; Recursion depth: 10; &emsp; 1024x1024 pixels </p>
+											<p> Prominent Techniques: BVH Acceleration </p>
+										</div>
+									</div>
+
+									<div class="nav">
+										<label for="img-PathTracer-Pretty-1" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-Pretty-3" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<input type="radio" name="PathTracerPretty" id="img-PathTracer-Pretty-3" />
+								<li class="slide-container">
+									<div class="slide" align="middle">
+										<img src="assets/images/Projects/PathTracer/pretty/VeachScene_FullLighting_2500Samples_depth10.png" />
+
+										<div class="caption">
+											<h3>Veach Scene</h3>											
+											<p> Full Lighting Integrator; &emsp; 2500 samples/pixel; &emsp; Recursion depth: 10; &emsp; 768x512 pixels </p>
+											<p> Prominent Techniques: Multiple Important Sampling </p>
+										</div>
+									</div>
+
+									<div class="nav">
+										<label for="img-PathTracer-Pretty-2" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-Pretty-4" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+
+								<input type="radio" name="PathTracerPretty" id="img-PathTracer-Pretty-4" />
+								<li class="slide-container">
+									<div class="slide" align="middle">
+										<img src="assets/images/Projects/PathTracer/pretty/Spectrum1_FullLighting_625Samples_depth10.png" />
+										
+										<div class="caption">
+											<h3>Spectrum</h3>											
+											<p>Full Lighting Integrator; &emsp; 625 samples/pixel; &emsp; Recursion depth: 10; &emsp; 1024x512 pixels</p>
+											<p> Variety of Materials </p>
+										</div>
+									</div>
+
+									<div class="nav">
+										<label for="img-PathTracer-Pretty-3" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-Pretty-5" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+
+								<input type="radio" name="PathTracerPretty" id="img-PathTracer-Pretty-5" />
+								<li class="slide-container">
+									<div class="slide" align="middle">
+										<img src="assets/images/Projects/PathTracer/pretty/environment1.png" />
+
+										<div class="caption">
+											<h3>Environment Map</h3>											
+											<p> Full Lighting Integrator; &emsp; 400 samples/pixel; &emsp; Recursion depth: 5; &emsp; 512x512 pixels </p>
+											<p> Prominent Techniques: Environment Mapping </p>
+										</div>
+									</div>
+
+									<div class="nav">
+										<label for="img-PathTracer-Pretty-4" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-Pretty-6" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+
+								<input type="radio" name="PathTracerPretty" id="img-PathTracer-Pretty-6" />
+								<li class="slide-container">
+									<div class="slide" align="middle">
+										<img src="assets/images/Projects/PathTracer/pretty/ParticipatingMedia14.png" />
+
+										<div class="caption">
+											<h3>Blue Orb</h3>
+											<p> Volumetric Integrator; &emsp; 100 samples/pixel; &emsp; Recursion depth: 5; &emsp; 512x512 pixels </p>
+											<p> Prominent Techniques: Volumetric Rendering via Ray Marching </p>
+										</div>
+									</div>
+
+									<div class="nav">
+										<label for="img-PathTracer-Pretty-5" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-Pretty-7" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+
+								<input type="radio" name="PathTracerPretty" id="img-PathTracer-Pretty-7" />
+								<li class="slide-container">
+									<div class="slide" align="middle">
+										<img src="assets/images/Projects/PathTracer/pretty/implicit2.png" />
+
+										<div class="caption">
+											<h3>Goursat's Cube</h3>
+											<p> Full Lighting Integrator; &emsp; 400 samples/pixel; &emsp; Recursion depth: 5; &emsp; 512x512 pixels </p>
+											<p> Prominent Techniques: Implicit Surface Rendering </p>
+										</div>
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-Pretty-6" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-Pretty-8" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+
+								<input type="radio" name="PathTracerPretty" id="img-PathTracer-Pretty-8" />
+								<li class="slide-container">
+									<div class="slide" align="middle">
+										<img src="assets/images/Projects/PathTracer/pretty/BowBeforeMeYouFools_FullLighting_625Samples_depth10.png" />
+
+										<div class="caption">
+											<h3>Bow Before Me You Fools</h3>
+											<p> Full Lighting Integrator; &emsp; 625 samples/pixel; &emsp; Recursion depth: 10; &emsp; 512x512 pixels </p>
+										</div>
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-Pretty-7" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-Pretty-9" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<input type="radio" name="PathTracerPretty" id="img-PathTracer-Pretty-9" />
+								<li class="slide-container">
+									<div class="slide" align="middle">
+										<img src="assets/images/Projects/PathTracer/pretty/TransmitBox_FullLighting_400Samples_depth10.png" />
+
+										<div class="caption">
+											<h3>Transmissive Sphere</h3>
+											<p> Full Lighting Integrator; &emsp; 400 samples/pixel; &emsp; Recursion depth: 10; &emsp; 512x512 pixels </p>
+											<p> Prominent Techniques: Transmissive Material </p>
+										</div>
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-Pretty-8" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-Pretty-1" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<li class="nav-dots">
+									<label for="img-PathTracer-Pretty-1" class="nav-dot" id="img-PathTracer-dot-Pretty-1"></label>
+									<label for="img-PathTracer-Pretty-2" class="nav-dot" id="img-PathTracer-dot-Pretty-2"></label>
+									<label for="img-PathTracer-Pretty-3" class="nav-dot" id="img-PathTracer-dot-Pretty-3"></label>
+									<label for="img-PathTracer-Pretty-4" class="nav-dot" id="img-PathTracer-dot-Pretty-4"></label>
+									<label for="img-PathTracer-Pretty-5" class="nav-dot" id="img-PathTracer-dot-Pretty-5"></label>
+									<label for="img-PathTracer-Pretty-6" class="nav-dot" id="img-PathTracer-dot-Pretty-6"></label>
+									<label for="img-PathTracer-Pretty-7" class="nav-dot" id="img-PathTracer-dot-Pretty-7"></label>
+									<label for="img-PathTracer-Pretty-8" class="nav-dot" id="img-PathTracer-dot-Pretty-8"></label>
+									<label for="img-PathTracer-Pretty-9" class="nav-dot" id="img-PathTracer-dot-Pretty-9"></label>
+								</li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+
+				<h2> Features: </h2>
+				
+				<!--<h3> Photon Mapping </h3><h3> Kd Tree Accelleration </h3>-->
+				<div class="row" style="align-content: middle">
+					
+					<div class="col-sm-12 col-md-6 col-lg-6 hyperlink">
+						<h3> <a href="#pathtracer_volumetric"> Volumetric Rendering </a> </h3>
+					</div>
+					<div class="col-sm-12 col-md-6 col-lg-6 hyperlink">
+						<h3> <a href="#pathtracer_BVH""> BVH Acceleration Structure </a> </h3>
+					</div>
+
+					<div class="col-sm-12 col-md-6 col-lg-6 hyperlink">
+						<h3> <a href="#pathtracer_lights"> Various Light Sources </a> </h3>
+					</div>
+					<div class="col-sm-12 col-md-6 col-lg-6 hyperlink">
+						<h3> <a href="#pathtracer_implicitSurfaces"> Complex Implicit Surfaces </a> </h3>
+					</div>
+
+					<div class="col-sm-12 col-md-6 col-lg-6 hyperlink">
+						<h3> <a href="#pathtracer_thinLensCam"> Thin Lens Camera </a> </h3>
+					</div>
+					<div class="col-sm-12 col-md-6 col-lg-6 hyperlink">
+						<h3> <a href="#pathtracer_BSDFs"> Various BSDF's </a> </h3>
+					</div>
+
+					<div class="col-sm-12 col-md-6 col-lg-6 hyperlink">
+						<h3> <a href="#pathtracer_integrators"> Full Lighting Integrator </a> </h3>
+					</div>
+					<div class="col-sm-12 col-md-6 col-lg-6 hyperlink">
+						<h3> <a href="#pathtracer_integrators"> Direct Lighting Integrator </a> </h3>
+					</div>
+
+					<div class="col-sm-12 col-md-6 col-lg-6 hyperlink">
+						<h3> <a href="#pathtracer_integrators"> Naive Integrator </a> </h3>
+					</div>
+					<div class="col-sm-12 col-md-6 col-lg-6 hyperlink">
+						<h3> <a href="#pathtracer_heuristics"> Multiple Important Sampling </a> </h3>
+					</div>
+
+					<div class="col-sm-12 col-md-6 col-lg-6 hyperlink">
+						<h3> <a href="#pathtracer_russianRoullete"> Russian Roullete Termination </a> </h3>
+					</div>
+					<div class="col-sm-12 col-md-6 col-lg-6 hyperlink">
+						<h3> <a href="#pathtracer_primitevesAndSampling"> Primitive Handling &amp; Sampling </a> </h3>
+					</div>
+				</div>
+				
+				<br>
+				<h2 id="pathtracer_volumetric"> Volumetric Rendering </h2>
+
+				<div class="slidewrapper captionedslidewrapper">
+					<div class="row backgroundPrimary">
+
+						<div class="slidebackground">
+							<ul class="slides">
+								<input type="radio" name="PathTracervolumetric" id="img-PathTracer-volumetric-1" checked />
+								<li class="slide-container">
+									<div class="slide"  align="middle">
+										<img src="assets/images/Projects/PathTracer/volumetric/blueSphereLight1.png" />
+
+										<div class="caption">
+											<h3>Blue Orb</h3>
+
+											<p>&emsp; Participating Media was rendered by ray marching through the space.</p>
+											<p>&emsp;  Parameters such as the absorbance, emittance, density, scattering, and color can be defined and tuned for the medium. </p>
+											<br>
+											<p>&emsp; The blue orb scene does not have a back wall and so its easy to identify the emissivity of the medium. </p>
+										</div>
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-volumetric-4" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-volumetric-2" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<input type="radio" name="PathTracervolumetric" id="img-PathTracer-volumetric-2" />
+								<li class="slide-container">
+									<div class="slide" align="middle">
+										<img src="assets/images/Projects/PathTracer/volumetric/volumetricCornellBoxTwoLights1.png" />
+
+										<div class="caption">
+											<h3>Cornell Box with Participating Media (Parameter set 1)</h3>
+
+											<p>&emsp; Participating Media was rendered by ray marching through the space.</p>
+											<p>&emsp;  Parameters such as the absorbance, emittance, density, scattering, and color can be defined and tuned for the medium. </p>
+											<br>
+
+											<p>&emsp; The cornell box has a foggy appearance because absorbance and scattering are the most prominent effects of the rendered medium. </p>
+										</div>
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-volumetric-1" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-volumetric-3" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<input type="radio" name="PathTracervolumetric" id="img-PathTracer-volumetric-3" />
+								<li class="slide-container">
+									<div class="slide" align="middle">
+										<img src="assets/images/Projects/PathTracer/volumetric/volumetricCornellBoxTwoLights2.png" />
+
+										<div class="caption">
+											<h3>Cornell Box with Participating Media (Parameter set 2)</h3>
+
+											<p>&emsp; Participating Media was rendered by ray marching through the space.</p>
+											<p>&emsp;  Parameters such as the absorbance, emittance, density, scattering, and color can be defined and tuned for the medium. </p>
+											<br>
+
+											<p>&emsp; The cornell box has a foggy appearance because absorbance and scattering are the most prominent effects of the rendered medium. </p>
+										</div>	
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-volumetric-2" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-volumetric-4" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<input type="radio" name="PathTracervolumetric" id="img-PathTracer-volumetric-4" />
+								<li class="slide-container">
+									<div class="slide" align="middle">
+										<img src="assets/images/Projects/PathTracer/volumetric/blueSphereLight2.png" />
+
+										<div class="caption">
+											<h3>Grossly Incandescent Blue Orb</h3>
+
+											<p>&emsp; Participating Media was rendered by ray marching through the space.</p>
+											<p>&emsp;  Parameters such as the absorbance, emittance, density, scattering, and color can be defined and tuned for the medium. </p>
+											<br>
+											<p>&emsp; The blue orb scene does not have a back wall and so its easy to identify the emissivity of the medium. </p>
+										</div>
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-volumetric-3" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-volumetric-1" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<li class="nav-dots">
+									<label for="img-PathTracer-volumetric-1" class="nav-dot" id="img-PathTracer-dot-volumetric-1"></label>
+									<label for="img-PathTracer-volumetric-2" class="nav-dot" id="img-PathTracer-dot-volumetric-2"></label>
+									<label for="img-PathTracer-volumetric-3" class="nav-dot" id="img-PathTracer-dot-volumetric-3"></label>
+									<label for="img-PathTracer-volumetric-4" class="nav-dot" id="img-PathTracer-dot-volumetric-4"></label>
+								</li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+				<br>
+
+				<h2 id="pathtracer_BVH"> BVH Acceleration Structure </h2>
+
+				<div class="singleImage">
+					<img src="assets/images/Projects/PathTracer/pretty/Wahoo_FullLighting_625Samples_depth10.png" style="max-width: 100%; max-height: 100%;" alt="FYI, image alt text is required" />
+				</div>
+				<br>
+				<div class="centered">
+					<p>&emsp; Mario; 5k triangles;</p>
+					<p>&emsp; With BVH at 1 sample/pixel: 4594 milliseconds; </p>
+					<p>&emsp; Without BVH at 1 sample/pixel: 454041 milliseconds </p>
+
+					<p>&emsp; Render Time Sped up <b>98.83347 times</b> (or <b>9883.347%</b> speed increase) </p>
+					<p>&emsp; BVH Construction Time For Wahoo.obj: 156 milliseconds </p>
+				</div>
+				<br>
+
+				<h2 id="pathtracer_lights"> Various Light Sources </h2>
+
+				<div class="slidewrapper captionedslidewrapper">
+					<div class="row backgroundPrimary">
+
+						<div class="slidebackground">
+							<ul class="slides">
+								<input type="radio" name="PathTracerlight" id="img-PathTracer-light-1" checked />
+								<li class="slide-container">
+									<div class="slide"  align="middle">
+										<img src="assets/images/Projects/PathTracer/lights/environment1.png" />
+
+										<div class="caption">
+											<h3> Environment Map as a Light Source </h3>
+											<p> Full Lighting Integrator; &emsp; 400 samples/pixel; &emsp; Recursion depth: 10; &emsp; 512x512 pixels </p>
+										</div>
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-light-3" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-light-2" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<input type="radio" name="PathTracerlight" id="img-PathTracer-light-2" />
+								<li class="slide-container">
+									<div class="slide" align="middle">
+										<img src="assets/images/Projects/PathTracer/lights/PointLightFull_NotcloseToObjects.png" />
+
+										<div class="caption">
+											<h3>Point Light</h3>
+											<p> Full Lighting Integrator; &emsp; 400 samples/pixel; &emsp; Recursion depth: 10; &emsp; 512x512 pixels </p>
+										</div>
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-light-1" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-light-3" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<input type="radio" name="PathTracerlight" id="img-PathTracer-light-3" />
+								<li class="slide-container">
+									<div class="slide" align="middle">
+										<img src="assets/images/Projects/PathTracer/lights/spotLightcornell.png" />
+
+										<div class="caption">
+											<h3>Spot Light</h3>
+											<p> Full Lighting Integrator; &emsp; 400 samples/pixel; &emsp; Recursion depth: 10; &emsp; 512x512 pixels </p>
+										</div>
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-light-2" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-light-3" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<li class="nav-dots">
+									<label for="img-PathTracer-light-1" class="nav-dot" id="img-PathTracer-dot-light-1"></label>
+									<label for="img-PathTracer-light-2" class="nav-dot" id="img-PathTracer-dot-light-2"></label>
+									<label for="img-PathTracer-light-3" class="nav-dot" id="img-PathTracer-dot-light-2"></label>
+								</li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+				<br>
+
+				<h2 id="pathtracer_implicitSurfaces"> Complex Implicit Surfaces </h2>
+
+				<div class="singleImage">
+					<img src="assets/images/Projects/PathTracer/Implicit/implicit2.png" style="max-width: 100%; max-height: 100%;" alt="FYI, image alt text is required" />
+				</div>
+				<br>
+
+				<p>&emsp; If an implicit surface can be defined by an equation equating to zero, it can define a Signed Distance Field(SDF); I used SDF's during intersection tests to determine if we're inside, outside, or actually intersecting the object. </p>
+				<br>
+
+				<h2 id="pathtracer_thinLensCam"> Thin Lens Camera </h2>
+
+				<div class="singleImage">
+					<img src="assets/images/Projects/PathTracer/cameraThinLens/camera_thinlens4.png" style="max-width: 100%; max-height: 100%;" alt="FYI, image alt text is required" />
+				</div>
+				<br>
+
+				<p>&emsp; Thin Convex Camera Lenses can be mimicked by having rays shot out from the camera pass through some point sampled on the lens and then using this point to change the original ray based on the properties of the lens. The technique is just an approximation for the actual math and produces better renders with more samples/pixel. </p>
+				<br>
+
+				<h2 id="pathtracer_BSDFs"> Various BSDF's </h2>
+
+				<div class="slidewrapper captionedslidewrapper2">
+					<div class="row backgroundPrimary">
+
+						<div class="slidebackground">
+							<ul class="slides">
+								<input type="radio" name="PathTracerBSDF" id="img-PathTracer-BSDF-1" checked />
+								<li class="slide-container">
+									<div class="slide"  align="middle">
+										<img src="assets/images/Projects/PathTracer/pretty/stanfordDragon_FullLighting_EnvironmentMap_1225Samples_Depth10.png" />
+
+										<div class="caption">
+											<h3>Draggo</h3>
+											<p> Matte Materials; Specular Materials; Glass Materials; </p>
+										</div>
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-BSDF-9" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-BSDF-2" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<input type="radio" name="PathTracerBSDF" id="img-PathTracer-BSDF-2" />
+								<li class="slide-container">
+									<div class="slide" align="middle">
+										<img src="assets/images/Projects/PathTracer/pretty/partyAnimals_900Samples_Depth10.png" />
+
+										<div class="caption">
+											<h3>Party Animals</h3>
+											<p> Matte Materials; Specular Materials; Glass Materials; </p>
+										</div>
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-BSDF-1" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-BSDF-3" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<input type="radio" name="PathTracerBSDF" id="img-PathTracer-BSDF-3" />
+								<li class="slide-container">
+									<div class="slide" align="middle">
+										<img src="assets/images/Projects/PathTracer/pretty/Spectrum2_FullLigthing_625Samples_depth10.png" />
+
+										<div class="caption">
+											<h3>Spectrum</h3>
+											<p> Matte Materials; Specular Materials; Textured Matte Materials; Rough Mirror Materials </p>
+										</div>
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-BSDF-2" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-BSDF-4" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<input type="radio" name="PathTracerBSDF" id="img-PathTracer-BSDF-4" />
+								<li class="slide-container">
+									<div class="slide" align="middle">
+										<img src="assets/images/Projects/PathTracer/pretty/TransmitBox_FullLighting_400Samples_depth10.png" />
+
+										<div class="caption">
+											<h3>Transmissive Material</h3>
+										</div>
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-BSDF-3" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-BSDF-5" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<input type="radio" name="PathTracerBSDF" id="img-PathTracer-BSDF-5" />
+								<li class="slide-container">
+									<div class="slide" align="middle">
+										<img src="assets/images/Projects/PathTracer/Materials/GlassBall/PT_GlassBallBox2_Naive_100Samples.png" />
+
+										<div class="caption">
+											<h3>Glass Material</h3>
+										</div>
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-BSDF-4" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-BSDF-6" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<input type="radio" name="PathTracerBSDF" id="img-PathTracer-BSDF-6" />
+								<li class="slide-container">
+									<div class="slide" align="middle">
+										<img src="assets/images/Projects/PathTracer/Materials/RoughMirror/RoughMirrorBoxUniform_FullLighting_2500Samples_depth10.png" />
+
+										<div class="caption">
+											<h3>Rough Mirror</h3>
+											<p> Rough Mirror Material; Matte Materials; </p>
+										</div>
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-BSDF-5" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-BSDF-7" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<input type="radio" name="PathTracerBSDF" id="img-PathTracer-BSDF-7" />
+								<li class="slide-container">
+									<div class="slide" align="middle">
+										<img src="assets/images/Projects/PathTracer/pretty/BowBeforeMeYouFools_FullLighting_625Samples_depth10.png" />
+
+										<div class="caption">
+											<h3>Specular Surface</h3>
+											<p> Specular Materials with varying degrees of roughness </p>
+										</div>
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-BSDF-6" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-BSDF-8" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<input type="radio" name="PathTracerBSDF" id="img-PathTracer-BSDF-8" />
+								<li class="slide-container">
+									<div class="slide" align="middle">
+										<img src="assets/images/Projects/PathTracer/pretty/environment1.png" />
+
+										<div class="caption">
+											<h3> Pure Specular Surface</h3>
+										</div>
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-BSDF-7" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-BSDF-9" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<input type="radio" name="PathTracerBSDF" id="img-PathTracer-BSDF-9" />
+								<li class="slide-container">
+									<div class="slide" align="middle">
+										<img src="assets/images/Projects/PathTracer/Materials/gradientmirror/GradientMirrorBox_FullLighting_400Samples_depth10.png" />
+
+										<div class="caption">
+											<h3>Gradient Mirror</h3>
+										</div>
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-BSDF-8" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-BSDF-1" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<li class="nav-dots">
+									<label for="img-PathTracer-BSDF-1" class="nav-dot" id="img-PathTracer-dot-BSDF-1"></label>
+									<label for="img-PathTracer-BSDF-2" class="nav-dot" id="img-PathTracer-dot-BSDF-2"></label>
+									<label for="img-PathTracer-BSDF-3" class="nav-dot" id="img-PathTracer-dot-BSDF-3"></label>
+									<label for="img-PathTracer-BSDF-4" class="nav-dot" id="img-PathTracer-dot-BSDF-4"></label>
+									<label for="img-PathTracer-BSDF-5" class="nav-dot" id="img-PathTracer-dot-BSDF-5"></label>
+									<label for="img-PathTracer-BSDF-6" class="nav-dot" id="img-PathTracer-dot-BSDF-6"></label>
+									<label for="img-PathTracer-BSDF-7" class="nav-dot" id="img-PathTracer-dot-BSDF-7"></label>
+									<label for="img-PathTracer-BSDF-8" class="nav-dot" id="img-PathTracer-dot-BSDF-8"></label>
+									<label for="img-PathTracer-BSDF-9" class="nav-dot" id="img-PathTracer-dot-BSDF-9"></label>
+								</li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+
+				<br>
+				<p> &emsp; Numerous Material models including Transmissive and Micorfacet material models were implemented. Each Material is defined by properties that give the path tracer a great deal of versatility and variety for composing scenes. </p>
+				<br>
+
+				<h2 id="pathtracer_integrators"> Integrators </h2>
+				<br>
+				<div class="row-fluid">
+					<div class="col-sm-4 col-md-4 col-lg-4">
+						<h3> Full Lighting Integrator </h3>
+					</div>
+					<div class="col-sm-4 col-md-4 col-lg-4">
+						<h3> Direct Lighting Integrator </h3>
+					</div>
+					<div class="col-sm-4 col-md-4 col-lg-4">
+						<h3> Naive Integrator </h3>
+					</div>					  
+				</div>
+				<br>
+				<br>
+
+				<div class="slidewrapper captionedslidewrapper2">
+					<div class="row backgroundPrimary">
+
+						<div class="slidebackground">
+							<ul class="slides">
+								<input type="radio" name="PathTracerIntegrators" id="img-PathTracer-Integrators-1" checked />
+								<li class="slide-container">
+									<div class="slide"  align="middle">
+										<img src="assets/images/Projects/PathTracer/IntegratorComparison/VeachScene_FullLighting_2500Samples_depth10.png" />
+
+										<div class="caption">
+											<h3>Veach Scene</h3>
+											<p> Full Lighting Integerator; &emsp; 2500 Samples; &emsp; Recursion Depth 10; </p>
+										</div>
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-Integrators-13" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-Integrators-2" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<input type="radio" name="PathTracerIntegrators" id="img-PathTracer-Integrators-2"/>
+								<li class="slide-container">
+									<div class="slide"  align="middle">
+										<img src="assets/images/Projects/PathTracer/IntegratorComparison/VeachScene_DirectLighting_900Samples_depth10.png" />
+
+										<div class="caption">
+											<h3>Veach Scene</h3>
+											<p> Direct Lighting Integerator; &emsp; 900 Samples; &emsp; Recursion Depth 10; </p>
+										</div>
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-Integrators-1" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-Integrators-3" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<input type="radio" name="PathTracerIntegrators" id="img-PathTracer-Integrators-3"/>
+								<li class="slide-container">
+									<div class="slide"  align="middle">
+										<img src="assets/images/Projects/PathTracer/IntegratorComparison/VeachScene_Naive_900Samples_depth10.png" />
+
+										<div class="caption">
+											<h3>Veach Scene</h3>
+											<p> Naive Integerator; &emsp; 900 Samples; &emsp; Recursion Depth 10; </p>
+										</div>
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-Integrators-2" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-Integrators-4" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+
+								<input type="radio" name="PathTracerIntegrators" id="img-PathTracer-Integrators-4"/>
+								<li class="slide-container">
+									<div class="slide"  align="middle">
+										<img src="assets/images/Projects/PathTracer/IntegratorComparison/RoughMirrorBox/RoughMirrorBoxMap_FullLighting_100Samples_depth10.png" />
+
+										<div class="caption">
+											<h3>Rough Mirror Box</h3>
+											<p> Full Lighting Integerator; &emsp; 100 Samples; &emsp; Recursion Depth 10; </p>
+										</div>
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-Integrators-3" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-Integrators-5" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<input type="radio" name="PathTracerIntegrators" id="img-PathTracer-Integrators-5"/>
+								<li class="slide-container">
+									<div class="slide"  align="middle">
+										<img src="assets/images/Projects/PathTracer/IntegratorComparison/RoughMirrorBox/RoughMirrorBoxMap_DirectLighting_400Samples_depth10.png" />
+
+										<div class="caption">
+											<h3>Rough Mirror Box</h3>
+											<p> Direct Lighting Integerator; &emsp; 400 Samples; &emsp; Recursion Depth 10; </p>
+										</div>
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-Integrators-4" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-Integrators-6" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<input type="radio" name="PathTracerIntegrators" id="img-PathTracer-Integrators-6"/>
+								<li class="slide-container">
+									<div class="slide"  align="middle">
+										<img src="assets/images/Projects/PathTracer/IntegratorComparison/RoughMirrorBox/RoughMirrorBoxMap_Naive_400Samples_depth10.png" />
+
+										<div class="caption">
+											<h3>Rough Mirror Box</h3>
+											<p> Naive Integerator; &emsp; 400 Samples; &emsp; Recursion Depth 10; </p>
+										</div>
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-Integrators-5" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-Integrators-7" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<input type="radio" name="PathTracerIntegrators" id="img-PathTracer-Integrators-7"/>
+								<li class="slide-container">
+									<div class="slide"  align="middle">
+										<img src="assets/images/Projects/PathTracer/IntegratorComparison/Test_FullLighting_400Samples_depth10.png" />
+
+										<div class="caption">
+											<h3>Test Scene</h3>
+											<p> Full Lighting Integerator; &emsp; 400 Samples; &emsp; Recursion Depth 5; </p>
+										</div>
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-Integrators-6" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-Integrators-8" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<input type="radio" name="PathTracerIntegrators" id="img-PathTracer-Integrators-8"/>
+								<li class="slide-container">
+									<div class="slide"  align="middle">
+										<img src="assets/images/Projects/PathTracer/IntegratorComparison/TestScene_DirectLighting_100Samples.png" />
+
+										<div class="caption">
+											<h3>Test Scene</h3>
+											<p> Direct Lighting Integerator; &emsp; 100 Samples; &emsp; Recursion Depth 5; </p>
+										</div>
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-Integrators-7" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-Integrators-9" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<input type="radio" name="PathTracerIntegrators" id="img-PathTracer-Integrators-9"/>
+								<li class="slide-container">
+									<div class="slide"  align="middle">
+										<img src="assets/images/Projects/PathTracer/IntegratorComparison/TestScene_Naive_100Samples.png" />
+
+										<div class="caption">
+											<h3>Test Scene</h3>
+											<p> Naive Integerator; &emsp; 100 Samples; &emsp; Recursion Depth 5; </p>
+										</div>
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-Integrators-8" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-Integrators-10" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<input type="radio" name="PathTracerIntegrators" id="img-PathTracer-Integrators-10"/>
+								<li class="slide-container">
+									<div class="slide"  align="middle">
+										<img src="assets/images/Projects/PathTracer/IntegratorComparison/CornellBox/CornellBox_FullLighting_2500Samples_depth10.png" />
+
+										<div class="caption">
+											<h3>Cornell Box</h3>
+											<p> Full Lighting Integerator; &emsp; 2500 Samples; &emsp; Recursion Depth 10; </p>
+										</div>
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-Integrators-9" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-Integrators-11" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<input type="radio" name="PathTracerIntegrators" id="img-PathTracer-Integrators-11"/>
+								<li class="slide-container">
+									<div class="slide"  align="middle">
+										<img src="assets/images/Projects/PathTracer/IntegratorComparison/CornellBox/PT_CornellBox_DirectLighting_2500Samples.png" />
+
+										<div class="caption">
+											<h3>Cornell Box</h3>
+											<p> Direct Lighting Integerator; &emsp; 2500 Samples; &emsp; Recursion Depth 10; </p>
+										</div>
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-Integrators-10" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-Integrators-12" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<input type="radio" name="PathTracerIntegrators" id="img-PathTracer-Integrators-12"/>
+								<li class="slide-container">
+									<div class="slide"  align="middle">
+										<img src="assets/images/Projects/PathTracer/IntegratorComparison/GlassBall/PT_GlassBallBox_DirectLighting_100Samples.png" />
+
+										<div class="caption">
+											<h3>Glass Ball</h3>
+											<p> Direct Lighting Integerator; &emsp; 100 Samples; &emsp; Recursion Depth 5; </p>
+										</div>
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-Integrators-11" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-Integrators-13" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<input type="radio" name="PathTracerIntegrators" id="img-PathTracer-Integrators-13"/>
+								<li class="slide-container">
+									<div class="slide"  align="middle">
+										<img src="assets/images/Projects/PathTracer/IntegratorComparison/GlassBall/PT_GlassBallBox_Naive_100Samples.png" />
+
+										<div class="caption">
+											<h3>Glass Ball</h3>
+											<p> Naive Integerator; &emsp; 100 Samples; &emsp; Recursion Depth 5; </p>
+										</div>
+									</div>
+									<div class="nav">
+										<label for="img-PathTracer-Integrators-12" class="prev">&#x2039;</label>
+										<label for="img-PathTracer-Integrators-1" class="next">&#x203a;</label>
+									</div>
+								</li>
+
+								<li class="nav-dots">
+									<label for="img-PathTracer-Integrators-1" class="nav-dot" id="img-PathTracer-dot-Integrators-1"></label>
+									<label for="img-PathTracer-Integrators-2" class="nav-dot" id="img-PathTracer-dot-Integrators-2"></label>
+									<label for="img-PathTracer-Integrators-3" class="nav-dot" id="img-PathTracer-dot-Integrators-3"></label>
+									<label for="img-PathTracer-Integrators-4" class="nav-dot" id="img-PathTracer-dot-Integrators-4"></label>
+									<label for="img-PathTracer-Integrators-5" class="nav-dot" id="img-PathTracer-dot-Integrators-5"></label>
+									<label for="img-PathTracer-Integrators-6" class="nav-dot" id="img-PathTracer-dot-Integrators-6"></label>
+									<label for="img-PathTracer-Integrators-7" class="nav-dot" id="img-PathTracer-dot-Integrators-7"></label>
+									<label for="img-PathTracer-Integrators-8" class="nav-dot" id="img-PathTracer-dot-Integrators-8"></label>
+									<label for="img-PathTracer-Integrators-9" class="nav-dot" id="img-PathTracer-dot-Integrators-9"></label>
+									<label for="img-PathTracer-Integrators-10" class="nav-dot" id="img-PathTracer-dot-Integrators-10"></label>
+									<label for="img-PathTracer-Integrators-11" class="nav-dot" id="img-PathTracer-dot-Integrators-11"></label>
+									<label for="img-PathTracer-Integrators-12" class="nav-dot" id="img-PathTracer-dot-Integrators-12"></label>
+									<label for="img-PathTracer-Integrators-13" class="nav-dot" id="img-PathTracer-dot-Integrators-13"></label>
+								</li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+
+				<br>
+				<p>&emsp; The differences amongst the 3 major integrators is pretty apparent on comparing the renders:</p>
+
+				<ul class="custom-bullet2">
+					<li> <p>  &nbsp; Naive Integrator: Renders scenes based on the Light Transport Equation, but implemented in a very naive sense, without any multiple important sampling, rusian roullete termination, etc. </p> </li>
+					<li> <p>  &nbsp; Direct Lighting Integrator: Renders the scene without any global illumination by simply ignoring secondary bounces of the ray once it hits something in the scene.</p> </li>
+					<li> <p>  &nbsp; Full Lighting Integrator: Renders the scene based upon the Light Transport Equation but takes into account Multiple Important Sampling, Russian Roullete Termination, Conditionals for various types of light sources, and is implemented in an iterative rather than recursive manner. All these features let it avoid blown out images that can occur in the naive integrator, keep global illumination, terminate rays early with very little impact on the render quality, etc. </p> </li>
+				</ul>
+				
+				<br>
+				<p>&emsp; A volumetric Integrator exists but it is essentially the full lighting integrator that will ray march through the scene in addition to everything else to account for the influence of the participating medium. </p>
+				<br>
+
+				<h2 id="pathtracer_heuristics"> Multiple Important Sampling </h2>
+
+				<div class="row">
+					<div class="col-sm-6 col-md-6 col-lg-6">
+						<img src="assets/images/Projects/PathTracer/MIScomp/twolightsCornellWRONG.png" style="max-width: 100%; max-height: 100%;" alt="FYI, image alt text is required" />
+					</div>
+					<div class="col-sm-6 col-md-6 col-lg-6">
+						<img src="assets/images/Projects/PathTracer/MIScomp/Cornell2Lights_FullLighting_100Samples_depth10_BVH.png" style="max-width: 100%; max-height: 100%;" alt="FYI, image alt text is required" />
+					</div>
+				</div>
+
+				<div class="row centered">
+					<div class="col-sm-6 col-md-6 col-lg-6">
+						<p>Cornell Box, 2 lights; WRONG!; No MIS;</p>
+					</div>
+					<div class="col-sm-6 col-md-6 col-lg-6">
+						<p>Cornell Box, 2 lights; Correct!; With MIS;</p>
+					</div>
+				</div>
+
+				<br>
+				<p>&emsp; The color at every point in the scene is correctly scaled via Multiple Important Sampling by accounting for the contribution of each incoming ray at that point with respect to the actual energy that the light rays bring in. This changes with the scene because it can depend on a lot of biases in terms of sampling that we introduce to get the image to converge faster. These biases include light important sampling, BSDF important sampling, consine weighted sampling, etc. Instead of relying on anyone of these biased forms of sampling we get the best result across all kinds of scenes by taking a weighted average of them. </p>
+				<br>
+
+				<h2 id="pathtracer_heuristics"> Power &amp; Balance Heuristics </h2>
+				
+				<div class="row">
+					<div class="col-sm-6 col-md-6 col-lg-6">
+						<img src="assets/images/Projects/PathTracer/MIScomp/cornellbox_fulllighting_100_samples_balanceHueristic_depth5.png" style="max-width: 100%; max-height: 100%;" alt="FYI, image alt text is required" />
+					</div>
+					<div class="col-sm-6 col-md-6 col-lg-6">
+						<img src="assets/images/Projects/PathTracer/MIScomp/cornellbox_fulllighting_100_samples_powerHueristic_depth5.png" style="max-width: 100%; max-height: 100%;" alt="FYI, image alt text is required" />
+					</div>
+				</div>
+				<div class="row centered">
+					<div class="col-sm-6 col-md-6 col-lg-6">
+						<p>Balance Heuristic</p>
+					</div>
+					<div class="col-sm-6 col-md-6 col-lg-6">
+						<p>Power Heuristic</p>
+					</div>
+				</div>
+
+				<br>
+				<p>&emsp; They are used to weight the energy contributions of rays to assist with Multiple Important Sampling. Power and Balance Heuristics are just different rules of thumb for the weighting</p>
+				<br>
+
+				<h2 id="pathtracer_russianRoullete"> Russian Roullete Termination </h2>
+
+				<br>
+				<p>&emsp; It is a technique employed to cut short the ray bounce depth once the energy being returned from the ray falls below a randomised threshold. The loss in energy is compensated by scaling up the existing energy value by an appropriate amount. When averaged over a bunch of samples, the loss in accuracy of the render is barely noticeable if at all.</p>
+				<br>
+
+				<h2 id="pathtracer_primitevesAndSampling"> Primitive Handling &amp; Sampling </h2>
+				
+				<br>
+				<p>&emsp; The Path Tracer handles various primitives such as implicit surfaces, triangles for meshes, and the basic ones like cubes, spheres, discs, and squareplanes. </p>
+
+				<p>&emsp; The sampler written for the path tracer is responsible for creating samples on the various primitives listed above. The samples generated for the shapes start from a uniform stratified distribution on a square plane which are then warped so as to resemble whatever shape we desire, also allowing for the introduction of biases such as cosine weighted sampling, in a controllable manner and from a common starting point.</p>
+				<br>
+
+				<br>
+				<br>
+			</div>
+		</div>
+	  </div>
+	</div>
+
+	<!-- Modal for WebGl Clustered Deferred and Clustered Forward Plus Shading Techniques -->
+	<div class="modal fade" id="Modal_ClusteredDeferredShading" tabindex="-1" role="dialog" aria-labelledby="ClusteredDeferred" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="row">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">WebGL Clustered Deferred and Forward Plus Shading</h5>
+					<i class="fa fa-times fa-3x" class="close" data-dismiss="modal" aria-label="Close"></i>
+				</div>
+			</div>
+
+			<div class="centered_headings">
+				<p>Javascript, WebGL, GLSL</p>
+			</div>
+
+			<div class="row center-block">
+				<div class="project-social-icons">
+					<ul class="social-icons">
+						<li>
+							<a href="https://github.com/Aman-Sachan-asach/WebGL-Clustered-Deferred-Forward-Plus" class="social-icon">
+							<i class="fa fa-github-square fa-3x">
+						</i></a></li>
+
+						<li>
+							<a href="https://vimeo.com/amansachan" class="social-icon">
+							<i class="fa fa-vimeo-square fa-3x">
+						</i></a></li>
+
+						<li>
+							<a href="https://www.youtube.com/channel/UCgt_lAI0-x_RhlGyv6DEBAw" class="social-icon">
+							<i class="fa fa-youtube-square fa-3x">
+						</i></a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="row-fluid divline">
+			</div>
+
+			<div class="modal-body">
+
+				<h2> Introduction </h2>
+
+				<p>&emsp; This project implements Clustered Deferred and Clustered Forward Shading Techniques. These techniques improve performance for scenes with many dynamic lights. </p>			
+				<br>
+
+				<p>&emsp; Typical forward shading involves looping over every object and then looping over every single light in the scene to accumulate the light energy on the object. If the number of lights is high, this can lead to a drastic drop in performance. We need to cull lights so that only those lights which actually contribute energy on a fragment are looped over. Clustering is a solution that bins lights into 3D buckets based on what the light can influence. Deferred shading is an improvement over this by only dealing with the fragments with the smallest z-depth, which is accomplished via a culling stage and using a "g-buffer". </p>
+				<br>
+				
+				<div class = "clearfix">
+					<div class="vid-wrapper" style="float: none">
+						<div class="vid">
+							<div class="summary">
+								<div class="gif">
+									<div style="width:100%;height:0;padding-bottom:53%;position:relative;">
+										<div class="videoWrapperModal">
+											<iframe class="center-block" width="854" height="480" src="https://player.vimeo.com/video/240254058?loop=1&autoplay=0&rel=0&showinfo=0&controls=0&autohide=1&autopause=0" 
+											frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<br>
+
+				<p>&emsp; These solutions allow you to have an enormous number of dynamic lights in the scene when optimized. This project can run over 2100 lights at 60 FPS.</p>
+				<br>
+				
+				<h2> Performance Analysis </h2>
+
+				<div class="singleBigImage">
+					<img src="../assets/images/Projects/ClusteredDeferred/NumLightsComparison.png" style="max-width: 100%; max-height: 100%;" alt="FYI, image alt text is required" />
+				</div>
+				<br>
+
+				<p>&emsp; The performance analysis of deferred shading vs. forward plus shading vs. forward shading is explained pretty well on the <a href="https://github.com/Aman-Sachan-asach/WebGL-Clustered-Deferred-Forward-Plus"> <span class="biggerText">github repository</span> </a>. </p>
+				<br>
+				<br>
+
+				<h2> Technical Approach </h2>
+				<br>
+				<br>
+				<h3> Clusters </h3>
+
+				<p>&emsp; Clustering is the binning technique used in this project to store lights in a spatial data structure based on their area of influence. Clusters are very similar to the cells that make up a 3D grid, where each cell in the grid represents a certain spatial boundary and does not overlap any other cell of the grid. A collection of clusters arent simply called a grid because they are made by slicing up the camera view frustum, which makes each cluster a tiny frustum instead of a cuboid. </p>
+				<br>
+				
+				<div class="singleImage">
+					<img src="../assets/images/Projects/ClusteredDeferred/PointLightCulling.png" style="max-width: 100%; max-height: 100%;" alt="FYI, image alt text is required" />
+				</div>
+				<br>
+
+				<p>&emsp; Clusters are used to determine if a specific light influences any part of the volume that the cluster occupies. This means that a datastructure representing the cluster would store all the lights that affect that cluster. A light can be stored in multiple clusters. </p>
+				<br>
+
+				<div class="singleImage">
+					<img src="../assets/images/Projects/ClusteredDeferred/false-positive-diagram.jpg" style="max-width: 100%; max-height: 100%;" alt="FYI, image alt text is required" />
+				</div>
+				<br>
+
+				<p>&emsp; It is surprisingly hard to do frustum based culling simply due to the ease with which false positives can pop up. There are multiple proven techniques that can be used to solve such issues. For example: <a href="http://gamedevs.org/uploads/fast-extraction-viewing-frustum-planes-from-world-view-projection-matrix.pdf"> <span class="biggerText">fast frustum culing</span> </a>. </p>
+				<br>
+				
+				<div class="singleBigImage">
+					<img src="../assets/images/Projects/ClusteredDeferred/Clustering_depth_Slicing.png" style="max-width: 100%; max-height: 100%;" alt="FYI, image alt text is required" />
+				</div>
+				<br>
+
+				<p>&emsp; The clusters used in this project were uniformly spaced in z, and were slicing the view frustum into 15 sections along each dimension. The number of slices per plane affects the size of the cluster buffer and so is a good number to play around with. Additionally it may be beneficially to have exponential splitting or some other way of splitting up the z dimension, because usually in real-time applications things in the distance are sampled at lower resolutions. This is something that can and has been taken advantage of, for example the game doom implemented an exponential divisioning of the z dimension. </p>
+				<br>
+
+				<p>&emsp; In WebGL, we can't simply create buffers to store data that can be accessed by the shaders. Thus, we store our data by packing it into textures. The textures in this project have been laid out with a single cluster's data occupying an entire column. It would be more memory coherent to implement it such that the cluster's data occupies an entire row. Within the column itself however we have packed data relatively tight. Every pixel stores four floats. The first float in every column is the number of lights in that cluster. The floats that follow are just the light indices in no particular order. </p>
+				<br>
+
+				<p>&emsp; This packing into textures additionally means that we have to unpack data in the shader itself. Additionally since we only store light indices we also need to store all of the lights in the scene in another texture. This texture also has to be packed and unpacked.</p>
+				<br>
+
+				<br>
+				<br>
+				<h3> Clustered Forward Plus Shading </h3>
+				<br>
+
+				<p>&emsp; Forward Plus is a shading technique that involves culling lights in some fashion and then binning them in either 2D tiles or as was done in this project 3D clusters. This means that there is overhead for light culling but the payoff during shading is enormous. Culling lights means every fragment loops through only a select few lights in relation to the entire scene instead of all the lights.</p>
+				<br>
+
+				<div class="singleBigImage">
+					<img src="../assets/images/Projects/ClusteredDeferred/NumLightsComparison.png" style="max-width: 100%; max-height: 100%;" alt="FYI, image alt text is required" />
+				</div>
+				<br>
+				<p>&emsp; The preformance can be many folds as the number of lights in the scene increase. About 17-18 times at 500 lights as compared to forward shading.</p>
+
+				<p>&emsp; The graphs show at a 1000 lights that forward plus is only about 5 times faster than forward shading. This is much better ofcourse but isn't as great as 17. This might be because of the cluster texture not fitting well into memory leading to many expensive calls to global memorry during shading.</p>
+				<br>
+				
+				<br>
+				<br>
+				<h3> Clustered Deferred Shading </h3>
+				<br>
+				
+				<p>&emsp; It is typical to end up with multiple fragments at verious depths for every pixel in the fragment buffer for a regular scene. It seems like an obvious solution to only calculate complex shading calculations including lighting for only the top most fragment,ie the one that is actually seen and has the lowest depth.</p>
+				<br>
+
+				<p>&emsp; Deferred shading is an improvement over forward plus shading. It has 2 render passes, the first one looping over fragments and creating a "g-buffer" that stores only the topmost fragment, ie the one with the smallest depth, and storing the data associated with it in a single or multiple buffers. This data can be whatever is required for shading such as positions, colors, normals, depth, specular, etc.</p>
+				<br>
+
+				<p>&emsp; Not having to loop over all the the fragments for a pixel and perform light accumulation on all the fragments leads to massive performance boosts even over forward plus. This boost is anywhere from 2 to 8 times more. The performance can be improved by using smaller and more data-coherent textures and so compact g-buffers.</p>
+				<br>
+
+				<p>&emsp; The performance of both clustered forward plus and deffered shading is heavily dependent upon the size of the cluster buffer which is based mainly on how many clusters and the maximum number of lights that can be stored in the cluster. Making this texture data coherent goes a long way towards making the shading technique run really fast. This however is hard to know intuitively and was more of a guessing process.</p>
+				<br>
+
+				<h2> Optimizations </h2>
+				<br>
+				<br>
+
+				<div class="singleBigImage">
+					<img src="../assets/images/Projects/ClusteredDeferred/OptimizationComparison.png" style="max-width: 100%; max-height: 100%;" alt="FYI, image alt text is required" />
+				</div>
+				<br>
+
+				<h3> Compressed G-Buffer </h3>
+				<br>
+
+				<p>&emsp; Reducing the number of g-buffers (or how many components make up the g-buffer) helps make deferred shading faster which can be done by compactly storing data in them. Colors often don't need the alpha component, normals can be reconstructed simply from 2 of their components, data can be stored in 24bit floats instead of 32 bits, are just some of the ways to achieve this compression.</p>
+
+				<p>&emsp; This project implemented the following layout for the 2 g-buffers used: </p>
+
+				<div class="singleBigImage">
+					<img src="../assets/images/Projects/ClusteredDeferred/GBuffer.PNG" style="max-width: 100%; max-height: 100%;" alt="FYI, image alt text is required" />
+				</div>
+
+				<br>
+				<br>
+				<h3> 2-Component Normal </h3>
+				<br>
+
+				<p>&emsp; If we assume the magnitude of a normal is one, which it usually is because its simply a direction vector. We can reconstruct the z-value of the normal from its x and y values. The magnitude of a vector is defined as the square root of x squared + y squared + z squared. This formula gives us the magnitude of z. The sign of z is positive in camera space for all the fragments that we can see. Using these 2 bits of information we can easily reconstruct the normal from only its x and y components.</p>
+				<br>
+
+				<h2> Debug Views </h2>
+				<br>
+				<p>&emsp; The debug view for the project can be found on the <a href="https://github.com/Aman-Sachan-asach/WebGL-Clustered-Deferred-Forward-Plus"> <span class="biggerText">github repository</span> </a>. </p>
+				<br>
+
+			</div>
+		</div>
+	  </div>
+	</div>
+
+	<!-- Modal for Hand Of God -->
+	<div class="modal fade" id="Modal_HandOfGod" tabindex="-1" role="dialog" aria-labelledby="HandOfGod" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="row">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">Hand Of God</h5>
+					<i class="fa fa-times fa-3x" class="close" data-dismiss="modal" aria-label="Close"></i>
+				</div>
+			</div>
+
+			<div class="centered_headings">
+				<p> Unreal Engine 4 </p>
+			</div>
+
+			<div class="row center-block">
+				<div class="project-social-icons">
+					<ul class="social-icons">
+						<li>
+							<a href="https://github.com/Aman-Sachan-asach/Hand_of_God" class="social-icon">
+							<i class="fa fa-github-square fa-3x">
+						</i></a></li>
+
+						<li>
+							<a href="https://vimeo.com/amansachan" class="social-icon">
+							<i class="fa fa-vimeo-square fa-3x">
+						</i></a></li>
+
+						<li>
+							<a href="https://www.youtube.com/channel/UCgt_lAI0-x_RhlGyv6DEBAw" class="social-icon">
+							<i class="fa fa-youtube-square fa-3x">
+						</i></a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="row-fluid divline">
+			</div>
+
+			<div class="modal-body">
+
+				<h2> Introduction </h2>
+
+				<p>&emsp; You are running from the encroaching Darkness of a dying world. Your path is hard to see and disintegrating. Creatures emerge from the shadows to drag you into the Darkness. Fortunately a God has decided to help you, but no God is perfect. How long can you last? </p>
+				<br>
+				<p>&emsp; Hand of God is an asymmetric co-op game. One player is the ‘Runner’, and uses a traditional game controller to move and stay ahead of the Darkness that swirls around along the dangerous path. If the Runner cannot move forward fast enough, the darkness envelops them for a grim end. The other player is the ‘God’, trying to help the Runner last as long as possible. This is a God, however, who needs the Runner's help. The Runner collects resources that enable the God to generate and place items to help the Runner, such as blocks to cross gaps in the world, and fending off creatures that emerge from the shadows. The God is immersed into the world of the runner via the HTC Vive and has a broader sense of the world itself. </p>
+				<br>
+	
+				<h2> Gameplay Trailer </h2>
+				<div class = "clearfix">
+					<div class="vid-wrapper" style="float: none">
+						<div class="vid">
+							<div class="summary">
+								<div class="gif">
+									<div style="width:100%;height:0;padding-bottom:53%;position:relative;">
+										<div class="videoWrapperModal">
+											<iframe class="center-block" width="854" height="480" src="https://www.youtube.com/embed/8zP61F2Iodg" frameborder="0" gesture="media" allow="encrypted-media" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<br>
+				<br>
+
+				<h2> Promotional Trailer </h2>
+				<div class = "clearfix">
+					<div class="vid-wrapper" style="float: none">
+						<div class="vid">
+							<div class="summary">
+								<div class="gif">
+									<div style="width:100%;height:0;padding-bottom:53%;position:relative;">
+										<div class="videoWrapperModal">
+											<iframe class="center-block" width="854" height="480" src="https://www.youtube.com/embed/UKGqr8qPlbg" frameborder="0" gesture="media" allow="encrypted-media" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	  </div>
+	</div>
+
+	<!-- ////////////////////////////////////////////////////////////////////////////////////// -->
+	<!-- Actual Website content you can see on the page is above this points -->
+	<!-- ////////////////////////////////////////////////////////////////////////////////////// -->
+
+	<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+	<div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
+		<a class="btn btn-primary" href="#page-top">
+			<i class="fa fa-chevron-up"></i>
+		</a>
+	</div>
+
+	<!-- ////////////////////////////////////////////////////////////////////////////////////// -->
+	<!-- SCRIPTS -->
+	<!-- ////////////////////////////////////////////////////////////////////////////////////// -->
+	
+	<!-- Bootstrap Javascript dependencies -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	
+</body>
+</html>

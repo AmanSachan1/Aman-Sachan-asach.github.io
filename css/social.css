@@ -1,0 +1,27 @@
+.social-icons {
+	color: #f8f9fa;
+	padding: 0vh 0vw 0vh 0vw; /* top right bottom left */
+	margin: 0vh 0vw 0vh 0vw; /* top right bottom left */
+	display: list-item;	!important;
+}
+.social-icons li {
+	padding: 0vh 1vw 0vh 0vw; /* top right bottom left */
+	vertical-align: middle;
+	display: inline;
+}
+
+.fa-linkedin:hover {
+	color: #0073a4;
+}
+.fa-github:hover {
+	color: #6e5494;
+}
+.fa-envelope:hover {
+	color:#a9fd43;
+}
+.fa-vimeo:hover {
+	color: #1ab7ea;
+}
+.fa-youtube:hover {
+	color: #cd201f;
+}
