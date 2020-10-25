@@ -26,11 +26,20 @@
 .navbar-custom .navbar-nav {
 	letter-spacing: 1px;
 }
+.navbar-custom .navbar-nav li {
+	padding: 0vh 1vw 0vh 0vw; /* top right bottom left */
+	text-align: center;
+}
 .navbar-custom .navbar-nav li a {
 	color: white;
 }
 .navbar-custom .navbar-nav li a:hover {
 	color: #007fff;
+}
+.navbar-custom .navbar-nav li img {
+	width:2rem; /* you can use % */
+	height: auto;
+	text-align: center;
 }
 
 .webpage-links {

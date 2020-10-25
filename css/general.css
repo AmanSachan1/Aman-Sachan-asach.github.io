@@ -37,9 +37,9 @@ h6 {
 	font-weight: 400;
 }
 
-footer {
-		color: #f8f9fa;
-		padding: 8px;
-		font-size: 12px;
-		background-color: rgba(0,0,0,1);
+.footer {
+	color: #f8f9fa;
+	padding: 8px;
+	font-size: 12px;
+	background-color: rgba(0,0,0,1);
 }

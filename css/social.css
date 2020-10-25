@@ -2,7 +2,7 @@
 	color: #f8f9fa;
 	padding: 0vh 0vw 0vh 0vw; /* top right bottom left */
 	margin: 0vh 0vw 0vh 0vw; /* top right bottom left */
-	display: list-item;	!important;
+	display: list-item;
 }
 .social-icons li {
 	padding: 0vh 1vw 0vh 0vw; /* top right bottom left */
