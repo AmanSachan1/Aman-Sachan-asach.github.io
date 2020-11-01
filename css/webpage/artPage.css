@@ -1,0 +1,74 @@
+.introMsg {
+	color: rgb(180, 180, 180);
+	padding-left: 25px;
+}
+.introMsg p{
+	font-size: 3.2vw;
+	padding: 0vh 0vw;
+	margin: 0vh 0vw;
+}
+.introMsg .separator{
+	font-size: 3.75vw;
+}
+.introMsg a{
+	font-size: 3.5vw;
+}
+.introMsg img {
+    width: 20vw;
+	height: auto;
+	text-align: center;
+}
+
+.reelText {
+	color: rgb(180, 180, 180);
+}
+.reelText a {
+	color: rgb(173, 255, 91);
+}
+.reelText a:hover {
+	color: #007fff;
+}
+.resumeText {
+	color: rgb(180, 180, 180);
+}
+.resumeText a {
+	color: rgb(255, 128, 128);
+}
+.resumeText a:hover {
+	color: #007fff;
+}
+
+.nameText {
+	color: rgb(204, 173, 249);
+}
+.nameText img {
+	vertical-align: middle;
+	border-style: none;
+	width: 3vw;
+}
+.professionText {
+	color: rgb(220, 220, 220);
+}
+
+.gradientText1 {
+	background-image: linear-gradient(45deg, rgb(50, 221, 240), rgb(182, 145, 255) 40%, rgb(243, 104, 62)); 
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-shadow: none;
+}
+
+.topSeparation {
+	padding-top: 2vh;
+}
+
+.projectDisplay{
+	padding: 0vh 0vw;
+	margin: 0vh 0vw;
+}
+
+.projectDisplay img{
+    width: 16vw;
+	height: auto;
+	text-align: center;
+}

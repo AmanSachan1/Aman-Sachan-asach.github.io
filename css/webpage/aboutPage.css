@@ -1,0 +1,110 @@
+.content {
+	color: rgb(180, 180, 180);
+	padding-left: 25px;
+}
+.content .AlignText {
+	text-align: left;
+}
+.content .reddish {
+	color: #cc7070;
+}
+
+.content p{
+	font-size: 2vw;
+	padding: 0vh 0vw;
+	margin: 0vh 0vw;
+}
+.content .separator{
+	font-size: 2.25vw;
+}
+.content a{
+	font-size: 2vw;
+}
+.content img {
+    width: 20vw;
+	height: auto;
+	text-align: center;
+}
+.content .EmphasizeName {
+	color: #d2f8c5;
+	font-size: 4vw;
+}
+.content .EmphasizeTitle {
+	color: #d2f8c5;
+	font-size: 2.5vw;
+}
+
+/* Medium devices (desktops, 992px and up) --> Value used by bootstrap */
+/* Small devices (tablets, 768px and up) --> Value used by bootstrap */
+@media (max-width: 768px) {
+	.content {
+		padding-left: 15px;
+	}
+	.content .AlignText {
+		text-align: center;
+	}
+	
+	.content p{
+		font-size: 2.5vw;
+	}
+	.content .separator{
+		font-size: 2.75vw;
+	}
+	.content a{
+		font-size: 2.5vw;
+	}
+	.content img {
+		width: 20vw;
+	}
+	.content .EmphasizeName {
+		font-size: 4.5vw;
+	}
+	.content .EmphasizeTitle {
+		font-size: 3.0vw;
+	}
+}
+
+.BioPic {
+	color: rgb(204, 173, 249);
+}
+.BioPic img {
+	vertical-align: middle;
+	border-style: none;
+	width: 30vw;
+}
+
+.topSeparation {
+	padding-top: 3vh;
+}
+
+/* Medium devices (desktops, 992px and up) --> Value used by bootstrap */
+/* Small devices (tablets, 768px and up) --> Value used by bootstrap */
+@media (max-width: 768px) { 
+	.BioPic img {
+		width: 60vw;
+	}
+
+	.topSeparation {
+		padding-top: 1.5vh;
+	}
+ }
+
+
+.reelText {
+	color: rgb(180, 180, 180);
+}
+.reelText a {
+	color: rgb(173, 255, 91);
+}
+.reelText a:hover {
+	color: #007fff;
+}
+.resumeText {
+	color: rgb(180, 180, 180);
+}
+.resumeText a {
+	color: rgb(255, 128, 128);
+}
+.resumeText a:hover {
+	color: #007fff;
+}
