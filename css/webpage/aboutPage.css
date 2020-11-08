@@ -1,3 +1,7 @@
+.colorWhite {
+    color: #f8f9fa;
+}
+
 .content {
 	color: rgb(180, 180, 180);
 	padding-left: 25px;
@@ -26,11 +30,11 @@
 	text-align: center;
 }
 .content .EmphasizeName {
-	color: #d2f8c5;
+	color: #a0df6c;
 	font-size: 4vw;
 }
 .content .EmphasizeTitle {
-	color: #d2f8c5;
+	color: #a0df6c;
 	font-size: 2.5vw;
 }
 

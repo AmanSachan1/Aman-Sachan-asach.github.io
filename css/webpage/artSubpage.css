@@ -1,0 +1,159 @@
+.card-columns{	
+	column-count: 1;
+	margin: 0vh 0vw;
+}
+
+.card{
+	background: rgb(0, 0, 0);
+	margin: 0vh 0vw;
+}
+
+@media (min-width: 400px) {
+	.card-columns {
+		column-count: 1;
+	}
+	.card-columns .card {
+		margin: 0vh 0vw 2vh 0vw;
+	}
+}
+@media (min-width: 768px) {
+	.card-columns {
+		column-count: 2;
+	}
+}
+@media (min-width: 1000px) {
+	.card-columns {
+		column-count: 3;
+	}
+}
+
+hr{
+	margin: 15px; /*20px 0px 20px -20px;*/
+	border: none;
+	border-top: 1px solid #fff;
+}
+h1, h2 {
+	margin: 0vh 0vw;
+}
+.heading-center {
+	text-align: center;
+	margin: 3vh 0vw 0vh 0vw;
+}
+.heading-left {
+	text-align: left;
+	padding-left: 2vw;
+	margin: 0vh 0vw;
+}
+
+
+.dropdown-menu {
+	background-color: #252525;
+	background-clip: border-box;
+	border: 1px solid rgb(204, 173, 249);
+	border-radius: 1vw;
+	text-shadow: none;
+}
+.dropdown-item {
+	color: #fff;
+	border: 1px solid rgba(255, 255, 255, 0);
+	border-radius: 1vw;
+}
+.dropdown-item:focus, .dropdown-item:hover {
+    color: #007fff;
+    background-color: #252525;
+}
+
+
+.project {
+	margin: 0vh 0vw;
+	padding: 1vh 1vw 0vh 1vw;
+	width: 100%;
+	background-color: #1b1b1b;	
+}  
+.project .title{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	text-align: center;
+	font-size: 1.75vw;
+	padding: 1vh 1vw 1vh 1vw;	
+}
+@media (max-width: 768px) {
+	.project .title{
+		font-size: 3.75vw;
+	}
+}
+
+/*
+///////////////////////// Video Wrapper //////////////////////////////////
+*/
+
+.videoContainer {
+	position:relative;
+	width:100%;
+	padding-bottom:59%;	
+}
+.videoWrapperModal {
+	/* position: relative; */
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+
+.videoWrapper iframe,
+.videoWrapperModal iframe{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/*
+///////////////////////// Image Carousel //////////////////////////////////
+*/
+
+.carousel-item {
+	width: 100%;
+	height: auto;
+}
+.carousel-item-3DModelling {
+	width: 105%;
+}
+.emptycard {
+	background-color: #000;
+}
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    width: 30px;
+	height: 30px;
+}
+
+/*
+///////////////////////// Button //////////////////////////////////
+*/
+
+.btn {
+	display: flex;
+	margin: 1vh 1vw 1vh 1vw;
+
+	font-weight: 400;
+	align-items: center;
+	justify-content: center;
+
+	border: 1px solid transparent;
+		border-top-color: transparent;
+		border-right-color: transparent;
+		border-bottom-color: transparent;
+		border-left-color: transparent;
+	padding: 0.375vw 0.75vw;
+	font-size: 1.5vw;
+	line-height: 1.5;
+	border-radius: 0.5vw;
+	transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+@media (max-width: 768px) {
+	.btn {
+		font-size: 3.75vw;
+	}
+}

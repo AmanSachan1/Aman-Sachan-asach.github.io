@@ -87,10 +87,11 @@
 }
 
 .nameText {
-	color: rgb(204, 173, 249);
+	color: #f8f9fa;
+	/* text-shadow: -1px -1px rgb(255, 128, 128), 1px 1px rgb(173, 255, 91), 1px -1px #007fff, -1px 1px #007fff; */	
 }
 .professionText {
-	color: rgb(220, 220, 220);
+	color: rgb(188, 188, 188);
 }
 
 .gradientText1 {
@@ -99,4 +100,5 @@
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	text-shadow: none;
+	padding: 0px 4px;
 }

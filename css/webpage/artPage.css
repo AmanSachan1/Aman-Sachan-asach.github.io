@@ -1,74 +1,152 @@
-.introMsg {
-	color: rgb(180, 180, 180);
-	padding-left: 25px;
-}
-.introMsg p{
-	font-size: 3.2vw;
-	padding: 0vh 0vw;
-	margin: 0vh 0vw;
-}
-.introMsg .separator{
-	font-size: 3.75vw;
-}
-.introMsg a{
-	font-size: 3.5vw;
-}
-.introMsg img {
-    width: 20vw;
-	height: auto;
-	text-align: center;
+.divLink{
+	position:absolute; 
+	width:100%;
+	height:90vh;
+	top:-42vh;
+	left: 0;
+
+	z-index: 1;
 }
 
-.reelText {
-	color: rgb(180, 180, 180);
-}
-.reelText a {
-	color: rgb(173, 255, 91);
-}
-.reelText a:hover {
-	color: #007fff;
-}
-.resumeText {
-	color: rgb(180, 180, 180);
-}
-.resumeText a {
-	color: rgb(255, 128, 128);
-}
-.resumeText a:hover {
-	color: #007fff;
-}
-
-.nameText {
-	color: rgb(204, 173, 249);
-}
-.nameText img {
-	vertical-align: middle;
-	border-style: none;
-	width: 3vw;
-}
-.professionText {
-	color: rgb(220, 220, 220);
-}
-
-.gradientText1 {
-	background-image: linear-gradient(45deg, rgb(50, 221, 240), rgb(182, 145, 255) 40%, rgb(243, 104, 62)); 
-	background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	text-shadow: none;
-}
-
-.topSeparation {
-	padding-top: 2vh;
-}
-
-.projectDisplay{
-	padding: 0vh 0vw;
+.displayBanner {
+	display: flex;
+	align-items: left;
+	padding: 0vh 1vw;
 	margin: 0vh 0vw;
 }
 
-.projectDisplay img{
-    width: 16vw;
-	height: auto;
-	text-align: center;
+.displayBanner .displayBannerItem {
+	background-size: cover;
+	height: 90vh;
+	width: 50%;
+	clip-path: polygon(24.75% 0, 100% 0, 75% 100%, 0 100%);
+	margin-left: -11vw;
+	position: relative;
+	display: flex;
+	justify-content: flex-end;
+	flex-direction: column;
+}
+
+.displayBanner .displayBannerItem:first-child {
+	margin-left: 0;
+	width: 40%;
+	clip-path: polygon(0% 0%, 100% 0%, 69% 100%, 0% 100%);
+}
+
+.displayBanner .displayBannerItem:last-child {
+	width: 40%;
+	clip-path: polygon(31% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.overlayMain {
+	height: 100%;
+	width: 100%;
+	
+    overflow: hidden;
+    position: relative;
+    -webkit-box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.3);
+}
+.overlayMain .overlay {
+    position: absolute;
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 100%;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+.overlayMain:hover .overlay {
+    top: 0;
+}
+
+.overlayMain .title {
+	position: relative;
+	top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    color: #ffffff;
+    line-height: 40px;
+	font-size: 2.5vw;
+	padding: 0vh 0vw;
+	margin: 0vh 0vw;
+    text-align: center;
+    text-decoration: none;
+    
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    opacity: 0;
+}
+.overlayMain .title:hover,
+.overlayMain .title:focus {
+	color: #007fff;
+	text-decoration: none;
+}
+.title-left  {
+	margin-left: -6vw;
+}
+.title-center  {
+	margin-left: 0vw;
+}
+.title-right  {
+	margin-left: 5vw;
+}
+
+.overlayMain:hover .title{
+    opacity: 1;
+}
+
+/* Medium devices (desktops, 992px and up) --> Value used by bootstrap */
+/* Small devices (tablets, 768px and up) --> Value used by bootstrap */
+@media (max-width: 768px) {
+	.displayBanner {
+		display: block;
+	}
+
+	.displayBanner .displayBannerItem {
+		background-size: cover;
+		height: 70vh;
+		width: 100%;
+		margin-left: 0;
+		clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+	}
+
+	.displayBanner .displayBannerItem:first-child {
+		width: 100%;
+		clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+	}
+	
+	.displayBanner .displayBannerItem:last-child {
+		width: 100%;
+		clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+	}
+
+	.overlayMain .title {
+		font-size: 5vw;
+	}
+
+	.title-left  {
+		margin-left: 0vw;
+	}
+	.title-center  {
+		margin-left: 0vw;
+	}
+	.title-right  {
+		margin-left: 0vw;
+	}
 }
