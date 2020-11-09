@@ -21,7 +21,7 @@
 
 /* Medium devices (desktops, 992px and up) --> Value used by bootstrap */
 /* Small devices (tablets, 768px and up) --> Value used by bootstrap */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
 	.introMsg {
 		padding-left: 15px;
 	}
@@ -43,21 +43,28 @@
 .topSeparation {
 	padding-top: 2vh;
 }
-
 .projectDisplay{
 	padding: 0vh 0vw;
 	margin: 0vh 0vw;
 }
-
 .projectDisplay img{
-    width: 16vw;
+	width: 19vw;
 	height: auto;
 	text-align: center;
+	padding-bottom: 2px;
+}
+.projectDisplay img:hover{
+	background: #007fff;
+	padding: 3px;
+}
+
+.rounded {
+	border-radius: 1.5vw !important;
 }
 
 /* Medium devices (desktops, 992px and up) --> Value used by bootstrap */
 /* Small devices (tablets, 768px and up) --> Value used by bootstrap */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
 	.topSeparation {
 		padding-top: 4vh;
 	}
