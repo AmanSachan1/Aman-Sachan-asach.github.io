@@ -11,6 +11,24 @@ h1, h2 {
 	margin: 0vh 0vw;
 }
 
+.pageheading h3 {
+    text-align: left;
+    padding: 0vh 0vw 0vh 2vw;
+}
+
+a {
+	margin: auto 0vw;
+}
+
+.project .title {
+	padding: 0.25vh 1vw 0.25vh 1vw;
+}
+.simpleSkewedSlideContainer {
+	width: auto;
+	justify-content: center;
+	margin: 0vh 0vw 0vh 0vw;
+}
+
 /*
 ///////////////////////// Image Carousel //////////////////////////////////
 */
