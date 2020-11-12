@@ -23,11 +23,6 @@ a {
 .project .title {
 	padding: 0.25vh 1vw 0.25vh 1vw;
 }
-.simpleSkewedSlideContainer {
-	width: auto;
-	justify-content: center;
-	margin: 0vh 0vw 0vh 0vw;
-}
 
 /*
 ///////////////////////// Image Carousel //////////////////////////////////

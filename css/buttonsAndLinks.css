@@ -40,6 +40,11 @@
 	justify-content: center;
 	margin: 0vh 0vw 1vh 0vw;
 }
+.simpleSkewedSlideContainer {
+	width: auto;
+	justify-content: center;
+	margin: 0vh 0vw 0vh 0vw;
+}
 
 .demobutton{
 	position: relative;

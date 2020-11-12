@@ -83,8 +83,6 @@
 						Project Categories
 					</button>
 					<div class="dropdown-menu dropdown-menu-right">
-						<a class="dropdown-item text-wrap" href="#PinnedProjects">Pinned</a>
-						<div class="dropdown-divider"></div>
 						<a class="dropdown-item text-wrap" href="#Simulations">Simulations & Procedural Realism</a>
 						<div class="dropdown-divider"></div>
 						<a class="dropdown-item text-wrap" href="#RenderingTechniques">Rendering Techniques</a>
@@ -105,12 +103,10 @@
 		</nav>
 	</div>
 
-	<!-- Project Cards Section -->
-	<div id="PinnedProjects" class="container-fluid">
-		
+	<div class="container-fluid">		
 		<div class="row">
 			<div class="col-12 text-center pageheading">
-				<h2> Projects </h2>
+				<h2> All Projects </h2>
 				<h6 style="padding: 0px;"> To learn more about a project, follow the link to its git repository </h6>
 			</div>
 			<hr>
@@ -118,163 +114,9 @@
 			<br>
 			<br>
 		</div>
-
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-12 pageheading">
-					<h3> Pinned Projects </h3>
-				</div>
-			</div>
-	
-			<div class="card-columns">
-				
-				<div id="Project_Meteoros" class="card"> <!-- Meteoros -->
-					<div class="project">
-						<div class="videoContainer">
-							<div class="videoWrapper">
-								<iframe class="center-block" src="https://player.vimeo.com/video/247662072?autoplay=0&loop=1&portrait=0" 
-									width="640" height="360" frameborder="0" allow="autoplay; fullscreen" 
-									webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-							</div>
-						</div>
-
-						<div class="d-flex justify-content-start summaryTitle">
-							<span class="p-2">Meteoros</span>
-							<a class="ml-auto p-2" href="https://github.com/AmanSachan1/Meteoros"><i class="fa fa-github fa-lg"></i>REPO</a>
-						</div>
-
-						<div class="projectKeywords"><p>Vulkan, C++, GLSL</p></div>
-
-						<p>	&nbsp; A real-time cloudscape renderer in Vulkan.</p>
-						<p>	&nbsp; It is based on the cloud system 'NUBIS' that was implemented for the Decima Engine by Guerrilla Games 
-							for the game 'Horizon Zero Dawn'</p>
-					</div>
-				</div>
-				<div id="Project_HandOfGod" class="card"> <!-- Hand Of God -->
-					<div class="project">
-						<div class="videoContainer">
-							<div class="videoWrapper">
-								<iframe class="center-block" src="https://www.youtube.com/embed/UKGqr8qPlbg?autoplay=0&loop=1&portrait=0" 
-									width="640" height="360" frameborder="0" allow="encrypted-media; autoplay; fullscreen;" 
-									webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-							</div>
-						</div>
-
-						<div class="d-flex justify-content-start summaryTitle">
-							<span class="p-2">Hand of God</span>
-							<a class="ml-auto p-2" href="https://github.com/AmanSachan1/Hand_of_God"><i class="fa fa-github fa-lg"></i>REPO</a>
-						</div>
-
-						<div class="projectKeywords"><p>Unreal Engine 4</p></div>
-
-						<p>	&nbsp; Hand of God is an asymmetric co-op game, where one player is the ‘Runner’ and uses a traditional game controller 
-							while the other is a ‘God’ and uses the HTC Vive to reach into the world for an immersive feel. </p>
-						<p>	&nbsp; The goal is for the 'Runner' to move and stay ahead of the Darkness that swirls around along their dangerous path 
-							and for the 'God' to help the runner through this arduous journey. If the Runner cannot move forward fast enough, the 
-							darkness envelops them for a grim end.</p>
-					</div>
-				</div>
-				<div id="Project_CPU_PathTracer" class="card"> <!-- Monte Carlo Path Tracer -->
-					<div class="project">
-						<div class="videoContainer">
-							<div class="videoWrapper">
-								<iframe class="center-block" src="https://player.vimeo.com/video/235422890?autoplay=0&loop=1&portrait=0" 
-									width="640" height="360" frameborder="0" allow="autoplay; fullscreen" 
-									webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-							</div>
-						</div>
-
-						<div class="d-flex justify-content-start summaryTitle">
-							<span class="p-2">Monte Carlo Path Tracer</span>
-							<a class="ml-auto p-2" href="https://github.com/AmanSachan1/Monte-Carlo-Path-Tracer"><i class="fa fa-github fa-lg"></i>REPO</a>
-						</div>
-
-						<div class="projectKeywords"><p>C++, OpenGL</p></div>
-
-						<p>&nbsp; Monte Carlo Path tracing is a rendering technique that aims to represent global illumination 
-							as accurately as possible with respect to reality. When combined with physically accurate models of surfaces, 
-							accurate models light sources, and optically-correct cameras, path tracing can produce still images that are 
-							indistinguishable from photographs.</p>
-					</div>
-				</div>
-				<div id="Project_BoidFlocking" class="card"> <!-- Boids -->
-					<div class="project">
-						<div class="videoContainer">
-							<div class="videoWrapper">
-								<iframe class="center-block" src="https://player.vimeo.com/video/233558094?autoplay=0&loop=1&portrait=0" 
-									width="640" height="360" frameborder="0" allow="autoplay; fullscreen" 
-									webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-							</div>
-						</div>
-
-						<div class="d-flex justify-content-start summaryTitle">
-							<span class="p-2">Boids with CUDA</span>
-							<a class="ml-auto p-2" href="https://github.com/AmanSachan1/CUDA-Boid-Flocking"><i class="fa fa-github fa-lg"></i>REPO</a>
-						</div>
-
-						<div class="projectKeywords"><p>C++, CUDA</p></div>
-
-						<h6><b>Visualize 1.6 million particles running at 60fps</b></h6>
-						<p> &nbsp; GPU Flocking Simulation written in CUDA </p>						
-						<p> &nbsp; Tested on: Windows 10, i7-7700HQ @ 2.8GHz 32GB, GTX 1070(laptop GPU) 8074MB </p>
-					</div>
-				</div>
-				<div id="Project_ClusteredDeferred" class="card"> <!-- Clustered Deferred and Forward Plus Shading -->
-					<div class="project">
-						<div class="videoContainer">
-							<div class="videoWrapper">
-								<iframe class="center-block" src="https://player.vimeo.com/video/240254058?autoplay=0&loop=1&portrait=0"
-									width="640" height="360" frameborder="0" allow="autoplay; fullscreen" 
-									webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-							</div>
-						</div>
-
-						<div class="d-flex justify-content-between summaryTitle">
-							<span class="p-2">Clustered Deferred &amp; <br /> Forward Plus Shading</span>
-							<a class="p-2" href="https://github.com/AmanSachan1/WebGL-Clustered-Deferred-Forward-Plus">
-								<i class="fa fa-github fa-lg"></i>REPO</a>
-						</div>
-
-						<div class="projectKeywords"><p>Javascript, WebGL, GLSL</p></div>
-
-						<div class="row skewedSlideContainer">
-							<a href="https://amansachan1.github.io/WebGL-Clustered-Deferred-Forward-Plus/">
-								<div class="demobutton buttonSkewedSlide">
-									<div>Demo!</div>
-									<div></div>
-									<div>Demo!</div>
-								</div>
-							</a>
-						</div>
-
-						<p>&nbsp; Can simulate over 2100 lights at 60 FPS.</p>
-						<p>&nbsp; A WebGL implementation of Clustered Deferred and Clustered Forward Shading Techniques.</p>
-					</div>
-				</div>
-				<div id="Project_JelloSim" class="card">  <!-- Jello Sim -->
-					<div class="project">
-						<div class="videoContainer">
-							<div class="videoWrapper">
-								<iframe class="center-block" src="https://player.vimeo.com/video/260037661?autoplay=0&loop=1&portrait=0" 
-									width="640" height="360" frameborder="0" allow="autoplay; fullscreen" 
-									webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-							</div>
-						</div>
-
-						<div class="d-flex justify-content-start summaryTitle">
-							<span class="p-2">Jello Sim</span>
-							<a class="ml-auto p-2" href="https://github.com/AmanSachan1/JelloSim"><i class="fa fa-github fa-lg"></i>REPO</a>
-						</div>
-
-						<div class="projectKeywords"><p>C++, Houdini</p></div>
-						<p>	&nbsp; A Jello Simulator based on the Finite Element Method using a Fixed Corotated Elastic Model</p> 
-					</div>
-				</div>
-
-			</div>
-		</div>
 	</div>
 
+	<!-- Project Cards Section -->
 	<div id="Simulations" class="container-fluid containerPadding">
 		<div class="row">
 			<div class="col-12 pageheading">
@@ -385,6 +227,28 @@
 						indistinguishable from photographs.</p>
 				</div>
 			</div>
+			<div class="card"> <!-- CUDA Rasterizer -->
+				<div class="project">
+					<div class="videoContainer">
+						<div class="videoWrapper">
+							<iframe class="center-block" src="https://player.vimeo.com/video/238849486?autoplay=0&loop=1&portrait=0"
+								width="640" height="360" frameborder="0" allow="autoplay; fullscreen" 
+								webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+						</div>
+					</div>
+
+					<div class="d-flex justify-content-between summaryTitle">
+						<span class="p-2">CUDA Rasterizer</span>
+						<a class="p-2" href="https://github.com/AmanSachan1/CUDA-Rasterizer"><i class="fa fa-github fa-lg"></i>REPO</a>
+					</div>
+
+					<div class="projectKeywords"><p>C++, CUDA</p></div>
+
+					<p>&nbsp; GPU Rasterizer written in CUDA that runs at >60 FPS </p>					
+					<p>&nbsp; Implements tile based rasterization and scanline rasterization along with standard features 
+						like depth testing via mutex locks; texture mapping; backface culling; point, line, and triangle rasterization;</p>
+				</div>
+			</div>
 			<div class="card"> <!-- Clustered Deferred and Forward Plus Shading -->
 				<div class="project">
 					<div class="videoContainer">
@@ -439,28 +303,7 @@
 						Subsuface Scattering, Stream Compaction, Material Sorting, Intersection Caching </span></p>
 				</div>
 			</div>
-			<div class="card"> <!-- CUDA Rasterizer -->
-				<div class="project">
-					<div class="videoContainer">
-						<div class="videoWrapper">
-							<iframe class="center-block" src="https://player.vimeo.com/video/238849486?autoplay=0&loop=1&portrait=0"
-								width="640" height="360" frameborder="0" allow="autoplay; fullscreen" 
-								webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-						</div>
-					</div>
 
-					<div class="d-flex justify-content-between summaryTitle">
-						<span class="p-2">CUDA Rasterizer</span>
-						<a class="p-2" href="https://github.com/AmanSachan1/CUDA-Rasterizer"><i class="fa fa-github fa-lg"></i>REPO</a>
-					</div>
-
-					<div class="projectKeywords"><p>C++, CUDA</p></div>
-
-					<p>&nbsp; GPU Rasterizer written in CUDA that runs at >60 FPS </p>					
-					<p>&nbsp; Implements tile based rasterization and scanline rasterization along with standard features 
-						like depth testing via mutex locks; texture mapping; backface culling; point, line, and triangle rasterization;</p>
-				</div>
-			</div>
 		</div>
 	</div>
 
@@ -575,6 +418,50 @@
 					<p>&nbsp; Stream compaction is a technique that performs the following: given an array and some condition, 
 						creates and returns a new array that contains only those elements from the original array that satisy the condition, 
 						while preserving the order of the elements.</p>
+				</div>
+			</div>
+			<div class="card"> <!-- CUDA Path Tracer -->
+				<div class="project">
+					<div class="videoContainer">
+						<div class="videoWrapper">
+							<iframe class="center-block" src="https://player.vimeo.com/video/236271250?autoplay=0&loop=1&portrait=0" 
+								width="640" height="360" frameborder="0" allow="autoplay; fullscreen" 
+								webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+						</div>
+					</div>
+
+					<div class="d-flex justify-content-start summaryTitle">
+						<span class="p-2">CUDA Path Tracer</span>
+						<a class="ml-auto p-2" href="https://github.com/AmanSachan1/CUDA-Path-Tracer"><i class="fa fa-github fa-lg"></i>REPO</a>
+					</div>
+
+					<div class="projectKeywords"><p>C++, CUDA</p></div>
+
+					<p> &nbsp; A simple CUDA Monte Carlo path tracer that runs at about 19 ms/sample. </p>
+					<p> &nbsp; Interesting things that were implemented include: <span class="bigText">&nbsp; 
+						Subsuface Scattering, Stream Compaction, Material Sorting, Intersection Caching </span></p>
+				</div>
+			</div>
+			<div class="card"> <!-- CUDA Rasterizer -->
+				<div class="project">
+					<div class="videoContainer">
+						<div class="videoWrapper">
+							<iframe class="center-block" src="https://player.vimeo.com/video/238849486?autoplay=0&loop=1&portrait=0"
+								width="640" height="360" frameborder="0" allow="autoplay; fullscreen" 
+								webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+						</div>
+					</div>
+
+					<div class="d-flex justify-content-between summaryTitle">
+						<span class="p-2">CUDA Rasterizer</span>
+						<a class="p-2" href="https://github.com/AmanSachan1/CUDA-Rasterizer"><i class="fa fa-github fa-lg"></i>REPO</a>
+					</div>
+
+					<div class="projectKeywords"><p>C++, CUDA</p></div>
+
+					<p>&nbsp; GPU Rasterizer written in CUDA that runs at >60 FPS </p>					
+					<p>&nbsp; Implements tile based rasterization and scanline rasterization along with standard features 
+						like depth testing via mutex locks; texture mapping; backface culling; point, line, and triangle rasterization;</p>
 				</div>
 			</div>
 
