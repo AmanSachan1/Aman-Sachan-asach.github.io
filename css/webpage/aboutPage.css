@@ -96,17 +96,6 @@
 	}
 }
 
-@media (min-width: 768px) { 
-	.reelText a {
-		font-size: 3.5vw;
-	}
-	.resumeText a {
-		font-size: 3.5vw;
-	}
-	.social-icons-big a {
-		font-size: 4vw;
-	}
-}
 
 .reelText {
 	color: rgb(180, 180, 180);
@@ -131,4 +120,16 @@
 
 .social-icons-big a {
 	font-size: 5vw;
+}
+
+@media (min-width: 768px) { 
+	.reelText a {
+		font-size: 3.5vw;
+	}
+	.resumeText a {
+		font-size: 3.5vw;
+	}
+	.social-icons-big a {
+		font-size: 4vw;
+	}
 }
