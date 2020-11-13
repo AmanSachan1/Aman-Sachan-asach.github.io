@@ -4,69 +4,72 @@
 
 .content {
 	color: rgb(180, 180, 180);
-	padding-left: 25px;
+	padding-left: 15px;
 }
 .content .AlignText {
-	text-align: left;
+	text-align: center;
 }
 .content .reddish {
 	color: #cc7070;
 }
 
+
 .content p{
-	font-size: 2vw;
+	font-size: 3.5vw;
 	padding: 0vh 0vw;
 	margin: 0vh 0vw;
 }
 .content .separator{
-	font-size: 2.25vw;
+	font-size: 3.75vw;
 }
 .content a{
-	font-size: 2vw;
+	font-size: 3.5vw;
 }
 .content img {
-    width: 20vw;
+    width: 30vw;
 	height: auto;
 	text-align: center;
 }
 .content .EmphasizeName {
 	color: #a0df6c;
-	font-size: 4vw;
+	font-size: 5.5vw;
 }
 .content .EmphasizeTitle {
 	color: #a0df6c;
-	font-size: 2.5vw;
+	font-size: 4.0vw;
 }
+
 
 /* Medium devices (desktops, 992px and up) --> Value used by bootstrap */
 /* Small devices (tablets, 768px and up) --> Value used by bootstrap */
-@media (max-width: 768px) {
+@media (min-width: 768px) {
 	.content {
-		padding-left: 15px;
+		padding-left: 25px;
 	}
 	.content .AlignText {
-		text-align: center;
+		text-align: left;
 	}
 	
 	.content p{
-		font-size: 2.5vw;
+		font-size: 2vw;
 	}
 	.content .separator{
-		font-size: 2.75vw;
+		font-size: 2.25vw;
 	}
 	.content a{
-		font-size: 2.5vw;
+		font-size: 2vw;
 	}
 	.content img {
 		width: 20vw;
 	}
 	.content .EmphasizeName {
-		font-size: 4.5vw;
+		font-size: 4vw;
 	}
 	.content .EmphasizeTitle {
-		font-size: 3.0vw;
+		font-size: 2.5vw;
 	}
 }
+
 
 .BioPic {
 	color: rgb(204, 173, 249);
@@ -74,7 +77,7 @@
 .BioPic img {
 	vertical-align: middle;
 	border-style: none;
-	width: 30vw;
+	width: 60vw;
 }
 
 .topSeparation {
@@ -83,21 +86,33 @@
 
 /* Medium devices (desktops, 992px and up) --> Value used by bootstrap */
 /* Small devices (tablets, 768px and up) --> Value used by bootstrap */
-@media (max-width: 768px) { 
-	.BioPic img {
-		width: 60vw;
+@media (min-width: 768px) { 
+	.BioPic img {		
+		width: 30vw;
 	}
 
 	.topSeparation {
 		padding-top: 1.5vh;
 	}
- }
+}
 
+@media (min-width: 768px) { 
+	.reelText a {
+		font-size: 3.5vw;
+	}
+	.resumeText a {
+		font-size: 3.5vw;
+	}
+	.social-icons-big a {
+		font-size: 4vw;
+	}
+}
 
 .reelText {
 	color: rgb(180, 180, 180);
 }
 .reelText a {
+	font-size: 4.5vw;
 	color: rgb(173, 255, 91);
 }
 .reelText a:hover {
@@ -107,8 +122,13 @@
 	color: rgb(180, 180, 180);
 }
 .resumeText a {
+	font-size: 4.5vw;
 	color: rgb(255, 128, 128);
 }
 .resumeText a:hover {
 	color: #007fff;
+}
+
+.social-icons-big a {
+	font-size: 5vw;
 }

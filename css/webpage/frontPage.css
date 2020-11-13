@@ -69,8 +69,23 @@
 		padding-top: 4vh;
 	}
 
-	.projectDisplay img{
-		width: 35vw;
+	.projectDisplay img {
+		width: 100%;
+		padding-bottom: 0px;
+	}
+
+	.row {
+		margin: 0px;
+		padding: 0px;
+	}
+
+	.col-sm-12 {
+		margin: 0px;
+		padding: 0px;
+	}
+
+	.rounded {
+		border-radius: 1.0vw !important;
 	}
 }
 
