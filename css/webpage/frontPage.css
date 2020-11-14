@@ -51,11 +51,7 @@
 	width: 19vw;
 	height: auto;
 	text-align: center;
-	padding-bottom: 2px;
-}
-.projectDisplay img:hover{
-	background: #007fff;
-	padding: 3px;
+	margin-bottom: 2px;
 }
 
 .rounded {

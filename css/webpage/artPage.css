@@ -36,6 +36,7 @@
 .displayBanner .displayBannerItem:last-child {
 	width: 40%;
 	clip-path: polygon(31% 0%, 100% 0%, 100% 100%, 0% 100%);
+	background-position-x: 40%;
 }
 
 .overlayMain {
