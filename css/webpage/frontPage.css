@@ -104,12 +104,18 @@
 	color: #007fff;
 }
 
-.nameText {
+.hightlightText {
 	color: #f8f9fa;
 	/* text-shadow: -1px -1px rgb(255, 128, 128), 1px 1px rgb(173, 255, 91), 1px -1px #007fff, -1px 1px #007fff; */	
 }
-.professionText {
-	color: #f8f9fa;
+.hightlightText a:hover {
+	color: #007fff;
+}
+.hollowLogo img {
+	background-color: #f8f9fa;	
+}
+.hollowLogo img:hover {
+	background-color: #007fff;
 }
 
 .gradientText1 {
