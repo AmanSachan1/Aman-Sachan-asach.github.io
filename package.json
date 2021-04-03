@@ -10,11 +10,11 @@
   "dependencies": {
     "@popperjs/core": "^2.4.4",
     "acorn": "^7.4.0",
-    "yargs-parser": "^20.2.0"
+    "yargs-parser": "^20.2.7"
   },
   "devDependencies": {
     "bootstrap": "^4.5.2",
-    "browser-sync": "^2.26.12",
+    "browser-sync": "^2.26.14",
     "font-awesome": "^4.7.0",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
