@@ -8,27 +8,27 @@
     "deploy": "gh-pages-deploy"
   },
   "dependencies": {
-    "@popperjs/core": "^2.4.4",
-    "acorn": "^7.4.0",
+    "@popperjs/core": "^2.9.2",
+    "acorn": "^8.2.4",
     "yargs-parser": "^20.2.7"
   },
   "devDependencies": {
-    "bootstrap": "^4.5.2",
+    "bootstrap": "^5.0.0",
     "browser-sync": "^2.26.14",
     "font-awesome": "^4.7.0",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
-    "gulp-filter": "^6.0.0",
+    "gulp-filter": "^7.0.0",
     "gulp-header": "^2.0.9",
     "gulp-less": "^4.0.1",
     "gulp-rename": "^2.0.0",
     "gulp-uglify": "^3.0.2",
-    "jquery": "^3.5.1",
+    "jquery": "^3.6.0",
     "popper.js": "^1.16.1",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.2"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/BlackrockDigital/startbootstrap-freelancer.git"
+    "url": "https://github.com/AmanSachan1/Portfolio.git"
   }
 }
