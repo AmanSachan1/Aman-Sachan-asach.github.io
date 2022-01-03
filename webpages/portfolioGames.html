@@ -1,7 +1,5 @@
 <!doctype html>
 <html lang="en">
- 
-<!-- REFERENCES: Cthulhu Image: http://pcon.github.io/design/cthulhu/ -->
 
 <head>
 	<!-- Required meta tags -->
@@ -17,7 +15,7 @@
 
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
+	
 	<!-- Fonts -->
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
@@ -27,7 +25,8 @@
 	<link href="../css/general.css" rel="stylesheet">
 	<link href="../css/navigation.css" rel="stylesheet">
 	<link href="../css/connectWithMe.css" rel="stylesheet">
-	<link href="../css/webpage/artSubpage.css" rel="stylesheet">
+	<link href="../css/buttonsAndLinks.css" rel="stylesheet">
+	<link href="../css/webpage/portfolioPage.css" rel="stylesheet">
 
 	<title>Aman Sachan | Graphics Engineer</title>
 </head>
@@ -82,68 +81,82 @@
 		</nav>
 	</div>
 
-	<!-- Page Content -->
-	<div class="container-fluid">
+	<!-- Project Cards Section -->
+	<div id="PinnedProjects" class="container-fluid">
+		
 		<div class="row">
-			<div class="col-12 heading-center">
-				<h1> 3D Modelling </h1>
-				<hr>
+			<div class="col-12 text-center pageheading">
+				<h2> Projects </h2>
+				<h6 style="padding: 0px;"> To learn more about a project, follow the link to its git repository </h6>
 			</div>
 		</div>
 
-		<div class="card-columns">
-			
-			<div class="card">
-				<div class="project">
-					<div class="videoContainer">
-						<div class="videoWrapper">
-							<iframe class="center-block" src="https://www.youtube.com/embed/bOm_olR1RyY" 
-							width="854" height="480" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-							<!-- Sif AO Pass: src="https://www.youtube.com/embed/EeI9M3-EAfk" -->
-						</div>
-					</div>
+		<a href="portfolioPinned.html" 			role="button" class="btn btnSameLine btnColorLightGrey">Pinned</a>
+		<a href="portfolioRendering.html" 		role="button" class="btn btnSameLine btnColorLightGrey">Rendering</a>
+		<a href="portfolioSimulation.html" 		role="button" class="btn btnSameLine btnColorLightGrey">Simulation</a>
+		<a href="portfolioGames.html" 			role="button" class="btn btnSameLine btnColorGrassGreen">Games</a>
+		<a href="portfolioProcedural.html" 		role="button" class="btn btnSameLine btnColorLightGrey">Procedural</a>
+		<a href="portfolioCUDA.html" 			role="button" class="btn btnSameLine btnColorLightGrey">CUDA</a>
+		<a href="portfolioMiscellaneous.html" 	role="button" class="btn btnSameLine btnColorLightGrey">Miscellaneous</a>
 
-					<div class="d-flex justify-content-around">
-						<div class="title">Sif, The Great Grey Wolf</div>
-					</div>
-				</div>
-			</div>
+		<div><br></div> <!-- Line Break Spacing -->
 
-			<div class="card">
-				<div class="project">
-					<div id="carouselIndicators_Artorias" class="carousel slide" data-ride="carousel">
-						<ol class="carousel-indicators">
-							<li data-target="#carouselIndicators_Artorias" data-slide-to="0" class="active"></li>
-							<li data-target="#carouselIndicators_Artorias" data-slide-to="1"></li>
-						</ol>
-						<div class="carousel-inner">
-							<div class="carousel-item carousel-item-3DModelling active">
-								<img src="../assets/images/3DModelling/ArtoriasGrave/Artorias_Grave_Render1.jpg" 
-								class="d-block w-100">
-							</div>
-							<div class="carousel-item carousel-item-3DModelling">
-								<img src="../assets/images/3DModelling/ArtoriasGrave/Artorias_Grave_Render2.jpg" 
-								class="d-block w-100">
+
+		<div class="container-fluid">
+			<div class="card-columns" id="GamesCategory">
+
+				<div class="card GamesCategory"> <!-- Hand Of God -->
+					<div class="project">
+						<div class="videoContainer">
+							<div class="videoWrapper">
+								<iframe class="center-block" src="https://www.youtube.com/embed/UKGqr8qPlbg?autoplay=0&loop=1&portrait=0" 
+									width="640" height="360" frameborder="0" allow="encrypted-media; autoplay; fullscreen;" 
+									webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 							</div>
 						</div>
-						<a class="carousel-control-prev" href="#carouselIndicators_Artorias" role="button" data-slide="prev">
-							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-							<span class="sr-only">Previous</span>
-						</a>
-						<a class="carousel-control-next" href="#carouselIndicators_Artorias" role="button" data-slide="next">
-							<span class="carousel-control-next-icon" aria-hidden="true"></span>
-							<span class="sr-only">Next</span>
-						</a>
-					</div>
 
-					<div class="d-flex justify-content-around">
-						<div class="title">Artorias's Grave</div>
+						<div class="d-flex justify-content-start summaryTitle">
+							<span class="p-2">Hand of God</span>
+							<a class="ml-auto p-2" href="https://github.com/AmanSachan1/Hand_of_God"><i class="fa fa-github fa-lg"></i>REPO</a>
+						</div>
+
+						<div class="projectKeywords"><p>Unreal Engine 4</p></div>
+
+						<p>	&nbsp; Hand of God is an asymmetric co-op game, where one player is the ‘Runner’ and uses a traditional game controller 
+							while the other is a ‘God’ and uses the HTC Vive to reach into the world for an immersive feel. </p>
+						<p>	&nbsp; The goal is for the 'Runner' to move and stay ahead of the Darkness that swirls around along their dangerous path 
+							and for the 'God' to help the runner through this arduous journey. If the Runner cannot move forward fast enough, the 
+							darkness envelops them for a grim end.</p>
 					</div>
 				</div>
-			</div>
+				<div class="card GamesCategory"> <!-- Stay Woke -->
+					<div class="project">
+						<div class="videoContainer">
+							<div class="videoWrapper">
+								<iframe class="center-block" src="https://www.youtube.com/embed/0YEG7jgNYbs?autoplay=0&loop=1&portrait=0" 
+								width="1280" height="720" frameborder="0" allow="encrypted-media; autoplay; fullscreen;" 
+										webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+							</div>
+						</div>
+						
+						<div class="d-flex justify-content-start summaryTitle">
+							<span class="p-2">Stay Woke</span>
+							<a class="ml-auto p-2" href="https://github.com/AgentLee/StayWoke"><i class="fa fa-github fa-lg"></i>REPO</a>
+						</div>
 
+						<div class="projectKeywords"><p>Unity, C#, HTC Vive</p></div>
+						<p>	&nbsp; It’s so fun that you can <strong>bear-ly</strong> put it down! </p>
+						<p>	&nbsp; Your dreams are getting weirder every night, but one thing remains constant, the escape. 
+							Stay Woke is a fun-filled game in which the player must escape their dream, which begins at the 
+							door to their backyard. At the other end lies a cabin, to which the player must reach in order to escape. 
+							First, however, they must pass by a dangerous bear that’s sleeping right in between them and the cabin entrance. </p>
+					</div>
+				</div>
+
+			</div>
 		</div>
 	</div>
+
 
 	<!-- Footer -->
 	<footer class="container footer">

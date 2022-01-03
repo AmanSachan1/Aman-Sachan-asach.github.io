@@ -1,7 +1,5 @@
 <!doctype html>
 <html lang="en">
- 
-<!-- REFERENCES: Cthulhu Image: http://pcon.github.io/design/cthulhu/ -->
 
 <head>
 	<!-- Required meta tags -->
@@ -17,7 +15,7 @@
 
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
+	
 	<!-- Fonts -->
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
@@ -27,7 +25,8 @@
 	<link href="../css/general.css" rel="stylesheet">
 	<link href="../css/navigation.css" rel="stylesheet">
 	<link href="../css/connectWithMe.css" rel="stylesheet">
-	<link href="../css/webpage/artSubpage.css" rel="stylesheet">
+	<link href="../css/buttonsAndLinks.css" rel="stylesheet">
+	<link href="../css/webpage/portfolioPage.css" rel="stylesheet">
 
 	<title>Aman Sachan | Graphics Engineer</title>
 </head>
@@ -82,68 +81,120 @@
 		</nav>
 	</div>
 
-	<!-- Page Content -->
-	<div class="container-fluid">
+	<!-- Project Cards Section -->
+	<div id="PinnedProjects" class="container-fluid">
+		
 		<div class="row">
-			<div class="col-12 heading-center">
-				<h1> 3D Modelling </h1>
-				<hr>
+			<div class="col-12 text-center pageheading">
+				<h2> Projects </h2>
+				<h6 style="padding: 0px;"> To learn more about a project, follow the link to its git repository </h6>
 			</div>
 		</div>
 
-		<div class="card-columns">
-			
-			<div class="card">
-				<div class="project">
-					<div class="videoContainer">
-						<div class="videoWrapper">
-							<iframe class="center-block" src="https://www.youtube.com/embed/bOm_olR1RyY" 
-							width="854" height="480" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-							<!-- Sif AO Pass: src="https://www.youtube.com/embed/EeI9M3-EAfk" -->
-						</div>
-					</div>
+		<a href="portfolioPinned.html" 			role="button" class="btn btnSameLine btnColorLightGrey">Pinned</a>
+		<a href="portfolioRendering.html" 		role="button" class="btn btnSameLine btnColorLightGrey">Rendering</a>
+		<a href="portfolioSimulation.html" 		role="button" class="btn btnSameLine btnColorLightGrey">Simulation</a>
+		<a href="portfolioGames.html" 			role="button" class="btn btnSameLine btnColorLightGrey">Games</a>
+		<a href="portfolioProcedural.html" 		role="button" class="btn btnSameLine btnColorLightGrey">Procedural</a>
+		<a href="portfolioCUDA.html" 			role="button" class="btn btnSameLine btnColorLightGrey">CUDA</a>
+		<a href="portfolioMiscellaneous.html" 	role="button" class="btn btnSameLine btnColorGrassGreen">Miscellaneous</a>
 
-					<div class="d-flex justify-content-around">
-						<div class="title">Sif, The Great Grey Wolf</div>
-					</div>
-				</div>
-			</div>
+		<div><br></div> <!-- Line Break Spacing -->
 
-			<div class="card">
-				<div class="project">
-					<div id="carouselIndicators_Artorias" class="carousel slide" data-ride="carousel">
-						<ol class="carousel-indicators">
-							<li data-target="#carouselIndicators_Artorias" data-slide-to="0" class="active"></li>
-							<li data-target="#carouselIndicators_Artorias" data-slide-to="1"></li>
-						</ol>
-						<div class="carousel-inner">
-							<div class="carousel-item carousel-item-3DModelling active">
-								<img src="../assets/images/3DModelling/ArtoriasGrave/Artorias_Grave_Render1.jpg" 
-								class="d-block w-100">
-							</div>
-							<div class="carousel-item carousel-item-3DModelling">
-								<img src="../assets/images/3DModelling/ArtoriasGrave/Artorias_Grave_Render2.jpg" 
-								class="d-block w-100">
+
+		<div class="container-fluid">
+			<div class="card-columns" id="MiscellaneousCards">
+
+				<div class="card MiscellaneousCategory"> <!-- Mini-Minecraft -->
+					<div class="project">
+						<div class="videoContainer">
+							<div class="videoWrapper">
+								<iframe class="center-block" src="https://player.vimeo.com/video/231614466?autoplay=0&loop=1&portrait=0" 
+									width="640" height="360" frameborder="0" allow="autoplay; fullscreen" 
+									webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 							</div>
 						</div>
-						<a class="carousel-control-prev" href="#carouselIndicators_Artorias" role="button" data-slide="prev">
-							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-							<span class="sr-only">Previous</span>
-						</a>
-						<a class="carousel-control-next" href="#carouselIndicators_Artorias" role="button" data-slide="next">
-							<span class="carousel-control-next-icon" aria-hidden="true"></span>
-							<span class="sr-only">Next</span>
-						</a>
-					</div>
 
-					<div class="d-flex justify-content-around">
-						<div class="title">Artorias's Grave</div>
+						<div class="d-flex justify-content-start summaryTitle">
+							<span class="p-2">Mini Minecraft</span>
+							<a class="ml-auto p-2" href="https://github.com/AmanSachan1/MiniMineCraft"><i class="fa fa-github fa-lg"></i>REPO</a>
+						</div>
+
+						<div class="d-flex justify-content-around projectKeywords">
+							<span class="p-2"><p>C++, OpenGL, GLSL</p></span>
+							<span class="p-2"><p>Group Project</p></span>
+						</div>
+						
+						<p>&nbsp; A tiny game built from scratch in the style of Minecraft.</p>
+						<p>	&nbsp; Features I Implemented: Efficient Terrain Generation (interleaved VBO's and mesh hull drawing), 
+							general material property mapping scheme, weather, clouds, a day and night cycle, animated textures and more.</p>
 					</div>
 				</div>
-			</div>
+				<div class="card MiscellaneousCategory"> <!-- Mesh Editor -->
+					<div class="project">
+						<div class="videoContainer">
+							<div class="videoWrapper">
+								<iframe class="center-block" src="https://player.vimeo.com/video/232433941?autoplay=0&loop=1&portrait=0" 
+									width="640" height="360" frameborder="0" allow="autoplay; fullscreen" 
+									webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+							</div>
+						</div>
 
+						<div class="d-flex justify-content-start summaryTitle">
+							<span class="p-2">Mesh Editor</span>
+						</div>
+
+						<div class="projectKeywords"><p>C++, OpenGL</p></div>
+						<p>	&nbsp; A HalfEdge Mesh Data Structure; Catmull Clark Subdivision; Skeletons and Skinning;</p>
+					</div>
+				</div>
+				<div class="card MiscellaneousCategory"> <!-- Art Of Collisions -->
+					<div class="project">
+						<div class="videoContainer">
+							<div class="videoWrapper">
+								<iframe class="center-block" src="https://player.vimeo.com/video/231615628?autoplay=0&loop=1&portrait=0" 
+									width="640" height="360" frameborder="0" allow="autoplay; fullscreen" 
+									webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+							</div>
+						</div>
+
+						<div class="d-flex justify-content-start summaryTitle">
+							<span class="p-2">Art Of Collisions</span>
+							<a class="ml-auto p-2" href="https://github.com/Aman-Sachan-asach/ArtOfCollisions"><i class="fa fa-github fa-lg"></i>REPO</a>
+						</div>
+
+						<div class="d-flex justify-content-around projectKeywords">
+							<span class="p-2"><p>C++, Maya API, MEL</p></span>
+							<span class="p-2"><p>Group Project</p></span>
+						</div>
+
+						<p> &nbsp; A real-time simulation of particle-based rigid body dynamics based on the paper 
+							"Unified Particle Physics for Real-Time Applications" by Macklin, Muller, Chentanez, and Kim.</p>					
+					</div>
+				</div>
+				<div class="card MiscellaneousCategory"> <!-- Agent Behaviour -->
+					<div class="project">
+						<div class="videoContainer">
+							<div class="videoWrapper">
+								<iframe class="center-block" src="https://player.vimeo.com/video/232434283?autoplay=0&loop=1&portrait=0" 
+									width="640" height="360" frameborder="0" allow="autoplay; fullscreen" 
+									webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+							</div>
+						</div>
+
+						<div class="d-flex justify-content-start summaryTitle">
+							<span class="p-2">Agent Behaviours</span>
+						</div>
+
+						<div class="projectKeywords"><p>C++</p></div>
+						<p>	&nbsp; An Implementation of a variety of agent behaviours, both individual and group behaviours.</p>
+					</div>
+				</div>
+
+			</div>
 		</div>
 	</div>
+
 
 	<!-- Footer -->
 	<footer class="container footer">

@@ -1,7 +1,5 @@
 <!doctype html>
 <html lang="en">
- 
-<!-- REFERENCES: Cthulhu Image: http://pcon.github.io/design/cthulhu/ -->
 
 <head>
 	<!-- Required meta tags -->
@@ -49,7 +47,7 @@
 				<ul class="navbar-nav webpage-links justify-content-center m-auto h4">
 					<li class="hidden"><a href="#page-top"></a></li>
 					<li style="padding: 0vh 1.5vw 0vh 0vw;">
-						<a href="portfolio.html">							
+						<a href="portfolioPinned.html">							
 							<svg width="1em" height="1em" style="vertical-align: middle; stroke:#4AD8E3; overflow: visible;" viewBox="0 0 16 16" class="bi bi-triangle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" d="M7.938 2.016a.146.146 0 0 0-.054.057L1.027 13.74a.176.176 0 0 0-.002.183c.016.03.037.05.054.06.015.01.034.017.066.017h13.713a.12.12 0 0 0 .066-.017.163.163 0 0 0 .055-.06.176.176 0 0 0-.003-.183L8.12 2.073a.146.146 0 0 0-.054-.057A.13.13 0 0 0 8.002 2a.13.13 0 0 0-.064.016zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/>
 							</svg> Portfolio 
@@ -91,22 +89,23 @@
 				<h2> Projects </h2>
 				<h6 style="padding: 0px;"> To learn more about a project, follow the link to its git repository </h6>
 			</div>
-			<hr>
-			<br>
-			<br>
-			<br>
 		</div>
 
+		<a href="portfolioPinned.html" 			role="button" class="btn btnSameLine btnColorGrassGreen">Pinned</a>
+		<a href="portfolioRendering.html" 		role="button" class="btn btnSameLine btnColorLightGrey">Rendering</a>
+		<a href="portfolioSimulation.html" 		role="button" class="btn btnSameLine btnColorLightGrey">Simulation</a>
+		<a href="portfolioGames.html" 			role="button" class="btn btnSameLine btnColorLightGrey">Games</a>
+		<a href="portfolioProcedural.html" 		role="button" class="btn btnSameLine btnColorLightGrey">Procedural</a>
+		<a href="portfolioCUDA.html" 			role="button" class="btn btnSameLine btnColorLightGrey">CUDA</a>
+		<a href="portfolioMiscellaneous.html" 	role="button" class="btn btnSameLine btnColorLightGrey">Miscellaneous</a>
+
+		<div><br></div> <!-- Line Break Spacing -->
+
+
 		<div class="container-fluid">
-			<div class="row">
-				<div class="col-12 pageheading">
-					<h3> Pinned Projects </h3>
-				</div>
-			</div>
-	
 			<div class="card-columns">
-				
-				<div id="Project_Meteoros" class="card"> <!-- Meteoros -->
+
+				<div class="card PinnedCategory"> <!-- Meteoros -->
 					<div class="project">
 						<div class="videoContainer">
 							<div class="videoWrapper">
@@ -128,7 +127,7 @@
 							for the game 'Horizon Zero Dawn'</p>
 					</div>
 				</div>
-				<div id="Project_HandOfGod" class="card"> <!-- Hand Of God -->
+				<div class="card PinnedCategory"> <!-- Hand Of God -->
 					<div class="project">
 						<div class="videoContainer">
 							<div class="videoWrapper">
@@ -152,7 +151,26 @@
 							darkness envelops them for a grim end.</p>
 					</div>
 				</div>
-				<div id="Project_CPU_PathTracer" class="card"> <!-- Monte Carlo Path Tracer -->
+				<div class="card PinnedCategory"> <!-- Mesh Editor -->
+					<div class="project">
+						<div class="videoContainer">
+							<div class="videoWrapper">
+								<iframe class="center-block" src="https://player.vimeo.com/video/232433941?autoplay=0&loop=1&portrait=0" 
+									width="640" height="360" frameborder="0" allow="autoplay; fullscreen" 
+									webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+							</div>
+						</div>
+
+						<div class="d-flex justify-content-start summaryTitle">
+							<span class="p-2">Mesh Editor</span>
+						</div>
+
+						<div class="projectKeywords"><p>C++, OpenGL</p></div>
+						<p>	&nbsp; A HalfEdge Mesh Data Structure; Catmull Clark Subdivision; Skeletons and Skinning;</p>
+					</div>
+				</div>
+
+				<div class="card PinnedCategory"> <!-- Monte Carlo Path Tracer -->
 					<div class="project">
 						<div class="videoContainer">
 							<div class="videoWrapper">
@@ -174,59 +192,8 @@
 							accurate models light sources, and optically-correct cameras, path tracing can produce still images that are 
 							indistinguishable from photographs.</p>
 					</div>
-				</div>
-				<div id="Project_JelloSim" class="card">  <!-- Jello Sim -->
-					<div class="project">
-						<div class="videoContainer">
-							<div class="videoWrapper">
-								<iframe class="center-block" src="https://player.vimeo.com/video/260037661?autoplay=0&loop=1&portrait=0" 
-									width="640" height="360" frameborder="0" allow="autoplay; fullscreen" 
-									webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-							</div>
-						</div>
-
-						<div class="d-flex justify-content-start summaryTitle">
-							<span class="p-2">Jello Sim</span>
-							<a class="ml-auto p-2" href="https://github.com/AmanSachan1/JelloSim"><i class="fa fa-github fa-lg"></i>REPO</a>
-						</div>
-
-						<div class="projectKeywords"><p>C++, Houdini</p></div>
-						<p>	&nbsp; A Jello Simulator based on the Finite Element Method using a Fixed Corotated Elastic Model</p> 
-					</div>
-				</div>
-				<div id="Project_ClusteredDeferred" class="card"> <!-- Clustered Deferred and Forward Plus Shading -->
-					<div class="project">
-						<div class="videoContainer">
-							<div class="videoWrapper">
-								<iframe class="center-block" src="https://player.vimeo.com/video/240254058?autoplay=0&loop=1&portrait=0"
-									width="640" height="360" frameborder="0" allow="autoplay; fullscreen" 
-									webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-							</div>
-						</div>
-
-						<div class="d-flex justify-content-between summaryTitle">
-							<span class="p-2">Clustered Deferred &amp; <br /> Forward Plus Shading</span>
-							<a class="p-2" href="https://github.com/AmanSachan1/WebGL-Clustered-Deferred-Forward-Plus">
-								<i class="fa fa-github fa-lg"></i>REPO</a>
-						</div>
-
-						<div class="projectKeywords"><p>Javascript, WebGL, GLSL</p></div>
-
-						<div class="row skewedSlideContainer">
-							<a href="https://amansachan1.github.io/WebGL-Clustered-Deferred-Forward-Plus/">
-								<div class="demobutton buttonSkewedSlide">
-									<div>Demo!</div>
-									<div></div>
-									<div>Demo!</div>
-								</div>
-							</a>
-						</div>
-
-						<p>&nbsp; Can simulate over 2100 lights at 60 FPS.</p>
-						<p>&nbsp; A WebGL implementation of Clustered Deferred and Clustered Forward Shading Techniques.</p>
-					</div>
-				</div>
-				<div id="Project_StylizedJellyfish" class="card">
+				</div>	
+				<div class="card PinnedCategory"> <!-- Stylized Jellyfish -->
 					<div class="project">
 						<div class="videoContainer">
 							<div class="videoWrapper">
@@ -250,59 +217,9 @@
 
 						<div class="projectKeywords"><p>GLSL</p></div>
 						<p>&nbsp; No textures, No assets, just <b>pure math</b>!</p>
-
 					</div>
-				</div>
-
-			</div>
-
-			<div class="card-columns">
-
-				<div id="Project_Rasterizer" class="card"> <!-- CUDA Rasterizer -->
-					<div class="project">
-						<div class="videoContainer">
-							<div class="videoWrapper">
-								<iframe class="center-block" src="https://player.vimeo.com/video/238849486?autoplay=0&loop=1&portrait=0"
-									width="640" height="360" frameborder="0" allow="autoplay; fullscreen" 
-									webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-							</div>
-						</div>
-	
-						<div class="d-flex justify-content-between summaryTitle">
-							<span class="p-2">CUDA Rasterizer</span>
-							<a class="p-2" href="https://github.com/AmanSachan1/CUDA-Rasterizer"><i class="fa fa-github fa-lg"></i>REPO</a>
-						</div>
-	
-						<div class="projectKeywords"><p>C++, CUDA</p></div>
-	
-						<p>&nbsp; GPU Rasterizer written in CUDA that runs at >60 FPS </p>					
-						<p>&nbsp; Implements tile based rasterization and scanline rasterization along with standard features 
-							like depth testing via mutex locks; texture mapping; backface culling; point, line, and triangle rasterization;</p>
-					</div>
-				</div>
-				<div id="Project_CUDAPathTracer" class="card"> <!-- CUDA Path Tracer -->
-					<div class="project">
-						<div class="videoContainer">
-							<div class="videoWrapper">
-								<iframe class="center-block" src="https://player.vimeo.com/video/236271250?autoplay=0&loop=1&portrait=0" 
-									width="640" height="360" frameborder="0" allow="autoplay; fullscreen" 
-									webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-							</div>
-						</div>
-	
-						<div class="d-flex justify-content-start summaryTitle">
-							<span class="p-2">CUDA Path Tracer</span>
-							<a class="ml-auto p-2" href="https://github.com/AmanSachan1/CUDA-Path-Tracer"><i class="fa fa-github fa-lg"></i>REPO</a>
-						</div>
-	
-						<div class="projectKeywords"><p>C++, CUDA</p></div>
-	
-						<p> &nbsp; A simple CUDA Monte Carlo path tracer that runs at about 19 ms/sample. </p>
-						<p> &nbsp; Interesting things that were implemented include: <span class="bigText">&nbsp; 
-							Subsuface Scattering, Stream Compaction, Material Sorting, Intersection Caching </span></p>
-					</div>
-				</div>
-				<div id="Project_GrassTesselation" class="card"> <!-- Vulkan Grass Tesselation -->
+				</div>				
+				<div class="card PinnedCategory"> <!-- Vulkan Grass Tesselation -->
 					<div class="project">
 						<div class="videoContainer">
 							<div class="videoWrapper">
@@ -311,14 +228,14 @@
 									webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 							</div>
 						</div>
-	
+
 						<div class="d-flex justify-content-start summaryTitle">
 							<span class="p-2">Vulkan Grass Tesselation</span>
 							<a class="ml-auto p-2" href="https://github.com/AmanSachan1/Vulkan-Grass-Rendering"><i class="fa fa-github fa-lg"></i>REPO</a>
 						</div>
-	
+
 						<div class="projectKeywords"><p>Vulkan, C++, GLSL</p></div>
-	
+
 						<p>&nbsp; Can simulate and render over 1 Million blades of grass on a Notebook GTX 1070.</p>
 						<p>&nbsp; The project follows 
 							<a href="https://www.cg.tuwien.ac.at/research/publications/2017/JAHRMANN-2017-RRTG/JAHRMANN-2017-RRTG-draft.pdf"><span class="bigText">
@@ -326,7 +243,82 @@
 							</a> very closely.</p>
 					</div>
 				</div>
-				<div id="Project_InterestingLevelGenerator" class="card"> <!-- Interesting Level Generator -->
+
+				<div class="card PinnedCategory"> <!-- CUDA Rasterizer -->
+					<div class="project">
+						<div class="videoContainer">
+							<div class="videoWrapper">
+								<iframe class="center-block" src="https://player.vimeo.com/video/238849486?autoplay=0&loop=1&portrait=0"
+									width="640" height="360" frameborder="0" allow="autoplay; fullscreen" 
+									webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+							</div>
+						</div>
+
+						<div class="d-flex justify-content-between summaryTitle">
+							<span class="p-2">CUDA Rasterizer</span>
+							<a class="p-2" href="https://github.com/AmanSachan1/CUDA-Rasterizer"><i class="fa fa-github fa-lg"></i>REPO</a>
+						</div>
+
+						<div class="projectKeywords"><p>C++, CUDA</p></div>
+
+						<p>&nbsp; GPU Rasterizer written in CUDA that runs at >60 FPS </p>					
+						<p>&nbsp; Implements tile based rasterization and scanline rasterization along with standard features 
+							like depth testing via mutex locks; texture mapping; backface culling; point, line, and triangle rasterization;</p>
+					</div>
+				</div>
+
+				<div class="card PinnedCategory"> <!-- Jello Sim -->
+					<div class="project">
+						<div class="videoContainer">
+							<div class="videoWrapper">
+								<iframe class="center-block" src="https://player.vimeo.com/video/260037661?autoplay=0&loop=1&portrait=0" 
+									width="640" height="360" frameborder="0" allow="autoplay; fullscreen" 
+									webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+							</div>
+						</div>
+
+						<div class="d-flex justify-content-start summaryTitle">
+							<span class="p-2">Jello Sim</span>
+							<a class="ml-auto p-2" href="https://github.com/AmanSachan1/JelloSim"><i class="fa fa-github fa-lg"></i>REPO</a>
+						</div>
+
+						<div class="projectKeywords"><p>C++, Houdini</p></div>
+						<p>	&nbsp; A Jello Simulator based on the Finite Element Method using a Fixed Corotated Elastic Model</p> 
+					</div>
+				</div>
+				<div class="card PinnedCategory"> <!-- Clustered Deferred and Forward Plus Shading -->
+					<div class="project">
+						<div class="videoContainer">
+							<div class="videoWrapper">
+								<iframe class="center-block" src="https://player.vimeo.com/video/240254058?autoplay=0&loop=1&portrait=0"
+									width="640" height="360" frameborder="0" allow="autoplay; fullscreen" 
+									webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+							</div>
+						</div>
+
+						<div class="d-flex justify-content-between summaryTitle">
+							<span class="p-2">Clustered Deferred &amp; <br /> Forward Plus Shading</span>
+							<a class="p-2" href="https://github.com/AmanSachan1/WebGL-Clustered-Deferred-Forward-Plus">
+								<i class="fa fa-github fa-lg"></i>REPO</a>
+						</div>
+
+						<div class="projectKeywords"><p>Javascript, WebGL, GLSL</p></div>
+						
+						<div class="row skewedSlideContainer">
+							<a href="https://amansachan1.github.io/WebGL-Clustered-Deferred-Forward-Plus/">
+								<div class="demobutton buttonSkewedSlide">
+									<div>Demo!</div>
+									<div></div>
+									<div>Demo!</div>
+								</div>
+							</a>
+						</div>
+
+						<p>&nbsp; Can simulate over 2100 lights at 60 FPS.</p>
+						<p>&nbsp; A WebGL implementation of Clustered Deferred and Clustered Forward Shading Techniques.</p>
+					</div>
+				</div>				
+				<div class="card PinnedCategory"> <!-- Interesting Level Generator -->
 					<div class="project">
 						<div class="videoContainer">
 							<div class="videoWrapper">
@@ -335,16 +327,16 @@
 									webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 							</div>
 						</div>
-	
+
 						<div class="d-flex justify-content-start summaryTitle">
 							<span class="p-2">Interesting Level Generator</span>
 							<a class="ml-auto p-2" href="https://github.com/AmanSachan1/InterestingLevelGenerator"><i class="fa fa-github fa-lg"></i>REPO</a>
 						</div>
-	
+
 						<div class="d-flex justify-content-center projectKeywords">
 							<span class="p-2"><p>Javascript, WebGL</p></span>
 						</div>
-	
+
 						<div class="row skewedSlideContainer">
 							<a href="https://amansachan1.github.io/InterestingLevelGenerator/">
 								<div class="demobutton buttonSkewedSlide">
@@ -354,51 +346,11 @@
 								</div>
 							</a>
 						</div>
-	
+
 						<p> &nbsp; A procedural multi-layer dungeon generator that generates levels based on a dynamically generated voronoi 
 							like graph after it has been heavily modified by various filters.</p> 
 						<p> &nbsp; Realistic fog, crumbling pathways, and terrain are added over the basic level layout to give it a unique 
 							mysterious foreign world aesthetic.</p>
-					</div>
-				</div>
-				<div id="Project_MeshEditor" class="card"> <!-- Mesh Editor -->
-					<div class="project">
-						<div class="videoContainer">
-							<div class="videoWrapper">
-								<iframe class="center-block" src="https://player.vimeo.com/video/232433941?autoplay=0&loop=1&portrait=0" 
-									width="640" height="360" frameborder="0" allow="autoplay; fullscreen" 
-									webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-							</div>
-						</div>
-	
-						<div class="d-flex justify-content-start summaryTitle">
-							<span class="p-2">Mesh Editor</span>
-						</div>
-	
-						<div class="projectKeywords"><p>C++, OpenGL</p></div>
-						<p>	&nbsp; A HalfEdge Mesh Data Structure; Catmull Clark Subdivision; Skeletons and Skinning;</p>
-					</div>
-				</div>
-				<div id="Project_StreamCompaction" class="card"> <!-- Stream Compaction -->
-					<div class="project">
-						<div class="ImageContainer">
-							<div class="videoWrapper">
-								<img src="../assets/images/Projects/StreamCompaction/streamCompactionImage.png" 
-								style="max-width: 100%; max-height: 100%;" alt="Stream Compaction"/>						
-							</div>
-						</div>
-	
-						<div class="d-flex justify-content-start summaryTitle">
-							<span class="p-2">Stream Compaction</span>
-							<a class="ml-auto p-2" href="https://github.com/AmanSachan1/CUDA-Stream-Compaction"><i class="fa fa-github fa-lg"></i>REPO</a>
-						</div>
-	
-						<div class="projectKeywords"><p>C++, CUDA</p></div>
-	
-						<p>&nbsp; Implementaion of the Stream Compaction technique and a performance analysis of the same. </p>					
-						<p>&nbsp; Stream compaction is a technique that performs the following: given an array and some condition, 
-							creates and returns a new array that contains only those elements from the original array that satisy the condition, 
-							while preserving the order of the elements.</p>
 					</div>
 				</div>
 
@@ -406,18 +358,6 @@
 		</div>
 	</div>
 
-
-	<!-- All Projects Webpage Link -->
-	<div class="d-flex justify-content-center">
-		<a href="AllProjects.html">
-			<div class="allProjectsButton buttonDoubleRoll3D">
-				<div>All Projects</div>
-				<div>All Projects</div>
-				<div>All Projects</div>
-				<div>All Projects</div>
-			</div>
-		</a>
-	</div>
 
 	<!-- Footer -->
 	<footer class="container footer">
