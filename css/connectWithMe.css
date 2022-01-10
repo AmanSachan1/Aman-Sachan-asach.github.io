@@ -3,6 +3,9 @@
 	padding: 0vh 0vw 0vh 0vw; /* top right bottom left */
 	margin: 0vh 0vw 0vh 0vw; /* top right bottom left */
 	display: list-item;
+
+	vertical-align: middle;
+	list-style: none;
 }
 .connectWithMe-icons li {
 	padding: 0vh 1vw 0vh 0vw; /* top right bottom left */
@@ -10,15 +13,57 @@
 	display: inline;
 }
 
-.fa-linkedin:hover {
-	color: #0073a4;
+.borderedIcon {
+	color: #f8f9fa; /* Offwhite */
+	-webkit-text-fill-color: black; /* Will override color (regardless of order) */
+	-webkit-text-stroke-width: 1.5px;
+	transition: fill 0.3s ease 0s, stroke 0.3s ease 0s;
 }
-.fa-github:hover {
-	color: #6e5494;
+
+.resumeClass,
+.resumeClass a {
+	font-size: 4.0vw;
+	-webkit-text-fill-color: black; /* Will override color (regardless of order) */
+	-webkit-text-stroke-color: #FF8080;
+	-webkit-text-stroke-width: 1.5px;
+	transition: fill 0.3s ease 0s, stroke 0.3s ease 0s;
+}
+.resumeClass a:hover {
+	-webkit-text-fill-color: #FF8080; /* Will override color (regardless of order) */
+	fill: #FF8080;
+}
+
+.svgResume {
+	fill: black;
+	stroke-width: 0.3px;
+	stroke: #FF8080;
+	overflow: visible;
+}
+
+.fa-envelope {
+	-webkit-text-stroke-color: #64b1ff;
 }
 .fa-envelope:hover {
-	color:#a9fd43;
+	-webkit-text-fill-color: #64b1ff;
+}
+
+.fa-linkedin {
+	-webkit-text-stroke-color: #0073a4;
+}
+.fa-linkedin:hover {
+	-webkit-text-fill-color: #0073a4;
+}
+
+.fa-github {
+	-webkit-text-stroke-color: #6e5494;
+}
+.fa-github:hover {
+	-webkit-text-fill-color: #6e5494;
+}
+
+.fa-vimeo {
+	-webkit-text-stroke-color: #1ab7ea;
 }
 .fa-vimeo:hover {
-	color: #1ab7ea;
+	-webkit-text-fill-color: #1ab7ea;
 }
