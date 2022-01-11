@@ -40,6 +40,41 @@
 	overflow: visible;
 }
 
+.fa {
+	font-size: 3.25vw;
+	padding: 0vh 0vw 0vh 0.5vw;
+}
+/* Medium devices (desktops, 992px and up) --> Value used by bootstrap */
+/* Small devices (tablets, 768px and up) --> Value used by bootstrap */
+@media (max-width: 950px) {
+	.connectWithMe-icons{
+		padding: 1.25vh 0vw 0vh 3.5vw;
+	}
+	.fa {
+		font-size: 7.5vw;
+		padding: 0vh 0vw 0vh 2vw;
+	}
+	.resumeClass,
+	.resumeClass a {
+		font-size: 9vw;
+		padding: 0vh 0vw 0vh 1.5vw;
+	}
+}
+@media (max-width: 750px) {
+	.connectWithMe-icons{
+		padding: 1vh 0vw 0vh 7vw;
+	}
+	.fa {
+		font-size: 10vw;
+		padding: 0vh 0vw 0vh 1vw;
+	}
+	.resumeClass,
+	.resumeClass a {
+		font-size: 11vw;
+		padding: 0vh 0vw 0vh 3vw;
+	}
+}
+
 .fa-envelope {
 	-webkit-text-stroke-color: #64b1ff;
 }

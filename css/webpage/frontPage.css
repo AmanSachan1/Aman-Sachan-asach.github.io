@@ -105,7 +105,7 @@
 	color: #fff;
 }
 .ProfessionStyle {
-	font-size: 2vw;
+	font-size: 2.6vw;
 	color: #f8f9fa;
 }
 
@@ -125,6 +125,38 @@
 
 .SubPageLink .svgElement {
 	font-size: 3vw;
+}
+
+@media (max-width: 950px) {
+	.SubPageLink,
+	.SubPageLink a{
+		font-size: 10vw;
+		line-height: 1.15;
+	}
+	.SubPageLink ul li  {
+		display: block;
+	}
+	.NameStyle{
+		font-size: 12vw;
+	}
+	.ProfessionStyle{
+		font-size: 6vw;
+	}
+}
+@media (max-width: 750px) {
+	.SubPageLink,
+	.SubPageLink a {
+		font-size: 12vw;
+	}
+	.SubPageLink ul li  {
+		display: block;
+	}
+	.NameStyle{
+		font-size: 12vw;
+	}
+	.ProfessionStyle{
+		font-size: 6vw;
+	}
 }
 
 .PortfolioLink, 
