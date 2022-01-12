@@ -111,20 +111,11 @@
 
 .SubPageLink,
 .SubPageLink a {
-	font-size: 4.1vw;
-	list-style: none;
-}
-.SubPageLink ul {
-	margin: 2vh 0vw 0.5vh 0vw; /* top | right | bottom | left */
-	padding: 0vh 0vw;
+	font-size: 4.0vw;
+	padding: 0vh 0vw 0vh 0vw;
 }
 .SubPageLink ul li  {
-	display: inline;
-	padding: 0vh 1.3vw;
-}
-
-.SubPageLink .svgElement {
-	font-size: 3vw;
+	padding: 0vh 1vw;
 }
 
 @media (max-width: 950px) {
@@ -146,7 +137,7 @@
 @media (max-width: 750px) {
 	.SubPageLink,
 	.SubPageLink a {
-		font-size: 12vw;
+		font-size: 13vw;
 	}
 	.SubPageLink ul li  {
 		display: block;
@@ -159,15 +150,44 @@
 	}
 }
 
-.PortfolioLink, 
-.PortfolioLink a  {
-	color: #A9FD43;
+.connectWithMe-iconsFrontPage{
+	padding: 0.5vh 0vw 0vh 1.75vw;
 }
-.ArtLink, 
-.ArtLink a  {
-	color: #FF8080
+.fa-FrontPage {
+	font-size: 2.5vw;
+	padding: 0vh 0vw 0vh 0.35vw;
 }
-.AboutLink, 
-.AboutLink a  {	
-	color: #4AD8E3;
+.resumeClassFrontPage,
+.resumeClassFrontPage a {
+	font-size: 3vw;
+	padding: 1vh 0vw 0vh 0.5vw;
+}
+
+@media (max-width: 950px) {
+	.connectWithMe-iconsFrontPage{
+		padding: 0vh 0vw 0vh 1.5vw;
+	}
+	.fa-FrontPage {
+		font-size: 4.6vw;
+		padding: 0vh 0vw 0vh 0.75vw;
+	}
+	.resumeClassFrontPage,
+	.resumeClassFrontPage a {
+		font-size: 5.5vw;
+		padding: 1vh 0vw 0vh 0.5vw;
+	}
+}
+@media (max-width: 750px) {
+	.connectWithMe-iconsFrontPage{
+		padding: 1.5vh 0vw 0vh 3vw;
+	}
+	.fa-FrontPage{
+		font-size: 7.5vw;
+		padding: 0vh 0vw 0vh 0.75vw;
+	}
+	.resumeClassFrontPage,
+	.resumeClassFrontPage a {
+		font-size: 8.25vw;
+		padding: 0vh 0vw 0vh 1vw;
+	}
 }
