@@ -53,18 +53,6 @@
 }
 
 
-@media (max-width: 950px) {
-	.connectWithMe-icons{
-		padding: 1.25vh 0vw 0vh 0vw;
-	}
-}
-@media (max-width: 750px) {
-	.connectWithMe-icons{
-		padding: 1vh 0vw 0vh 0vw;
-	}
-}
-
-
 .SubPageLink,
 .SubPageLink a {
 	font-size: 3vw;
@@ -95,4 +83,31 @@
 .AboutLink, 
 .AboutLink a  {	
 	color: #4AD8E3 !important; /* Override the navbar-custom colors above */
+}
+
+
+@media (max-width: 950px) {
+	.navbar-custom .navbar-brand {
+		font-size: 3.75vw;
+	}
+	.connectWithMe-icons{
+		padding: 1.25vh 0vw 0vh 0vw;
+	}
+	.SubPageLink,
+	.SubPageLink a 
+	{
+		font-size: 4vw;
+	}
+}
+@media (max-width: 750px) {
+	.navbar-custom .navbar-brand {
+		font-size: 9vw;
+	}
+	.connectWithMe-icons{
+		padding: 1vh 0vw 0vh 0vw;
+	}
+	.SubPageLink,
+	.SubPageLink a {
+		font-size: 11vw;
+	}
 }

@@ -4,69 +4,35 @@
 
 .content {
 	color: rgb(130, 130, 130);
-	padding-left: 15px;
 }
 .content .AlignText {
 	text-align: center;
 }
-.content .reddish {
-	color: #cc7070;
+
+.topSeparation{
+	padding: 2vh 0vw 0vh 0vw;
 }
 
-
-.content p{
-	font-size: 3.5vw;
+.content p,
+.content a {
+	font-size: 2vw;
 	padding: 0vh 0vw;
 	margin: 0vh 0vw;
-}
-.content .separator{
-	font-size: 3.75vw;
-}
-.content a{
-	font-size: 3.5vw;
-}
-.content img {
-    width: 30vw;
-	height: auto;
-	text-align: center;
-}
-.content .EmphasizeName {
-	color: #21dfff;; /* #a0df6c; */
-	font-size: 5.5vw;
-}
-.content .EmphasizeTitle {
-	color: #dcfaff; /* #a0df6c; */
-	font-size: 4.0vw;
 }
 
 
 /* Medium devices (desktops, 992px and up) --> Value used by bootstrap */
 /* Small devices (tablets, 768px and up) --> Value used by bootstrap */
-@media (min-width: 768px) {
-	.content {
-		padding-left: 25px;
+@media (max-width: 950px) {
+	.content p,
+	.content a {
+		font-size: 3.75vw;
 	}
-	.content .AlignText {
-		text-align: left;
-	}
-	
-	.content p{
-		font-size: 2vw;
-	}
-	.content .separator{
-		font-size: 2.25vw;
-	}
-	.content a{
-		font-size: 2vw;
-	}
-	.content img {
-		width: 20vw;
-	}
-	.content .EmphasizeName {
-		font-size: 4vw;
-	}
-	.content .EmphasizeTitle {
-		font-size: 2.5vw;
+}
+@media (max-width: 750px) {
+	.content p,
+	.content a {
+		font-size: 6vw;
 	}
 }
 
@@ -77,22 +43,19 @@
 .BioPic img {
 	vertical-align: middle;
 	border-style: none;
-	width: 60vw;
-}
-
-.topSeparation {
-	padding-top: 3vh;
+	width: 38vw;
 }
 
 /* Medium devices (desktops, 992px and up) --> Value used by bootstrap */
 /* Small devices (tablets, 768px and up) --> Value used by bootstrap */
-@media (min-width: 768px) { 
+@media (max-width: 950px) {
 	.BioPic img {		
-		width: 30vw;
+		width: 60vw;
 	}
-
-	.topSeparation {
-		padding-top: 1.5vh;
+}
+@media (max-width: 750px) {
+	.BioPic img {		
+		width: 75vw;
 	}
 }
 
