@@ -16,8 +16,8 @@
 .content p,
 .content a {
 	font-size: 2vw;
-	padding: 0vh 0vw;
-	margin: 0vh 0vw;
+	padding: 0vh 0vw 0vh 0vw;
+	margin: 0vh 1vw 0vh 0vw;
 }
 
 
