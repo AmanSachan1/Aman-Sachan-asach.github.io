@@ -4,6 +4,7 @@
 
 .content {
 	color: rgb(130, 130, 130);
+	margin: 0vh 0vw 0vh 0vw;
 }
 .content .AlignText {
 	text-align: center;
@@ -17,9 +18,12 @@
 .content a {
 	font-size: 2vw;
 	padding: 0vh 0vw 0vh 0vw;
-	margin: 0vh 1vw 0vh 0vw;
+	margin: 0vh 0vw 0vh 0vw;
 }
 
+.TextContent {
+	margin: 0vh 2vw 0vh 0vw;
+}
 
 /* Medium devices (desktops, 992px and up) --> Value used by bootstrap */
 /* Small devices (tablets, 768px and up) --> Value used by bootstrap */
