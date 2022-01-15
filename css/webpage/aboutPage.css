@@ -21,6 +21,10 @@
 	margin: 0vh 0vw 0vh 0vw;
 }
 
+.resumeClass a {
+	font-size: 2.5vw;
+}
+
 /* Medium devices (desktops, 992px and up) --> Value used by bootstrap */
 /* Small devices (tablets, 768px and up) --> Value used by bootstrap */
 @media (max-width: 950px) {
@@ -28,11 +32,17 @@
 	.content a {
 		font-size: 3.75vw;
 	}
+	.resumeClass a {
+		font-size: 4.5vw;
+	}
 }
 @media (max-width: 750px) {
 	.content p,
 	.content a {
 		font-size: 6vw;
+	}
+	.resumeClass a {
+		font-size: 10vw;
 	}
 }
 
