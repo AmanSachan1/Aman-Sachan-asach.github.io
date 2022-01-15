@@ -2,19 +2,6 @@
 	color: #d7d7d7; /* #f8f9fa; */
 }
 
-/*
-.borderedIcon {
-	-webkit-text-stroke-width: 4px;
-}
-.resumeClass,
-.resumeClass a {
-	-webkit-text-stroke-width: 4px;
-}
-.svgResume {
-	stroke-width: 0.5px;
-}
-*/
-
 .content {
 	color: rgb(130, 130, 130);
 	margin: 0vh 0vw 0vh 0vw;
