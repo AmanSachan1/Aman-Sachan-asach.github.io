@@ -74,16 +74,39 @@
 
 .PortfolioLink, 
 .PortfolioLink a  {
-	color: #A9FD43 !important; /* Override the navbar-custom colors above */
+	-webkit-text-stroke-width: 0.5px;
+	-webkit-text-stroke-color: #000;
+	color: #B8FF73 !important; /* Override the navbar-custom colors above.  #A9FD43 */
 }
 .ArtLink, 
 .ArtLink a  {
-	color: #FF8080 !important; /* Override the navbar-custom colors above */
+	-webkit-text-stroke-width: 0.5px;
+	-webkit-text-stroke-color: #000;
+	color: #FF9C66 !important; /* Override the navbar-custom colors above.  #FF8080 */
 }
 .AboutLink, 
 .AboutLink a  {	
-	color: #4AD8E3 !important; /* Override the navbar-custom colors above */
+	-webkit-text-stroke-width: 0.5px;
+	-webkit-text-stroke-color: #000;
+	color: #8CFFFB !important; /* Override the navbar-custom colors above.  #4AD8E3 */
 }
+
+.PortfolioLink a:hover,
+.AboutLink a:hover,
+.ArtLink a:hover  {
+	-webkit-text-stroke-width: 0.75px;
+	transition: fill 0.3s ease 0s, stroke 0.3s ease 0s;
+}
+.PortfolioLink a:hover {
+	-webkit-text-stroke-color: #B8FF73;
+}
+.ArtLink a:hover  {
+	-webkit-text-stroke-color: #FF9C66;
+}
+.AboutLink a:hover {	
+	-webkit-text-stroke-color: #8CFFFB;
+}
+
 
 
 @media (max-width: 950px) {
