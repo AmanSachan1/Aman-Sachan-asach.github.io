@@ -107,6 +107,9 @@
 						<p>	&nbsp; A real-time cloudscape renderer in Vulkan.</p>
 						<p>	&nbsp; It is based on the cloud system 'NUBIS' that was implemented for the Decima Engine by Guerrilla Games 
 							for the game 'Horizon Zero Dawn'</p>
+						<p>	&nbsp; Responsibilities: Vulkan framework; 2D and 3D texture support; ray marching of cloud shapes; 
+							reprojection and cheap sampling optimizations; post-processing (god rays, tone mapping, temporal anti-aliasing);</p>
+						
 					</div>
 				</div>				
 				<div class="card RenderingCategory"> <!-- Clustered Deferred and Forward Plus Shading -->
@@ -164,6 +167,8 @@
 							as accurately as possible with respect to reality. When combined with physically accurate models of surfaces, 
 							accurate models light sources, and optically-correct cameras, path tracing can produce still images that are 
 							indistinguishable from photographs.</p>
+						<p>&nbsp; multiple importance sampling; volumetric rendering; BVH acceleration; multi-threading; micro-facet materials; 
+							fresnel reflectance model; realistic modelling of light sources; thin lens camera models;</p>
 					</div>
 				</div>
 				<div class="card RenderingCategory"> <!-- CUDA Path Tracer -->
@@ -186,7 +191,7 @@
 
 						<p> &nbsp; A simple CUDA Monte Carlo path tracer that runs at about 19 ms/sample. </p>
 						<p> &nbsp; Interesting things that were implemented include: <span class="bigText">&nbsp; 
-							Subsuface Scattering, Stream Compaction, Material Sorting, Intersection Caching </span></p>
+							Subsuface Scattering, Stream Compaction, Material Sorting, First Bounce Intersection Caching </span></p>
 					</div>
 				</div>
 				<div class="card RenderingCategory"> <!-- CUDA Rasterizer -->
